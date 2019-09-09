@@ -1,0 +1,19 @@
+@mixin _spacing {
+	padding: 60px 0;
+	@include respond-to(lg){
+		padding: 100px 0;
+	}
+}
+
+@mixin _responsivefh {
+    // $ratio-fh: 720 / 1280;
+    // bas aspect ratio of each image supplied.
+    width: 100vw; 
+    height: 100vw * ($ratio-fh);
+}
+@mixin _responsivesh {
+    // $ratio-sh: 640 / 2054;
+    // bas aspect ratio of each image supplied.
+    width: 100vw; 
+    height: 100vw * ($ratio-sh);
+}
