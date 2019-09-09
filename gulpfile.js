@@ -38,7 +38,14 @@ gulp.task('sass', function() {
 			})
 		)
 		.pipe(sourcemaps.init({ loadMaps: true }))
-		.pipe(sass({ errLogToConsole: true }))
+		.pipe(sass({ 
+			errLogToConsole: true,
+			// sourceMap: 'sass',
+			// outputStyle: 'compressed'
+			sourceComments: 'map',
+			sourceMap: 'sass',
+			outputStyle: 'nested' 
+		}))
 		.pipe(postcss([autoprefixer()]))
 		.pipe(sourcemaps.write(undefined, { sourceRoot: null }))
 		.pipe(gulp.dest(paths.css));
