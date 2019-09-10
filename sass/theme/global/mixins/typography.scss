@@ -33,7 +33,7 @@
 		font-size: 22px;
 		line-height: 31px;
 	}
-	@include respond-to('md') {
+	@include respond-to('lg') {
 		font-size: 28px;
 		line-height: 31px;
 	}

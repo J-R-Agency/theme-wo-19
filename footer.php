@@ -25,16 +25,31 @@ $instagram_url = get_field('instagram_url', 'option');
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
-			<?php 
-echo $address;
-echo $phone_display_number;
-echo $phone_number;
-echo $twitter_url;
-echo $linkedin_url;
-echo $facebook_url;
-echo $instagram_url;
-	?>
+			<div class="col-lg-7 col-md-12">
+				<h3>Contact Us</h3>
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						<p><?php echo $address; ?></p>
+					</div>
+					<div class="col-lg-6 col-md-12">
+						<p>
+							Call Us: <a href="tel:+<?php echo $phone_number;?>"><?php echo $phone_display_number;?></a> <br>
+							CONTACT US ONLINE
+							<div class="social">
+								<a href="<?php echo $twitter_url;?>" class="social__icons twitter"><img src="#" alt="social icons"></a>
+								<a href="<?php echo $linkedin_url;?>" class="social__icons linkedin"><img src="#" alt="social icons"></a>
+								<a href="<?php echo $facebook_url;?>" class="social__icons facebook"><img src="#" alt="social icons"></a>
+								<a href="<?php echo $instagram_url;?>" class="social__icons instagram"><img src="#" alt="social icons"></a>
+							</div>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 large-only">
+				<h3>Explore</h3>
+				<?php //footer_menu ?>
+			</div>
+
 			</div>
 		</div>
 	</div>
