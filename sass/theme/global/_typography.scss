@@ -1,0 +1,15 @@
+h1, .h1{
+    @include _title;
+}
+
+h2, .h2{
+    @include _heroSubTitle;
+}
+
+h3, .h3{
+    @include _subTitle;
+}
+
+p, body, html{
+    @include _bodyCopy;
+}
