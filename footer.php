@@ -10,36 +10,35 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$container = get_theme_mod( 'understrap_container_type' );
+$address = get_field('address', 'option');
+$phone_display_number = get_field('phone_display_number', 'option');
+$phone_number = get_field('phone_number', 'option');
+$twitter_url = get_field('twitter_url', 'option');
+$linkedin_url = get_field('linkedin_url', 'option');
+$facebook_url = get_field('facebook_url', 'option');
+$instagram_url = get_field('instagram_url', 'option');
+
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
-<div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
-
+<footer>
+	<div class="container">
 		<div class="row">
-
-			<div class="col-md-12">
-
-				<footer class="site-footer" id="colophon">
-
-					<div class="site-info">
-
-						<?php understrap_site_info(); ?>
-
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
-			</div><!--col end -->
-
-		</div><!-- row end -->
-
-	</div><!-- container end -->
-
-</div><!-- wrapper end -->
+			<div class="col-sm-12">
+			<?php 
+echo $address;
+echo $phone_display_number;
+echo $phone_number;
+echo $twitter_url;
+echo $linkedin_url;
+echo $facebook_url;
+echo $instagram_url;
+	?>
+			</div>
+		</div>
+	</div>
+</footer>
 
 </div><!-- #page we need this extra closing tag here -->
 
