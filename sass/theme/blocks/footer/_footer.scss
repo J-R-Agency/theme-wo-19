@@ -8,6 +8,7 @@ footer{
         font-size: 28px;
         line-height: 31px;
         font-weight: 400;
+        margin-bottom: 31px;
         @include respond-to('md') {
             font-size: 28px;
             line-height: 31px;
@@ -18,9 +19,19 @@ footer{
         font-size: 15px;
         line-height: 28px;
         font-weight: 400;
+        text-transform: uppercase;
     }
     a:link, a:visited{
         color: white;
         text-decoration: none;
+        text-transform: uppercase;
+    }
+    a:hover, a:focus{
+        text-decoration: underline;
+    }
+    #menu-footer-links{
+        padding-left: 0;
+        list-style: none;
+        column-count: 2;
     }
 }

@@ -34,3 +34,10 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+// custom nav for footer links
+
+function wpb_custom_new_menu() {
+	register_nav_menu('footer-links',__( 'Footer links' ));
+  }
+  add_action( 'init', 'wpb_custom_new_menu' );
