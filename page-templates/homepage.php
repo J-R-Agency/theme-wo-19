@@ -16,9 +16,9 @@ $theme_colour = get_field('theme_colour');
 get_header(); ?>
 
 <div class="site <?php echo $theme_colour; ?>">
-
-    <h1 class="theme"><?php the_title();?></h1>
-
+    <div class="container">
+        <h1 class="theme"><?php the_title();?></h1>
+    </div>
 </div>
 
 <?php get_footer();

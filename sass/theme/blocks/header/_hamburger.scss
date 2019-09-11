@@ -1,0 +1,72 @@
+.c-hamburger {
+
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    margin: -2px 0 0 7px;
+    width: 40px;
+    height: 30px;
+    transition: all 0.3s ease;
+    background: 0 0;
+    z-index: 200;
+
+    > span {
+
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        transition: all 0.3s ease;
+        background: none;
+
+        &:after,
+        &:before {
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            content: "";
+            transition: all 0.3s ease;
+            background-color: $primary;
+        }
+        &:before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+// open animation
+.collapsed .c-hamburger { 
+
+    > span {
+
+        background-color: $primary;
+
+        &:after,
+        &:before {
+            transition: all 0.3s ease;
+            background: $primary;
+        }
+
+        &:before {
+            top: -10px;
+            transform: rotate(0deg);
+        }
+
+        &:after {
+            bottom: -10px;
+            transform: rotate(0deg);
+        }
+
+    }
+}

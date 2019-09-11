@@ -1,0 +1,10 @@
+#site-logo{
+    @include _museo;
+	font-size: 19px;
+	line-height: 26px;
+    font-weight: 400;
+    // margin-top: 33px;
+    img{
+        width: 90px;
+    }
+}
