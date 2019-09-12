@@ -18,14 +18,14 @@ $bkgrey: #8D9091;
 $grid-breakpoints: (
   xs: 0,
   sm: 568px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1400px
+  md: 769px,
+  lg: 1025px,
+  xl: 1401px
 ) !default;
 
 $container-max-widths: (
-  sm: 568px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1400px
+  sm: 100%,
+  md: 100%,
+  lg: 1025px,
+  xl: 1401px
 ) !default;
