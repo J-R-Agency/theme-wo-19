@@ -65,7 +65,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									'menu_class'      => 'navbar-nav ml-auto',
 									'fallback_cb'     => '',
 									'menu_id'         => 'main-menu',
-									'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+									// 'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 								)
 							); ?>
 						</div>

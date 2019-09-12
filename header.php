@@ -31,30 +31,28 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
 		<nav class="container navbar-expand-md">
-			<div class="row">
-				<div class="col-md-4">
+			<div class="row align-items-start">
+				<div class="col-md-5 col-lg-4">
 					<div id="site-logo">
 						<img class="d-none d-md-block" src="<?php echo get_template_directory_uri()?>/assets/img/wo-logo.svg" alt="The Womens Organisation">
 						<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="The Womens Organisation" itemprop="url">The Women's Organisation</a>
 					</div>
-
-					<div id="desktop-nav" class="d-none d-md-block">
-						<ul class="top-links">
-							<li><a href="#">54 James Street</a></li>
-							<li><a href="#">Blog &amp; Media</a></li>
-							<li><a href="#">Contact</a></li>
-							<li><a><img id="search-icon" src="<?php echo get_template_directory_uri()?>/assets/img/search.svg" alt="search"></a></li>
-						</ul>
-					</div>
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-7 col-lg-8">
 					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 						<!-- memnu-icon hidden on mobile -->
 						<span class="c-hamburger">
 							<span></span>
 						</span>
 					</button>
-
+					<div id="desktop-nav" class="d-none d-md-block">
+						<ul class="top-links">
+							<li><a href="#">54 ST James Street</a></li>
+							<li><a href="#">Blog &amp; Media</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a><img id="search-icon" src="<?php echo get_template_directory_uri()?>/assets/img/search.svg" alt="search"></a></li>
+						</ul>
+					</div>
 					<div id="navbarNavDropdown" class="collapse navbar-collapse">
 						<?php get_template_part( 'searchform' ); ?>
 
