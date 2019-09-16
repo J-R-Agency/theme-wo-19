@@ -4,11 +4,40 @@
     .theme{
         color: $orange;
     }
+    .hero_banner{
+        @include respond-to('md'){
+            &:before{
+                content: url('../assets/img/wo-logo_orange.svg');
+            }
+            &:after{
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(255,133,0,0.4) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(255,133,0,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(255,133,0,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#66ff8500',GradientType=0 ); /* IE6-9 */
+                content: '';
+            }
+        }
+    }
 }
 
 .theme-green{
     .theme{
         color: $green;
+    }
+    .hero_banner{
+        @include respond-to('md'){
+            &:before{
+                content: url('../assets/img/wo-logo_green.svg');
+            }
+            &:after{
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(0,169,149,0.4) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(0,169,149,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(0,169,149,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#6600a995',GradientType=0 ); /* IE6-9 */
+
+                content: '';
+            }
+        }
     }
 }
 
@@ -16,11 +45,40 @@
     .theme{
         color: $purple;
     }
+    .hero_banner{
+        @include respond-to('md'){
+            &:before{
+                content: url('../assets/img/wo-logo_purple.svg');
+            }
+            &:after{
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(109,2,125,0.4) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(109,2,125,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(109,2,125,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#666d027d',GradientType=0 ); /* IE6-9 */
+
+                content: '';
+            }
+        }
+    }
 }
 
 .theme-lime{
     .theme{
         color: $lime;
+    }
+    .hero_banner{
+        @include respond-to('md'){
+            &:before{
+                content: url('../assets/img/wo-logo_lime.svg');
+            }
+            &:after{
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(190,215,48,0.4) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(190,215,48,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(190,215,48,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#66bed730',GradientType=0 ); /* IE6-9 */
+                content: '';
+            }
+        }
     }
 }
 
@@ -28,16 +86,58 @@
     .theme{
         color: $pink;
     }
+    .hero_banner{
+        @include respond-to('md'){
+            &:before{
+                content: url('../assets/img/wo-logo_pink.svg');
+            }
+            &:after{
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(236,2,140,0.4) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(236,2,140,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(236,2,140,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#66ec028c',GradientType=0 ); /* IE6-9 */
+                content: '';
+            }
+        }
+    }
 }
 
 .theme-red{
     .theme{
         color: $red;
     }
+    .hero_banner{
+        @include respond-to('md'){
+            &:before{
+                content: url('../assets/img/wo-logo_red.svg');
+            }
+            &:after{
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(255,71,51,0.4) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(255,71,51,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(255,71,51,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#66ff4733',GradientType=0 ); /* IE6-9 */
+                content: '';
+            }
+        }
+    }
 }
 
 .theme-aqua{
     .theme{
         color: $aqua;
+    }
+    .hero_banner{
+        @include respond-to('md'){
+            &:before{
+                content: url('../assets/img/wo-logo_aqua.svg');
+            }
+            &:after{
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(120,204,207,0.4) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(120,204,207,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(120,204,207,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#6678cccf',GradientType=0 ); /* IE6-9 */
+                content: '';
+            }
+        }
     }
 }

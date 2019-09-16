@@ -37,15 +37,28 @@ ul#main-menu{
     }
     > li{
         display: inline-block;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         @include respond-to('md'){
             display: inline-block;
             padding: 0 15px;
+            height: 52px;
             &:first-child{
                 padding-left: 0;
             }
             &:last-child{
                 padding-right: 0;
+            }
+            > .dropdown-menu{
+                display: none;
+                opacity: 0;
+                transition: opacity 0.3s linear;
+                border-radius: 0;
+            }
+            &:hover{
+                > .dropdown-menu{
+                    opacity: 1;
+                    display: block;
+                }
             }
         }
         a{
@@ -59,8 +72,8 @@ ul#main-menu{
             }
             &:hover, &:visited{
                 text-decoration: underline;
+                background-color: transparent;
             }
-            
         }
         > ul{
             position: relative !important;
@@ -69,16 +82,32 @@ ul#main-menu{
             padding-left: 15px;
             @include respond-to('md'){
                 position: absolute !important;
-                // padding-left: 0;
+                padding-left: 50px;
+                background-color: #EEEEEE;
+                padding-right: 50px;
+                border-bottom: $orange 8px solid;
+                padding-top: 0;
+                margin-top: 0;
             }
             > li {
                 display: block;
                 @include respond-to('md'){
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+                    padding-top: 0px;
+                    padding-bottom: 25px; 
                 }
                 a.dropdown-item{
                     font-size: 15px;
+                }
+                &:first-child{
+                    &:before{
+                        content: 'Overview';
+                        text-transform: uppercase;
+                        position: relative;
+                        float: left;
+                        margin: 25px 0 25px -25px;
+                        @include _akkurat;
+                        font-weight: bold;
+                    }
                 }
             }
         }
@@ -110,7 +139,7 @@ ul#main-menu{
 }
 
 .navbar-expand-md {
-    margin-bottom: 32px;
+    // margin-bottom: 32px;
     margin-top: 32px;
 }
 

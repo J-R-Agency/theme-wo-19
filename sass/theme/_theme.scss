@@ -1,26 +1,28 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
 // Global styles
-
 @import "global/mixins/fonts";
 @import "global/mixins/breakpoints";
 @import "global/mixins/typography";
 @import "global/typography"; 
 
 // BLOCKS
-
 @import "blocks/buttons";
 @import "blocks/page";
 @import "blocks/theme-colours";
 
 // Header
-
 @import "blocks/header/header";
 @import "blocks/header/navbar";
 @import "blocks/header/hamburger";
 @import "blocks/header/search";
 
 // Footer
-
 @import "blocks/footer/footer";
 @import "blocks/footer/social-icons";
+
+// Banners
+@import "blocks/banners/hero";
+
+// Sections
+@import "blocks/sections/carousel_home";
