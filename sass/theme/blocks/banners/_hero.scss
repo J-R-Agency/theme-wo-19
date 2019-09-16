@@ -31,7 +31,7 @@
         }
     }
     .row{
-        height: 350px;
+        height: 500px;
         @include respond-to('md'){
             height: 550px;
         }

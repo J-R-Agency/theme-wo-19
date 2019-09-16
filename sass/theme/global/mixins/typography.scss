@@ -8,9 +8,13 @@
 
 @mixin _title {
 	@include _museo;
-	font-size: 48px;
-	line-height: 53px;
+	font-size: 30px;
+	line-height: 38px;
 	font-weight: 500;
+	@include respond-to('md'){
+		font-size: 48px;
+		line-height: 53px;
+	}
 } 
 
 @mixin _subTitle {

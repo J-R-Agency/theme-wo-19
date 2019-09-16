@@ -41,7 +41,6 @@ ul#main-menu{
         @include respond-to('md'){
             display: inline-block;
             padding: 0 15px;
-            height: 52px;
             &:first-child{
                 padding-left: 0;
             }
@@ -74,6 +73,9 @@ ul#main-menu{
                 text-decoration: underline;
                 background-color: transparent;
             }
+        }
+        > a{
+            height: 52px;
         }
         > ul{
             position: relative !important;
@@ -139,8 +141,11 @@ ul#main-menu{
 }
 
 .navbar-expand-md {
-    // margin-bottom: 32px;
+    margin-bottom: 32px;
     margin-top: 32px;
+    @include respond-to('md'){
+        margin-bottom: 0;
+    }
 }
 
 .menu-main-menu-container{
