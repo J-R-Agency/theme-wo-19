@@ -1,0 +1,12 @@
+.stretch-left{
+    margin-left: calc((100vw - 568px) / -2);
+    @include respond-to('md'){
+      margin-left: calc((100vw - 769px) / -2);
+    }
+    @include respond-to('lg'){
+      margin-left: calc((100vw - 1025px) / -2);
+    }
+    @include respond-to('xl'){
+      margin-left: calc((100vw - 1401px) / -2);
+    }
+  }
