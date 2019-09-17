@@ -1,0 +1,29 @@
+.wo-btn{
+    border-radius: 30px;
+    padding: 18px 30px 17px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    @include _bodyCopy;
+    &.green{
+        background-color: $green;
+    }
+    &.orange{
+        background-color: $orange;
+    }
+    &.purple{
+        background-color: $purple;
+    }
+    &.lime{
+        background-color: $lime;
+    }
+    &.pink{
+        background-color: $pink;
+    }
+    &.red{
+        background-color: $red;
+    }
+    &.aqua{
+        background-color: $aqua;
+    }
+}
