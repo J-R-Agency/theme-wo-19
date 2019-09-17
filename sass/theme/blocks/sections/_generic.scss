@@ -1,0 +1,11 @@
+.generic{
+    background-color: #F1F1F1;
+    padding: 55px 0;
+    text-align: center;
+    @include respond-to('md'){
+        padding: 75px 0;
+    }
+    @include respond-to('lg'){
+        padding: 100px 0;
+    }    
+}

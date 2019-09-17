@@ -12,3 +12,18 @@
       margin-left: calc((100vw - 1401px) / -2);
     }
   }
+
+  .stretch-right{
+    margin-right: calc((100vw - 568px) / -2);
+    max-width: 50vw;
+    flex: auto;
+    @include respond-to('md'){
+      margin-right: calc((100vw - 769px) / -2);
+    }
+    @include respond-to('lg'){
+      margin-right: calc((100vw - 1025px) / -2);
+    }
+    @include respond-to('xl'){
+      margin-right: calc((100vw - 1401px) / -2);
+    }
+  }

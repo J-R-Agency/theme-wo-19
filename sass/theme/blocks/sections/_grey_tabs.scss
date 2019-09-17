@@ -60,6 +60,7 @@
         }
         @include respond-to('lg'){
             padding: 50px;
+            padding-right: 0;
         }
         .h1{
             padding-bottom: 20px;

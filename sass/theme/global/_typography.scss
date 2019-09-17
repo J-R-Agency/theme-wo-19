@@ -1,17 +1,21 @@
 h1, .h1{
     @include _title;
+    display: block;
 }
 
 h2, .h2{
     @include _heroSubTitle;
+    display: block;
 }
 
 h3, .h3{
     @include _subTitle;
+    display: block;
 }
 
 p, body, html{
     @include _bodyCopy;
+    display: block;
 }
 
 a:active, a:focus {
