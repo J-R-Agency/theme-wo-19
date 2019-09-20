@@ -37,7 +37,7 @@ ul#main-menu{
     }
     > li{
         display: inline-block;
-        // margin-bottom: 20px;
+        padding: 0 0 25px;
         @include respond-to('md'){
             display: inline-block;
             padding: 0 15px;
@@ -63,7 +63,7 @@ ul#main-menu{
         a{
             &:link, &:visited{
                 color: $primary;
-                font-size: 19px;
+                font-size: 17px;
                 line-height: 19px;
                 color: $primary;
                 text-transform: uppercase;
@@ -75,7 +75,9 @@ ul#main-menu{
             }
         }
         > a{
-            height: 52px;
+            @include respond-to('md'){
+                height: 52px;
+            }
         }
         > ul{
             position: relative !important;
@@ -93,6 +95,7 @@ ul#main-menu{
             }
             > li {
                 display: block;
+                padding-bottom: 25px;
                 @include respond-to('md'){
                     padding-top: 0px;
                     padding-bottom: 25px; 
@@ -106,9 +109,12 @@ ul#main-menu{
                         text-transform: uppercase;
                         position: relative;
                         float: left;
-                        margin: 25px 0 25px -25px;
+                        margin: 0px 0px 20px -15px;
                         @include _akkurat;
-                        font-weight: bold;
+                        // font-weight: bold;
+                        @include respond-to('md'){
+                            margin: 25px 0 25px -25px;
+                        }
                     }
                 }
             }

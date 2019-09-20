@@ -20,4 +20,10 @@ $bh_bkimg = get_field('bh_bkimg');
 			</div>
 		</div> 
 	</div>
+	<div class="hero_banner__video">
+	<video id="hero-video" autoplay muted playsinline loop class="archive">
+		<source src="<?php echo get_template_directory_uri()?>/assets/img/Meeting.mp4" type="video/mp4">
+	</video>
+</div>
 </section>
+

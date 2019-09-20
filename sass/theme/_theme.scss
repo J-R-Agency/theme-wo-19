@@ -9,7 +9,6 @@
 
 // BLOCKS
 @import "blocks/buttons";
-@import "blocks/page";
 @import "blocks/theme-colours";
 
 // Header
@@ -24,10 +23,13 @@
 
 // Banners
 @import "blocks/banners/hero";
-@import "blocks/banners/partners-cta";
-@import "blocks/banners/conversation-cta";
+@import "blocks/banners/fullimg-cta";
 
 // Sections
 @import "blocks/sections/carousel_home";
 @import "blocks/sections/grey_tabs";
 @import "blocks/sections/generic";
+@import "blocks/sections/stories";
+
+//cards
+@import "blocks/cards/blog-card"; 

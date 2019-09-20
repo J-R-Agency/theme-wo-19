@@ -1,0 +1,106 @@
+.stories{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    @include respond-to('md'){
+        text-align: left;
+    }
+    &__content{
+        background-color: $pink;
+        -webkit-box-shadow: 1px 1px 5px 0px rgba(151, 151, 151, 1);
+        -moz-box-shadow:    1px 1px 5px 0px rgba(151, 151, 151, 1);
+        box-shadow:         1px 1px 5px 0px rgba(151, 151, 151, 1);
+        position: relative;
+        height: auto;
+        overflow: hidden;
+        color: white;
+        padding: 30px;
+        @include respond-to('md'){
+            height: 470px;
+            padding: 40px;
+        }
+        &:before{
+            position: absolute;
+            content: url('../assets/img/wo-logo_green.svg');
+            transform: scale(1);
+            right: -255%;
+            top: -37px;
+            left: auto;
+        }
+        @include respond-to('md'){
+            &:before{
+                top: -150px;
+                transform: scale(0.7);
+                left: 260px;
+                right: auto;
+            }
+        }
+        @include respond-to('lg'){
+            &:before{
+                top: -150px;
+                transform: scale(0.7);
+                left: 260px;
+                right: auto;
+            }
+        }
+        h3, .h3{
+            padding-bottom: 30px;
+        }
+        p{
+            padding-bottom: 30px;
+            max-width: none;
+            @include respond-to('lg'){
+                max-width: 320px;
+            }
+        }
+        h4{
+            font-size: 16px;
+            font-weight: normal;
+            text-transform: uppercase;
+            @include _akkurat;
+            position: relative;
+        }
+    }
+    &__circleimg{
+        height: 280px;
+        width: 280px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-left: 0%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        @include respond-to('md'){
+            height: 340px;
+            width: 340px;
+            margin-left: 20%;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        img{
+            display: inline;
+            margin: 0 auto;
+            margin-left: -25%; 
+            height: 100%;
+            width: auto;
+            max-width: none;
+        }
+    }
+    .wo-btn{
+        display: block;
+        @include respond-to('md'){
+            display: inline-block
+        }
+    }
+}
+a.white-link{
+    text-transform: uppercase;
+    margin-left: 0;
+    margin-top: 30px;
+    display: block;
+    @include respond-to('md'){
+        margin-left: 20px;
+        margin-top: 0;
+        display: inline;
+    }
+}

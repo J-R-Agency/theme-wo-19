@@ -12,7 +12,7 @@
         opacity: 0.5;
         transform: translateY(-40%) scale(0.9);
         left: -260%;
-        
+        z-index: 1;
     }
     &:after{
         background-size: 100%;
@@ -48,6 +48,18 @@
         }
         @include respond-to('lg'){
             height: 600px;
+        }
+        div{
+            z-index: 1;;
+        }
+    }
+    &__video {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        overflow: hidden; 
+        video{
+            min-width: 100%;
         }
     }
 }
