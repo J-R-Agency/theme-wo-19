@@ -18,11 +18,18 @@ get_header(); ?>
 <div class="site <?php echo $theme_colour; ?>">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/subsection.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/grey_tabs.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/home-stories.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/fullimg-cta_partners.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/blog-home.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/fullimg-cta_conversation.tpl'); ?>
+    <section class="generic bk-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>About Us</h3>
+                    <div class="three-col"><?php echo get_the_content(); ?></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php include_once (get_template_directory() . '/global-templates/about-cards.tpl'); ?>
+    <?php include_once (get_template_directory() . '/global-templates/related-links.tpl'); ?>
 </div>
 
 <?php get_footer();
