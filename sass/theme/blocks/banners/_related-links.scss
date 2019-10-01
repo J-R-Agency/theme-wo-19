@@ -1,8 +1,9 @@
 .related-links{
-    padding: 90px 0;
+    padding: 90px 0 70px;
     background-color: white;
     &__card{
         position: relative;
+        padding-bottom: 20px;
     }
     &__img{
         overflow: hidden;

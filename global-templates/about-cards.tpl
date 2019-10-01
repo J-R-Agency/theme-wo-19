@@ -1,36 +1,39 @@
- <section class="generic">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="h1">Our Leadership</div>
-                    <p class="strapline">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class="row row-eq-height">
-                <div class="col-sm-12 col-md-4">
-                    <div class="leader-card">
-                        <div class="leader-card__img theme_overlay"><img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/leadership.png" alt="blog image"></div>
-                        <div class="leader-card__name">Maggie O'Carroll</div>
-                        <div class="leader-card__category">CHIEF EXECUTIVE OFFICER</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <div class="leader-card">
-                        <div class="leader-card__img theme_overlay"><img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/leadership.png" alt="blog image"></div>
-                        <div class="leader-card__name">Maggie O'Carroll</div>
-                        <div class="leader-card__category">CHIEF EXECUTIVE OFFICER</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <div class="leader-card">
-                        <div class="leader-card__img theme_overlay"><img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/leadership.png" alt="blog image"></div>
-                        <div class="leader-card__name">Maggie O'Carroll</div>
-                        <div class="leader-card__category">CHIEF EXECUTIVE OFFICER</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
+<?php
+/**
+ * About banner and leadership repeater
+ *
+ * @package understrap
+ */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
+?>
+<section class="generic">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="h1">Our Leadership</div>
+                <p class="strapline">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
             </div>
         </div>
-    </section>
+        <div class="row row-eq-height">
+            <?php  if( have_rows('leadership_repeater') ): ?>
+                <?php $count = 0; ?>
+                <?php while ( have_rows('leadership_repeater') ) : the_row(); ?>
+                    <?php $class = ($count != 0) ?: 'first'; ?>
+                    <?php $image = get_sub_field('image'); ?>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="leader-card <?php echo $class; ?>">
+                            <div class="leader-card__img theme_overlay"><img src="<?php echo $image['url']; ?>" alt="leadership image"></div>
+                            <div class="leader-card__name"><?php the_sub_field('name');?></div>
+                            <div class="leader-card__category"><?php the_sub_field('role');?></div>
+                            <p><?php the_sub_field('summary');?></p>
+                        </div>
+                    </div>
+                    <?php $count = $count + 1; ?>
+                <?php endwhile; ?>
+            <?php endif ?>
+        </div>
+    </div>
+</section>
