@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<section class="generic">
+<section class="generic capped-width">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">

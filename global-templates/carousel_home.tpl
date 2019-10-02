@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<section class="carousel_home grey-w-icon">
+<section class="carousel_home grey-w-icon capped-width">
     <div class="container">
         <div class="row align-items-center text-center justify-content-center">
             <div class="col-sm-12">

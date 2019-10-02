@@ -15,17 +15,22 @@ $bkgrey: #8D9091;
 
 // BREAKPOINTS -------
 
+$sm: 769px;
+$md: 1025px;
+$lg: 1400px;
+$xl: 1600px;
+
 $grid-breakpoints: (
   xs: 0,
-  sm: 568px,
-  md: 769px,
-  lg: 1025px,
-  xl: 1401px
+  sm: 769px,
+  md: 1025px, 
+  lg: 1400px,
+  xl: 1600px
 ) !default;
 
 $container-max-widths: (
-  sm: 100%,
-  md: 1024px,
+  sm: 769px,
+  md: 1025px,
   lg: 1400px,
   xl: 1600px
 ) !default;

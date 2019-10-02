@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<section class="subsection bk-grey grey-w-icon">
+<section class="subsection bk-grey grey-w-icon capped-width">
     <div class="container">
         <div class="row align-items-center text-center justify-content-center">
             <div class="col-lg-8 col-md-10 col-sm-12">

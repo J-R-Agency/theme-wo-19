@@ -34,8 +34,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="row align-items-start">
 				<div class="col-md-5 col-lg-4">
 					<div id="site-logo">
-						<img class="d-none d-md-block" src="<?php echo get_template_directory_uri()?>/assets/img/wo-logo.svg" alt="The Womens Organisation">
-						<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="The Womens Organisation" itemprop="url">The Women's Organisation</a>
+						<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="The Womens Organisation" itemprop="url">
+							<img class="d-none d-md-block" src="<?php echo get_template_directory_uri()?>/assets/img/wo-logo.svg" alt="The Womens Organisation">
+							The Women's Organisation
+						</a>
 					</div>
 				</div>
 				<div class="col-md-7 col-lg-8">

@@ -1,4 +1,4 @@
-<section class="stories">
+<section class="stories capped-width">
     <div class="stories__content container">
         <h4>stories</h4>
         <div class="row align-items-center">

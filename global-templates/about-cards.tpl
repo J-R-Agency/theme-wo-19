@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<section class="generic">
+<section class="generic capped-width">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
                     <div class="col-sm-12 col-md-4">
                         <div class="leader-card <?php echo $class; ?>">
                             <div class="leader-card__img theme_overlay"><img src="<?php echo $image['url']; ?>" alt="leadership image"></div>
-                            <div class="leader-card__name"><?php the_sub_field('name');?></div>
+                            <div class="leader-card__name theme"><?php the_sub_field('name');?></div>
                             <div class="leader-card__category"><?php the_sub_field('role');?></div>
                             <p><?php the_sub_field('summary');?></p>
                         </div>

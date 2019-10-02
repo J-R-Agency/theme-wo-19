@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
  
- <section class="related-links">
+ <section class="related-links capped-width">
     <div class="container">
         <div class="row">
             <?php  if( have_rows('related_links_repeater') ): ?>

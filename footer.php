@@ -25,13 +25,13 @@ $instagram_url = get_field('instagram_url', 'option');
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-7 col-md-12">
+			<div class="col-md-7 col-sm-12">
 				<h3>Contact Us</h3>
 				<div class="row">
-					<div class="col-lg-6 col-md-12">
+					<div class="col-md-6 col-sm-12">
 						<p><?php echo $address; ?></p>
 					</div>
-					<div class="col-lg-6 col-md-12">
+					<div class="col-md-6 col-sm-12">
 						<p>
 							Call Us: <a href="tel:+<?php echo $phone_number;?>"><?php echo $phone_display_number;?></a> <br>
 							CONTACT US ONLINE
@@ -45,7 +45,7 @@ $instagram_url = get_field('instagram_url', 'option');
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-5 d-none d-lg-block d-xl-block">
+			<div class="col-md-5 d-none d-md-block d-lg-block d-xl-block">
 				<h3>Explore</h3>
 				
 				<!-- footer links go here -->

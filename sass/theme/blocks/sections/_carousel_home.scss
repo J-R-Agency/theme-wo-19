@@ -5,7 +5,10 @@
         margin-bottom: 30px;
     }
     .carousel-item{
-        min-height: 150px;
+        min-height: 200px;
+        @include respond-to('md'){
+            min-height: 150px;
+        }
     }
     .carousel-indicators {
         position: relative;

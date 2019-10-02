@@ -1,30 +1,28 @@
 // styles to coincide with the theme colour select option
 
+// Mixin for gradient values
+@mixin linear_gradient($r, $g, $b, $a, $percent){
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) $percent, rgba($r, $g, $b, $a) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) $percent,rgba($r, $g, $b, $a) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) $percent,rgba($r, $g, $b, $a) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    content: '';
+}
+
 .theme-orange{
     .theme{
         color: $orange;
     }
     .hero_banner{
-        // @include respond-to('md'){
-            &:before{
-                content: url('../assets/img/wo-logo_orange.svg');
-            }
-            &:after{
-                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(255,133,0,0.4) 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(255,133,0,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(255,133,0,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#66ff8500',GradientType=0 ); /* IE6-9 */
-                content: '';
-            }
-        // }
+        &:before{
+            content: url('../assets/img/wo-logo_orange.svg');
+        }
+        &:after{
+            @include linear_gradient($r:255,$g:133,$b:0,$a:0.65, $percent: 20%);
+        }
     }
     .theme_overlay{
         &:after{
-            background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(255,133,0,0.4) 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(255,133,0,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(255,133,0,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#66ff8500',GradientType=0 ); /* IE6-9 */
-            content: '';
+            @include linear_gradient($r:255,$g:133,$b:0,$a:0.40, $percent: 40%);
         }
     }
 }
@@ -34,20 +32,18 @@
         color: $green;
     }
     .hero_banner{
-        // @include respond-to('md'){
-            &:before{ 
-                content: url('../assets/img/wo-logo_green.svg');
-            }
-            &:after{
-                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(0,169,149,0.4) 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(0,169,149,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(0,169,149,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#6600a995',GradientType=0 ); /* IE6-9 */
-
-                content: '';
-            }
+        &:before{ 
+            content: url('../assets/img/wo-logo_green.svg');
         }
-    // }
+        &:after{
+            @include linear_gradient($r:0,$g:169,$b:149,$a:0.65, $percent: 20%);
+        }
+    }
+    .theme_overlay{
+        &:after{
+            @include linear_gradient($r:0,$g:169,$b:149,$a:0.40, $percent: 40%);
+        }
+    }
 }
 
 .theme-purple{
@@ -55,18 +51,16 @@
         color: $purple;
     }
     .hero_banner{
-        // @include respond-to('md'){
-            &:before{
-                content: url('../assets/img/wo-logo_purple.svg');
-            }
-            &:after{
-                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(109,2,125,0.4) 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(109,2,125,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(109,2,125,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#666d027d',GradientType=0 ); /* IE6-9 */
-
-                content: '';
-            // }
+        &:before{
+            content: url('../assets/img/wo-logo_purple.svg');
+        }
+        &:after{
+            @include linear_gradient($r:109,$g:2,$b:125,$a:0.65, $percent: 20%);
+        }
+    }
+    .theme_overlay{
+        &:after{
+            @include linear_gradient($r:109,$g:2,$b:125,$a:0.40, $percent: 40%);
         }
     }
 }
@@ -76,18 +70,17 @@
         color: $lime;
     }
     .hero_banner{
-        // @include respond-to('md'){
-            &:before{
-                content: url('../assets/img/wo-logo_lime.svg');
-            }
-            &:after{
-                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(190,215,48,0.4) 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(190,215,48,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(190,215,48,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#66bed730',GradientType=0 ); /* IE6-9 */
-                content: '';
-            }
-        // }
+        &:before{
+            content: url('../assets/img/wo-logo_lime.svg');
+        }
+        &:after{
+            @include linear_gradient($r:190,$g:215,$b:48,$a:0.65, $percent: 20%);
+        }
+    }
+    .theme_overlay{
+        &:after{
+            @include linear_gradient($r:190,$g:215,$b:48,$a:0.40, $percent: 40%);
+        }
     }
 }
 
@@ -96,18 +89,17 @@
         color: $pink;
     }
     .hero_banner{
-        // @include respond-to('md'){
-            &:before{
-                content: url('../assets/img/wo-logo_pink.svg');
-            }
-            &:after{
-                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(236,2,140,0.4) 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(236,2,140,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(236,2,140,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#66ec028c',GradientType=0 ); /* IE6-9 */
-                content: '';
-            }
-        // }
+        &:before{
+            content: url('../assets/img/wo-logo_pink.svg');
+        }
+        &:after{
+            @include linear_gradient($r:236,$g:2,$b:140,$a:0.65, $percent: 20%);
+        }
+    }
+    .theme_overlay{
+        &:after{
+            @include linear_gradient($r:236,$g:2,$b:140,$a:0.40, $percent: 40%);
+        }
     }
 }
 
@@ -116,18 +108,17 @@
         color: $red;
     }
     .hero_banner{
-        // @include respond-to('md'){
-            &:before{
-                content: url('../assets/img/wo-logo_red.svg');
-            }
-            &:after{
-                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(255,71,51,0.4) 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(255,71,51,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(255,71,51,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#66ff4733',GradientType=0 ); /* IE6-9 */
-                content: '';
-            }
-        // }
+        &:before{
+            content: url('../assets/img/wo-logo_red.svg');
+        }
+        &:after{
+            @include linear_gradient($r:255,$g:71,$b:51,$a:0.65, $percent: 20%);
+        }
+    }
+    .theme_overlay{
+        &:after{
+            @include linear_gradient($r:255,$g:71,$b:51,$a:0.40, $percent: 40%);
+        }
     }
 }
 
@@ -136,17 +127,16 @@
         color: $aqua;
     }
     .hero_banner{
-        // @include respond-to('md'){
-            &:before{
-                content: url('../assets/img/wo-logo_aqua.svg');
-            }
-            &:after{
-                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(120,204,207,0.4) 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(120,204,207,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(120,204,207,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#6678cccf',GradientType=0 ); /* IE6-9 */
-                content: '';
-            }
-        // }
+        &:before{
+            content: url('../assets/img/wo-logo_aqua.svg');
+        }
+        &:after{
+            @include linear_gradient($r:120,$g:204,$b:207,$a:0.65, $percent: 20%);
+        }
+    }
+    .theme_overlay{
+        &:after{
+            @include linear_gradient($r:120,$g:204,$b:207,$a:0.40, $percent: 40%);
+        }
     }
 }
