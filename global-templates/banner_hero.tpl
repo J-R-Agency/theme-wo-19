@@ -15,7 +15,7 @@ $bh_bkimg = get_the_post_thumbnail_url();
 		<div class="row align-items-center">
 			<div class="col-sm-12 col-md-10 col-lg-8">
 				<?php if (! is_front_page() ) {	
-					echo'<h2>Only Displays On The Front Page</h2>';
+					echo'<p>breadcrumb</p>';
 				}?>
 				<h1><?php the_title(); ?></h1>
 				<h2><?php the_field('bh_subtitle'); ?></h2>
