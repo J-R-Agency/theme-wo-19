@@ -12,6 +12,9 @@
     .theme{
         color: $orange;
     }
+    a.theme{
+        color: $orange;
+    }
     .hero_banner{
         &:before{
             content: url('../assets/img/wo-logo_orange.svg');
@@ -29,6 +32,9 @@
 
 .theme-green{
     .theme{
+        color: $green;
+    }
+    a.theme{
         color: $green;
     }
     .hero_banner{
@@ -50,6 +56,9 @@
     .theme{
         color: $purple;
     }
+    a.theme{
+        color: $purple;
+    }
     .hero_banner{
         &:before{
             content: url('../assets/img/wo-logo_purple.svg');
@@ -67,6 +76,9 @@
 
 .theme-lime{
     .theme{
+        color: $lime;
+    }
+    a.theme{
         color: $lime;
     }
     .hero_banner{
@@ -88,6 +100,9 @@
     .theme{
         color: $pink;
     }
+    a.theme{
+        color: $pink;
+    }
     .hero_banner{
         &:before{
             content: url('../assets/img/wo-logo_pink.svg');
@@ -107,6 +122,9 @@
     .theme{
         color: $red;
     }
+    a.theme{
+        color: $red;
+    }
     .hero_banner{
         &:before{
             content: url('../assets/img/wo-logo_red.svg');
@@ -124,6 +142,9 @@
 
 .theme-aqua{
     .theme{
+        color: $aqua;
+    }
+    a.theme{
         color: $aqua;
     }
     .hero_banner{
