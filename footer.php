@@ -22,7 +22,7 @@ $instagram_url = get_field('instagram_url', 'option');
 
 
 
-<footer>
+<footer class="main-footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-7 col-sm-12">
