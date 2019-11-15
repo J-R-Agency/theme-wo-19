@@ -19,6 +19,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
+
+<div class="site <?php echo $theme_colour; ?>">
+    <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
+</div>
+
+
+
 <div class="wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
