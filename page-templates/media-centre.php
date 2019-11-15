@@ -23,7 +23,8 @@ get_header(); ?>
 
                 <?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php get_template_part( 'loop-templates/content', 'standard' ); ?>
+                    <?php get_template_part( 'loop-templates/media-centre', '' ); ?>
+
 
                     <?php
                     // If comments are open or we have at least one comment, load up the comment template.
