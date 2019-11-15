@@ -28,7 +28,7 @@ if( $content_cta_link ):
 	$link_title = $link['title'];
 	$link_target = $link['target'] ? $link['target'] : '_self';
 	?>
-	<a class="wo-btn <?php echo $theme_colour; ?>" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($content_cta_text); ?></a>
+	<a class="wo-btn <?php echo $theme_colour; ?> wo-btn--standard-content" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($content_cta_text); ?></a>
 <?php endif;
 unset($content_cta_link);
 

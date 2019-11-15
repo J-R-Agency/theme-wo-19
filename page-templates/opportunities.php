@@ -159,14 +159,9 @@ get_header(); ?>
                 </div>
                 
                 <div class="col-md-4 col-lg-3 d-none d-md-block more-info-sidebar">
-                    <h4>More Info</h4>
-                    <ul>
-                        <li><a class="theme" href="#">Our History</a></li>
-                        <li><a class="theme" href="#">Our Mission & Values</a></li>
-                        <li><a class="theme" href="#">Work With Us</a></li>
-                        <li><a class="theme" href="#">Support Us</a></li>
-                        <li><a class="theme" href="#">Media Centre</a></li>
-                    </ul>
+
+                <?php include_once (get_template_directory() . '/sidebar-templates/sidebar-moreinfo.php'); ?>
+
                 </div>
             </div>
         </div>

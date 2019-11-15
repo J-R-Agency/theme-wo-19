@@ -36,6 +36,19 @@
     }
 }
 
+.wo-btn:hover{
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+    &.white-pink{
+        color: $pink;
+    }
+}
+
+.wo-btn--standard-content{
+    margin: 1em 0;
+}
+
 .gradient-link{
     border-radius: 50px;
     padding: 35px 30px 35px;
