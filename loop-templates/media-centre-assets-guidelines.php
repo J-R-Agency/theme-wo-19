@@ -15,7 +15,7 @@ $theme_colour = get_field('theme_colour');
 <?php
 
 // check if the repeater field has rows of data
-if( have_rows('press_articles') ):
+if( have_rows('assets_guidelines') ):
 
  	// loop through the rows of data
     while ( have_rows('press_articles') ) : the_row();

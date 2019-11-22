@@ -9,4 +9,13 @@
         padding: 1rem;
         margin: 0.5rem 0;
     }
+    h3, .media-centre__title{
+        @include _akkurat;
+        @include _subTitle;
+    }
+}
+
+.social-twitter{
+    background-image: url('../assets/img/twitter.svg');
+    background-repeat: no-repeat;
 }
