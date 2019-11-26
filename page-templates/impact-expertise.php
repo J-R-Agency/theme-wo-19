@@ -17,20 +17,17 @@ get_header(); ?>
 
 <div class="site <?php echo $theme_colour; ?>">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/subsection.tpl'); ?>
     <section class="generic bk-white">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h3>About Us</h3>
-                    <br>
-                    <div class="three-col text-left"><?php echo $post->post_content; ?></div>
+                    <div class=" "><?php echo $post->post_content; ?></div>
                 </div>
             </div>
         </div>
     </section>
-    <?php include_once (get_template_directory() . '/global-templates/about-cards.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/related-links.tpl'); ?>
+    <?php include_once (get_template_directory() . '/global-templates/subsection-cards.tpl'); ?>
+    <?php include_once (get_template_directory() . '/global-templates/banner-cta.tpl'); ?>
 </div>
 
 <?php get_footer();
