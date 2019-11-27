@@ -1,6 +1,6 @@
 .banner_cta{
     overflow: hidden;
-    color: $bkgrey;
+    background-color: $dark-grey;
     background-size: cover;
     position: relative;
     background-position: center;
@@ -44,13 +44,18 @@
         // height: 500px;
         height: calc(100vh - 90px);
         @include respond-to('md'){
-            height: 550px;
+            height: 120px;
         }
         @include respond-to('lg'){
-            height: 600px;
+            height: 120px;
         }
         div{
             z-index: 1;;
         }
+    }
+    h2{
+        @include _museo;
+        color: $white;
+        font-size: 30px;
     }
 }

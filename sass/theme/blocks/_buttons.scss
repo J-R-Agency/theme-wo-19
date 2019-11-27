@@ -6,31 +6,28 @@
     text-transform: uppercase;
     @include _bodyCopy;
     display: inline-block;
-    &.green{
+    &.green, &.theme-green{
         background-color: $green;
     }
-    &.orange{
-        background-color: $orange;
-    }    
-    &.theme-orange{
+    &.orange, &.theme-orange{
         background-color: $orange;
     }
-    &.purple{
+    &.purple, &.theme-purple{
         background-color: $purple;
     }
-    &.lime{
+    &.lime, &.theme-lime{
         background-color: $lime;
     }
-    &.pink{
+    &.pink, &.theme-pink{
         background-color: $pink;
     }
-    &.red{
+    &.red, &.theme-red{
         background-color: $red;
     }
-    &.aqua{
+    &.aqua, &.theme-aqua{
         background-color: $aqua;
     }
-    &.white-pink{
+    &.white-pink, &.theme-white-pink{
         background-color: $white;
         color: $pink;
     }
