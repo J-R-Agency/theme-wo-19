@@ -41,3 +41,8 @@ function wpb_custom_new_menu() {
 	register_nav_menu('footer-links',__( 'Footer links' ));
   }
   add_action( 'init', 'wpb_custom_new_menu' );
+
+ 
+// Add Excerpt support for Page post type
+
+add_post_type_support( 'page', 'excerpt' );

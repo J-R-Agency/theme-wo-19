@@ -30,4 +30,11 @@
         padding-left: 50px;
         color: white;
     }
+    &__excerpt{
+        margin: 1rem 0;
+    }
+    & h3{
+      @include _akkurat;
+
+    }
 }
