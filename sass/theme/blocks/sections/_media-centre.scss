@@ -6,15 +6,49 @@
         margin-bottom: 1em;
     }
     .container-media-centre{
-        padding: 1rem;
+        padding: 1rem 2rem;
         margin: 0.5rem 0;
+    }
+    & .social-twitter, & .social-facebook, & .social-instagram, & .social-linkedin{
+        padding: 1rem 4rem;
     }
     h3, .media-centre__title{
         @include _akkurat;
+        font-size: 1.2rem;
+    }
+}
+
+.container-media-centre{
+    p{
+        font-size: 0.8rem;
+        line-height: 1.2rem;
     }
 }
 
 .social-twitter{
+    background-size: 1.5rem;
+    background-position: 1rem 1rem;
     background-image: url('../assets/img/twitter.svg');
+    background-repeat: no-repeat;
+}
+
+.social-facebook{
+    background-size: 1.5rem;
+    background-position: 1rem 1rem;    
+    background-image: url('../assets/img/facebook.svg');
+    background-repeat: no-repeat;
+}
+
+.social-instagram{
+    background-size: 1.5rem;
+    background-position: 1rem 1rem;
+    background-image: url('../assets/img/instagram.svg');
+    background-repeat: no-repeat;
+}
+
+.social-linkedin{
+    background-size: 1.5rem;
+    background-position: 1rem 1rem;
+    background-image: url('../assets/img/linkedin.svg');
     background-repeat: no-repeat;
 }
