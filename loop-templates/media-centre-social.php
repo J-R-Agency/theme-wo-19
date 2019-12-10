@@ -62,7 +62,7 @@ if( have_rows('social_media_accounts') ):
         endif;
 
 
-        echo "</div>";
+        echo "</div><p>&nbsp;</p>";
 
         unset($social_media_account);
         unset($social_media_handle);

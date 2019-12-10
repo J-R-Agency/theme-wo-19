@@ -30,7 +30,7 @@ if( have_rows('press_articles') ):
             echo "<span class=\"media-centre__title\"><a href=\"" . $press_article_link['url'] . "\" title=\"$press_article_title\">$press_article_title</a></span>";
         endif;
 
-        echo "</div>";
+        echo "</div><p>&nbsp;</p>";
 
     endwhile;
 
