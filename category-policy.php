@@ -18,7 +18,7 @@ get_header(); ?>
 
 <div class="site <?php echo $theme_colour; ?>">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
-    <section class="standard-content generic bk-white">
+    <section class="standard-content generic">
         <div class="container">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
@@ -38,6 +38,8 @@ get_header(); ?>
 					</header><!-- .page-header -->
 
 					<?php /* Start the Loop */ ?>
+
+					<div class="policy-container">
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php
@@ -49,8 +51,8 @@ get_header(); ?>
 						 */
 						get_template_part( 'loop-templates/content-post', "");
 						?>
-
 					<?php endwhile; ?>
+					</div>
 
 				<?php else : ?>
 
