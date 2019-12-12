@@ -24,7 +24,7 @@
 // Banners
 @import "blocks/banners/hero";
 @import "blocks/banners/fullimg-cta";
-
+@import "blocks/banners/cta";
 
 // Sections
 @import "blocks/sections/carousel_home";
@@ -34,7 +34,10 @@
 @import "blocks/sections/related-links";
 @import "blocks/sections/sidebar"; 
 @import "blocks/sections/opportunities_accordian";
+@import "blocks/sections/standard-content";
+@import "blocks/sections/media-centre";
 
 //cards
 @import "blocks/cards/blog-card"; 
 @import "blocks/cards/leader-card"; 
+@import "blocks/cards/policy-card"; 

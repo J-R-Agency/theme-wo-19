@@ -1,6 +1,6 @@
 <?php
 /**
- * Sidebar - hero setup.
+ * Sidebar - More info setup.
  *
  * @package understrap
  */

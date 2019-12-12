@@ -14,13 +14,13 @@ $theme_colour = get_field('theme_colour');
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-
-
-
 	<div class="entry-content">
 
-		<?php the_content(); ?>
-		<?php get_template_part( 'loop-templates/content', 'standard-cta' ); ?>
+        <?php the_content(); ?>
+        <?php get_template_part( 'loop-templates/media-centre', 'press-articles' ); ?>
+        <?php get_template_part( 'loop-templates/media-centre', 'social' ); ?>
+        <?php get_template_part( 'loop-templates/media-centre', 'assets-guidelines' ); ?>
+
 		<?php
 		wp_link_pages(
 			array(
