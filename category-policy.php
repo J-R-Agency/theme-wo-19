@@ -1,15 +1,14 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * Category Archive page: Policy
  *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * Template for displaying a page just with the header and footer area and a "naked" content area in between.
+ * Good for landingpages and other types of pages where you want to add a lot of custom markup.
  *
  * @package understrap
  */
 
-
-$container = get_theme_mod( 'understrap_container_type' );
-
+// Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
 $theme_colour = get_field('theme_colour');
@@ -18,22 +17,19 @@ get_header(); ?>
 
 <div class="site <?php echo $theme_colour; ?>">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
-    <section class="standard-content generic">
+    <section class="generic">
         <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-
-		<div class="row">
-
-
-			<main class="site-main" id="main">
 
 				<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">
+						<h1 class="page-title">Current policies</h1>
 						<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
+						//the_archive_title( '<h1 class="page-title">', '</h1>' );
+						//the_archive_description( '<div class="taxonomy-description">', '</div>' );
 						?>
 					</header><!-- .page-header -->
 
@@ -60,19 +56,9 @@ get_header(); ?>
 
 				<?php endif; ?>
 
-			</main><!-- #main -->
-
-			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
 
 
-		</div> <!-- .row -->
-
-	</div><!-- #content -->
-
-
-
-
+                </div>
             </div>
         </div>
     </section>

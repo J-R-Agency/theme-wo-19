@@ -104,8 +104,12 @@ ul#main-menu{
                     font-size: 15px;
                 }
                 &:first-child{
+                    padding: 1em 0;
+                    @include _akkurat_bold;
+                    margin: 10px 0px 10px -15px;
+                    color: #000;
                     &:before{
-                        content: 'Overview';
+                        /*content: 'Overview';*/
                         text-transform: uppercase;
                         position: relative;
                         float: left;
@@ -121,6 +125,35 @@ ul#main-menu{
         }
     }
 }
+
+
+
+#menu-item-30 .dropdown-menu{
+    @include respond-to('md'){
+        border-bottom: $orange 8px solid;
+    }
+}
+#menu-item-29 .dropdown-menu{
+    @include respond-to('md'){
+        border-bottom: $green 8px solid;
+    }
+}        
+#menu-item-224 .dropdown-menu{
+    @include respond-to('md'){
+        border-bottom: $purple 8px solid;
+    }
+}
+#menu-item-545 .dropdown-menu{
+    @include respond-to('md'){
+        border-bottom: $lime 8px solid;
+    }
+}
+#menu-item-544 .dropdown-menu{
+    @include respond-to('md'){
+        border-bottom: $pink 8px solid;
+    }
+}
+
 
 
 .navbar-toggler {
