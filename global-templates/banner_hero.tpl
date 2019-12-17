@@ -17,8 +17,12 @@ $bh_bkimg = get_the_post_thumbnail_url();
 				<?php if (! is_front_page() ) {	
 					// echo'<p>breadcrumb</p>';
 				}?>
+				<?php if ( is_category('policy') ){
+					echo "<h1>Research and policy</h1><h2>Duis consectetur neque non sem dictum, et laoreet massa mollis.</h2>";
+				} else { ?>
 				<h1><?php the_title(); ?></h1>
 				<h2><?php the_field('bh_subtitle'); ?></h2>
+			<?php } ?>
 			</div>
 		</div> 
 	</div>

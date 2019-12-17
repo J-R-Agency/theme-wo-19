@@ -18,6 +18,16 @@
     }
 }
 
+.entry-content--media-centre{
+    border-bottom: solid 1px $grey;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+
+    h2{
+        @include _museo;
+    }
+}
+
 .container-media-centre{
     p{
         font-size: 0.8rem;

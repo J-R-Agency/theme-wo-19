@@ -104,8 +104,11 @@ ul#main-menu{
                     font-size: 15px;
                 }
                 &:first-child{
+                    padding: 1em 0;
+                    font-weight: bold;
+                    color: #000;
                     &:before{
-                        content: 'Overview';
+                        /*content: 'Overview';*/
                         text-transform: uppercase;
                         position: relative;
                         float: left;

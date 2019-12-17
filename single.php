@@ -8,45 +8,44 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+$theme_colour = get_field('theme_colour');
+
 get_header();
+
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="single-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+<div class="site <?php echo $theme_colour; ?>">
+    <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
+    <section class="standard-content generic bk-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-7 col-lg-8 text-left">
 
-		<div class="row">
+                <?php while ( have_posts() ) : the_post(); ?>
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+                    <?php get_template_part( 'loop-templates/content', 'standard' ); ?>
 
-			<main class="site-main" id="main">
+                    <?php
+                    // If comments are open or we have at least one comment, load up the comment template.
+                    if ( comments_open() || get_comments_number() ) :
+                        comments_template();
+                    endif;
+                    ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+                <?php endwhile; // end of the loop. ?>
 
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 d-none d-md-block more-info-sidebar">
 
-					<?php understrap_post_nav(); ?>
+                <?php include_once (get_template_directory() . '/sidebar-templates/sidebar-moreposts.php'); ?>
 
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
-
-				<?php endwhile; // end of the loop. ?>
-
-			</main><!-- #main -->
-
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
-		</div><!-- .row -->
-
-	</div><!-- #content -->
-
-</div><!-- #single-wrapper -->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
 <?php get_footer();

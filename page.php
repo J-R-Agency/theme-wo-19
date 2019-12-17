@@ -19,11 +19,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-
+<?php if ( is_archive ('events') ){
+	// do nothing
+} else {
+	?>
 <div class="site <?php echo $theme_colour; ?>">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
 </div>
-
+<?php } ?>
 
 
 <div class="wrapper" id="page-wrapper">
