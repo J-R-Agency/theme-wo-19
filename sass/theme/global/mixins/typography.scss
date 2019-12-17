@@ -6,6 +6,10 @@
 	font-family: 'akkurat';
 }
 
+@mixin _akkurat_bold {
+	font-family: 'Akkurat-Bold';
+}
+
 @mixin _title {
 	@include _museo;
 	font-size: 30px;
