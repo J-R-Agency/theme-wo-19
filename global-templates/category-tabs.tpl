@@ -79,13 +79,13 @@
 							        
 						    	</div><!-- end blog card -->
 					        </div><!-- end col -->
-
 		        
 					    <?php endwhile; ?>
 					    <?php wp_reset_postdata(); ?>
-	        		</div><!-- end container -->
-	        	</div><!-- end tab pane -->
-			<?php } ?> <!-- end foreach loop -->
+        			</div><!-- end row -->
+        		</div><!-- end container -->
+        	</div><!-- end tab pane -->
+		<?php } ?> <!-- end foreach loop -->
 			
 					
 			
