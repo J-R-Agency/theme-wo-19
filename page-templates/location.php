@@ -17,20 +17,52 @@ get_header(); ?>
 
 <div class="site <?php echo $theme_colour; ?>">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/subsection.tpl'); ?>
+
+    <!-- Logo, Copy & CTA link -->
     <section class="generic bk-white">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h3>About Us</h3>
-                    <br>
-                    <div class="three-col text-left"><?php echo $post->post_content; ?></div>
-                </div>
-            </div>
-        </div>
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <?php echo $post->post_content; ?>
+	            </div>
+	        </div>
+	        <div class="row">
+	            <div class="col-sm-12">
+					<a href=" <?php the_field('content_cta_url'); ?> ">
+			        	<div class="wo-btn <?php echo $theme_colour; ?> wo-btn--standard-content">
+				        	<?php the_field('content_cta_text'); ?>
+				        </div>
+			        </a>
+	            </div>
+	        </div> 
+    	</div> <!-- end container -->      
+	</section>
+    
+    <!-- Map -->
+    <section class="standard-content map-container">
+	    <div class="container">
+		    <div class="row">
+		        <div class="col-12 col-md-6 col-lg-6">
+					<?php 
+					$location = get_field('location');
+					if( $location ): ?>
+					    <div class="acf-map" data-zoom="16">
+					        <div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
+					    </div>
+					<?php endif; ?>		            
+		        </div>
+		        <div class="col-12 col-md-6 col-lg-6">
+		            <div class="map-banner-cta">
+			            <h1><?php the_field('map_banner_title');?></h1>
+			            <p><?php the_field('map_banner_copy');?></p>
+		            </div>
+		        </div>	            
+		    </div> <!-- end map row -->
+	    </div>
     </section>
-    <?php include_once (get_template_directory() . '/global-templates/about-cards.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/related-links.tpl'); ?>
-</div>
+    
+    <!-- CTA Banner -->
+	<?php include_once (get_template_directory() . '/global-templates/banner-cta.tpl'); ?>            
+</div> <!-- end site -->
 
 <?php get_footer();

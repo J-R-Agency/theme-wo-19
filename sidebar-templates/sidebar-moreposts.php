@@ -26,7 +26,9 @@ if ( $related->have_posts()) : ?>
 	<h4>More from the blog</h4>
 		<ul class="related-list">
 	
-		<?php $categories = get_categories();
+		<?php
+			$categories = get_categories();
+			
 			foreach($categories as $category) {
 				if($category->name !== 'Uncategorized'):
 					echo

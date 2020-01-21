@@ -1,0 +1,56 @@
+.contact-card{    
+    padding: 20px 20px 50px;
+    color: black;
+    text-align: center;
+    margin: 2rem 0rem 2rem 0rem;
+    width: 100%;
+    height: 90%;
+	
+	.contact_card_cta_link {
+		display:inline-block;
+		border-radius: 50px;
+		padding: 1rem 2rem;
+		text-transform: uppercase;		
+	}
+	
+	&.theme-orange {
+		background: rgb(255,178,122);
+		background: linear-gradient(0deg, rgba(255,178,122,1) 0%, rgba(255,255,255,1) 100%);
+		.contact_card_cta_link {
+			background-color: #ff832f;
+		}		
+	}
+
+	&.theme-purple {
+		background: rgb(173,129,218);
+		background: linear-gradient(0deg, rgba(173,129,218,1) 0%, rgba(255,255,255,1) 100%);	
+		.contact_card_cta_link {
+			background-color: #700978;
+		}		
+	}
+	
+	&.theme-green {
+		background: rgb(113,237,197);
+		background: linear-gradient(0deg, rgba(113,237,197,1) 0%, rgba(255,255,255,1) 100%);
+		.contact_card_cta_link {
+			background-color: #00c692;
+		}		 		
+	}
+	
+    &__title{
+	    margin: 0 auto;
+	    width: 80%;
+	    font-size: 18pt;
+    }
+    
+    a {
+	    color: white;
+    }
+    
+    p{
+        font-size: 12pt;
+        line-height: 30px;
+        padding: 0 45px;
+    }
+
+} 

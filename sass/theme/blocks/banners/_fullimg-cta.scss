@@ -68,4 +68,15 @@
             }
         }
     }
+    &.contact {
+	    background-color: #f1f1f1;
+	    
+	    a {
+		    color: $orange;
+	    }
+    }
+    .split-panel-content {
+	    padding: 2rem;
+    }
+    
 }
