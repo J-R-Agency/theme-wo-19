@@ -39,8 +39,18 @@ foreach ( $understrap_includes as $file ) {
 
 function wpb_custom_new_menu() {
 	register_nav_menu('footer-links',__( 'Footer links' ));
+	register_nav_menu('top-menu',__( 'Top menu' ));
   }
   add_action( 'init', 'wpb_custom_new_menu' );
+
+// Add search icon to top menu
+add_filter( 'wp_nav_menu_items', 'add_search_icon', 10, 2 );
+function add_search_icon ( $items, $args ) {
+    if (is_single() && $args->theme_location == 'top-menu') {
+        $items .= '<li><a><img id="search-icon" src="<?php echo get_template_directory_uri()?>/assets/img/search.svg" alt="search"></a></li>';
+    }
+    return $items;
+}
 
  
 // Add Excerpt support for Page post type
@@ -63,3 +73,11 @@ function get_current_template( $echo = false ) {
     else
         return $GLOBALS['current_theme_template'];
 }
+
+// Google Maps API
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyDegn4MHKzgyeN8rFNPXi30NFLPPf6VZ8M');
+}
+
+add_action('acf/init', 'my_acf_init');

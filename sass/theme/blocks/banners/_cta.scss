@@ -59,3 +59,14 @@
         font-size: 30px;
     }
 }
+
+.content-cta {
+	display: flex;
+	background-color: $grey;
+	padding: 1rem;
+	.content-cta-text {
+		
+		justify-content: center;
+		align-items: center;
+	}
+}

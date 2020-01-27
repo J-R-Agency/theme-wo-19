@@ -48,14 +48,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<span></span>
 						</span>
 					</button>
+					
 					<div id="desktop-nav" class="d-none d-md-block">
-						<ul class="top-links">
+						<!--<ul class="top-links">
 							<li><a href="#">54 ST James Street</a></li>
 							<li><a href="#">Blog &amp; Media</a></li>
 							<li><a href="#">Contact</a></li>
 							<li><a><img id="search-icon" src="<?php echo get_template_directory_uri()?>/assets/img/search.svg" alt="search"></a></li>
-						</ul>
+						</ul>-->
+						<!-- The WordPress Menu goes here -->
+						<?php wp_nav_menu(
+							array(
+								'theme_location'  => 'top-menu',
+								'menu_class'      => 'top-links ml-auto',
+								'fallback_cb'     => '',
+								'menu_id'         => 'top-menu',
+								'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+							)
+						); ?>
+						
 					</div>
+					
 					<div id="navbarNavDropdown" class="collapse navbar-collapse">
 						<?php get_template_part( 'searchform' ); ?>
 
@@ -70,6 +83,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							)
 						); ?>
 					</div>
+					
 				</div>
 			</div><!-- .container -->
 		</nav><!-- .site-navigation -->

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Stories
+ * Template Name: Case Study
  *
  * Template for displaying a page just with the header and footer area and a "naked" content area in between.
  * Good for landingpages and other types of pages where you want to add a lot of custom markup.
@@ -17,17 +17,29 @@ get_header(); ?>
 
 <div class="site <?php echo $theme_colour; ?>">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
-    <section class="generic bk-white">
+    <?php include_once (get_template_directory() . '/global-templates/feature-standfirst.tpl'); ?>
+    
+    <section class="story-container">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class=" "><?php echo $post->post_content; ?></div>
+                    <div class=" ">
+	                    <?php
+							if (have_posts()):
+							  while (have_posts()) : the_post();
+							    the_content();
+							  endwhile;
+							else:
+							  echo '<p>Sorry, no posts matched your criteria.</p>';
+							endif;		                    
+	                     ?></div>
                 </div>
             </div>
         </div>
     </section>
+    
     <?php include_once (get_template_directory() . '/global-templates/subsection-cards--stories.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/banner-cta.tpl'); ?>
+    
 </div>
 
 <?php get_footer();
