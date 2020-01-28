@@ -28,7 +28,7 @@ $parent = new WP_Query( $args );
 if ( $parent->have_posts() ) : ?>
  
 
-<section class="story-cards capped-width">
+<section class="story-cards content capped-width">
     <div class="container">
 	    <div class="row">
 		    <div class="col-12">

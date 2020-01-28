@@ -21,7 +21,7 @@ $banner_cta_link = get_field('banner_cta_link');
 				<h2><?php the_field('banner_cta_title'); ?></h2>
 			</div>
 			<div class="col-12 col-md-6 col-lg-6">
-				<a class="wo-btn float-right orange wo-btn--standard-content" href="<?php echo esc_url($banner_cta_link); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($banner_cta_button); ?></a>
+				<a class="wo-btn float-md-right orange wo-btn--standard-content" href="<?php echo esc_url($banner_cta_link['url']); ?>" target="<?php echo esc_attr($banner_cta_link['target']); ?>"><?php echo esc_html($banner_cta_button); ?></a>
 			</div>
 		</div> 
 	</div>

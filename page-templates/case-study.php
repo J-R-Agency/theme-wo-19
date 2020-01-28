@@ -32,7 +32,8 @@ get_header(); ?>
 							else:
 							  echo '<p>Sorry, no posts matched your criteria.</p>';
 							endif;		                    
-	                     ?></div>
+	                     ?>
+	                </div>
                 </div>
             </div>
         </div>

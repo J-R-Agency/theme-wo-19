@@ -17,7 +17,7 @@ get_header(); ?>
 
 <div class="site <?php echo $theme_colour; ?>">
 	
-	<section class="subection">		
+	<section class="subsection content">		
 		<div class="container">
 	        <div class="row">
 	            <div class="col-sm-12">
@@ -29,7 +29,7 @@ get_header(); ?>
 	</section>
 
     <!-- CONTACT CARDS -->
-    <section class="generic bk-white">
+    <section class="generic content bk-white">
         <div class="container">
             <div class="row">
 				<?php if( have_rows('contact_card') ): ?>
@@ -96,17 +96,17 @@ get_header(); ?>
 	    </div>
     </section>  
     
-    <section class="generic bk-white">
+    <section class="generic content bk-white">
 	    <div class="container">
 		    <?php
 				$map_banner_cta_link = get_field('map_banner_cta_link');    
 			?>
 		    <div class="row">
 			    <div class='col-12 col-md-6 col-lg-6'>
-			    	<h1><?php echo the_field('map_banner_title'); ?></h1>
+			    	<h1 class="float-left"><?php echo the_field('map_banner_title'); ?></h1>
 			    </div>
 			    <div class='col-12 col-md-6 col-lg-6'>
-					<a href=" <?php echo $map_banner_cta_link['url']; ?> " class="wo-btn orange" target="<?php echo $map_banner_cta_link['target']; ?> ">
+					<a href=" <?php echo $map_banner_cta_link['url']; ?> " class="wo-btn orange float-md-right" target="<?php echo $map_banner_cta_link['target']; ?> ">
 						<?php echo $map_banner_cta_link['title']; ?>
 			        </a>
 			    </div>				    

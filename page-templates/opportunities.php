@@ -15,8 +15,11 @@ $theme_colour = get_field('theme_colour');
 
 get_header(); ?>
 
+
+
 <div class="site <?php echo $theme_colour; ?>">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
+    
     <section class="opportunities generic bk-white">
         <div class="container">
             <div class="row">
@@ -24,139 +27,98 @@ get_header(); ?>
                     <h5>Lorem ipsum dolor sit amet consectetur adipiscing</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 
-                    <div class="accordion" id="accordionExample">
+			<!-- Query -->
+			<?php
+			global $post;
+			$direct_parent = $post->post_parent;
+			$args = array(
+			    'post_type'      => 'page',
+			    'posts_per_page' => -1,
+			    'post_parent'    => $post->ID,
+			    'order'          => 'ASC',
+			    'orderby'        => 'menu_order',
+			    'post__not_in' => array( $post->ID ),
+			 );
+			 
+			 
+			$parent = new WP_Query( $args );
+			 
+			if ( $parent->have_posts() ) : ?>
+					
+				<div class="accordion" id="accordionExample">
+					
+	            <?php  if( $parent->have_posts() ): ?>
+	                <?php 
+	                $count = count($parent->have_posts()); 
+	                $pages = get_pages( array( 'child_of' => $post->ID, 'post_type' => 'property'));
+	                $count = count($pages);
+	                $counter = 1;
+	                ?>
+	
+	                <?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
+	                				
+					<!-- Jobs Accordion -->
+                    
                         <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <div class="card-title">Job title goes here</div>
+                            <div class="card-header" id="heading<?php echo $counter; ?>">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse<?php echo $counter; ?>" aria-expanded="true" aria-controls="collapse<?php echo $counter; ?>">
+                                    <div class="card-title"><?php the_title(); ?></div>
                                 </button>
                             </div>
 
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div id="collapse<?php echo $counter; ?>" class="collapse" aria-labelledby="heading<?php echo $counter; ?>" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-
+	                                
+                                    <?php the_content(); ?>
+									
+									<?php
+										$full_job_description_link = get_field('full_job_description');
+										$equal_opportunities_form_link = get_field('equal_opportunities_form');
+										$application_form_link = get_field('application_form');
+									?>
+									
                                     <div class="d-block job-links">
-                                        <a href="#" class="wo-btn orange">FULL JOB DESCRIPTION</a>
-                                        <a href="#" class="wo-btn orange">EQUAL OPPORTUNITIES FORM</a>
-                                        <a href="#" class="wo-btn orange">APPLICATION FORM</a>
+                                        <a href="<?php echo $full_job_description_link['url']; ?>" class="wo-btn white-orange">FULL JOB DESCRIPTION</a>
+                                        <a href="<?php echo $equal_opportunities_form_link['url']; ?>" class="wo-btn white-orange">EQUAL OPPORTUNITIES FORM</a>
+                                        <a href="<?php echo $application_form_link['url']; ?>" class="wo-btn orange">APPLICATION FORM</a>
                                     </div>
 
                                     <hr>
 
                                     <h5 class="job">This job opportunity is part funded by</h5>
+                                    
                                     <div class="row">
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                    <div class="card-title">Job title goes here</div>
-                                </button>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-
-                                    <div class="d-block job-links">
-                                        <a href="#" class="wo-btn orange">FULL JOB DESCRIPTION</a>
-                                        <a href="#" class="wo-btn orange">EQUAL OPPORTUNITIES FORM</a>
-                                        <a href="#" class="wo-btn orange">APPLICATION FORM</a>
-                                    </div>
-
-                                    <hr>
-
-                                    <h5 class="job">This job opportunity is part funded by</h5>
-                                    <div class="row">
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                    <div class="card-title">Job title goes here</div>
-                                </button>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                            <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-
-                                    <div class="d-block job-links">
-                                        <a href="#" class="wo-btn orange">FULL JOB DESCRIPTION</a>
-                                        <a href="#" class="wo-btn orange">EQUAL OPPORTUNITIES FORM</a>
-                                        <a href="#" class="wo-btn orange">APPLICATION FORM</a>
-                                    </div>
-
-                                    <hr>
-
-                                    <h5 class="job">This job opportunity is part funded by</h5>
-                                    <div class="row">
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                        <div class="col-sm-6 col-lg-4 job-img">
-                                            <img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/10/eujob.png" alt="opportunity">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+										<?php if( have_rows('sponsor_logos') ): ?>
+											<?php while( have_rows('sponsor_logos') ): the_row(); 
+												// vars
+												$sponsor_logo = get_sub_field('sponsor_logo');
+												?>
+										
+												<div class="col-sm-6 col-lg-4 job-img">
+													<img src="<?php echo $sponsor_logo['url']; ?>" alt="<?php echo $sponsor_logo['alt'] ?>" />
+												</div>
+										
+											<?php endwhile; ?>
+										<?php endif; ?>                            
+                                    </div><!-- end sponsors logo row -->
+                                    
+                                </div><!-- end card body -->
+                            </div><!-- end collapse -->
+                        </div><!-- end card -->
+                        <?php $counter += 1; ?>
+                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                    
+						<?php endwhile; ?>
+					<?php endif ?>
+				</div> <!-- end accordion -->	
+					
+				<?php
+					else:
+				?>
+					<p>Sorry, there are currently no opportunities.</p>
+				<?php endif; wp_reset_query(); ?> 
+				
+                </div> <!-- end col -->
                 
                 <div class="col-md-4 col-lg-3 d-none d-md-block more-info-sidebar">
 
