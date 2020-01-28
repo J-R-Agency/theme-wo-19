@@ -41,13 +41,14 @@
         }
     }
     .row{
-        // height: 500px;
-        height: calc(100vh - 90px);
+	    //height: calc(100vh - 90px);
+        padding: 3rem;
+        
         @include respond-to('md'){
-            height: 120px;
+            height: 180px;
         }
         @include respond-to('lg'){
-            height: 120px;
+            height: 180px;
         }
         div{
             z-index: 1;;

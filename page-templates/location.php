@@ -42,14 +42,10 @@ get_header(); ?>
     <section class="standard-content map-container">
 	    <div class="container">
 		    <div class="row">
-		        <div class="col-12 col-md-6 col-lg-6">
-					<?php 
-					$location = get_field('location');
-					if( $location ): ?>
-					    <div class="acf-map" data-zoom="16">
-					        <div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
-					    </div>
-					<?php endif; ?>		            
+		        <div class="col-12 col-md-6 col-lg-6" style="padding:0;">
+			        <div class="location-map">
+						<?php the_field('map_banner_google_details') ?>
+			        </div>            
 		        </div>
 		        <div class="col-12 col-md-6 col-lg-6">
 		            <div class="map-banner-cta">

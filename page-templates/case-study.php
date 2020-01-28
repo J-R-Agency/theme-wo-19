@@ -23,7 +23,7 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class=" ">
+                    <div class="case-study-content">
 	                    <?php
 							if (have_posts()):
 							  while (have_posts()) : the_post();
@@ -39,7 +39,7 @@ get_header(); ?>
     </section>
     
     <?php include_once (get_template_directory() . '/global-templates/subsection-cards--stories.tpl'); ?>
-    
+    <?php include_once (get_template_directory() . '/global-templates/banner-cta.tpl'); ?>
 </div>
 
 <?php get_footer();

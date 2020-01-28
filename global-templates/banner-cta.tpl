@@ -17,11 +17,11 @@ $banner_cta_link = get_field('banner_cta_link');
 <section class="banner_cta">
 	<div class="container">
 		<div class="row align-items-center">
-			<div class="col">
+			<div class="col-12 col-md-6 col-lg-6">
 				<h2><?php the_field('banner_cta_title'); ?></h2>
 			</div>
-			<div class="col">
-				<a class="wo-btn float-right <?php echo $theme_colour; ?> wo-btn--standard-content" href="<?php echo esc_url($banner_cta_link); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($banner_cta_button); ?></a>
+			<div class="col-12 col-md-6 col-lg-6">
+				<a class="wo-btn float-right orange wo-btn--standard-content" href="<?php echo esc_url($banner_cta_link); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($banner_cta_button); ?></a>
 			</div>
 		</div> 
 	</div>

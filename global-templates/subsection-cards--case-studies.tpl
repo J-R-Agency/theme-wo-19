@@ -15,8 +15,8 @@ global $post;
 $direct_parent = $post->post_parent;
 $args = array(
     'post_type'      => 'page',
-    'posts_per_page' => 3,
-    'post_parent'    => $direct_parent, // Get this pages id and find the children
+    'posts_per_page' => -1,
+    'post_parent'    => $post->ID,
     'order'          => 'ASC',
     'orderby'        => 'menu_order',
     'post__not_in' => array( $post->ID ),
@@ -28,7 +28,7 @@ $parent = new WP_Query( $args );
 if ( $parent->have_posts() ) : ?>
  
 
-<section class="related-links capped-width">
+<section class="story-cards capped-width">
     <div class="container">
 	    <div class="row">
 		    <div class="col-12">
@@ -51,14 +51,14 @@ if ( $parent->have_posts() ) : ?>
 
                 <?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
 
-                        <div class="col-sm-12 <?php echo $class; ?> related-links__card">
+                        <div class="col-sm-12 <?php echo $class; ?> story-cards__card">
                             <div 
-                                class="related-links__img d-flex align-items-center"
+                                class="story-cards__img d-flex align-items-center"
                                 style="background-image:url('<?php echo get_the_post_thumbnail_url(  $post->ID, 'medium_large' ) ;?>');">
                             </div>
                             <h3><?php the_title(); ?></h3>
-                            <div class="related-links__excerpt"><?php echo $post->post_excerpt ;?></div>
-                            <div class="related-links__button">
+                            <div class="story-cards__excerpt"><?php echo $post->post_excerpt ;?></div>
+                            <div class="story-cards__button">
                             	<a class="wo-btn orange wo-btn--cards" href="<?php the_permalink()?>">
                                 	Hear her story
                                 </a>

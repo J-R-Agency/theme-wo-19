@@ -70,7 +70,7 @@ get_header(); ?>
 			    <?php 
 				    $image = get_field('split_panel_image');
 			    ?>
-		        <div class="col-12 col-md-6 col-lg-6 d-none d-md-block stretch-left fullimg-cta__bkimg" style="background-image: url(<?php echo esc_url($image['url']); ?>);">
+		        <div class="col-12 col-md-6 col-lg-6 d-none d-md-block stretch-left fullimg-cta__bkimg theme_overlay" style="background-image: url(<?php echo esc_url($image['url']); ?>);">
 		        </div>
 				
 				<!-- content -->
@@ -106,7 +106,7 @@ get_header(); ?>
 			    	<h1><?php echo the_field('map_banner_title'); ?></h1>
 			    </div>
 			    <div class='col-12 col-md-6 col-lg-6'>
-					<a href=" <?php echo $map_banner_cta_link['url']; ?> " class="wo-btn orange">
+					<a href=" <?php echo $map_banner_cta_link['url']; ?> " class="wo-btn orange" target="<?php echo $map_banner_cta_link['target']; ?> ">
 						<?php echo $map_banner_cta_link['title']; ?>
 			        </a>
 			    </div>				    
@@ -114,13 +114,9 @@ get_header(); ?>
 		    
 		    <div class="row">
 			    <div class="col-12">
-					<?php 
-					$location = get_field('location');
-					if( $location ): ?>
-					    <div class="acf-map" data-zoom="16">
-					        <div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
-					    </div>
-					<?php endif; ?>					    
+				    <div class="contact-map">
+						<?php the_field('map_banner_google_details') ?>
+				    </div>	    
 			    </div>
 		    </div>
 	    </div>

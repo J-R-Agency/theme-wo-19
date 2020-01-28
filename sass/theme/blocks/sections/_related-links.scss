@@ -3,7 +3,7 @@
     background-color: $grey;
     &__card{
         position: relative;
-        padding-bottom: 20px;
+        padding: 20px 0px;
     }
     &__img{
         overflow: hidden;
@@ -12,7 +12,10 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        margin: 1rem;
+        margin: 0 auto;
+        @include respond-to('md'){
+	    	width: 400px;
+	    }         
         &:after {
           background-size: 100%;
           height: 100%;
@@ -22,6 +25,7 @@
           left: 0;
           content: '';
         }
+        
     }
     &__title{
         position: absolute;
@@ -33,8 +37,13 @@
         text-align: center;
     }
     &__excerpt{
-        margin: 1rem 0;
+        margin: 1rem;
+        padding: 0 5rem;
         text-align: center;
+		//text-overflow: ellipsis;
+		//white-space: nowrap;
+		max-height: 4.5em;
+		overflow: hidden;		      
     }
     &__button {
 	    display: flex;
@@ -43,6 +52,7 @@
     & h3{
       @include _akkurat;
 	  text-align: center;
+	  padding-top: 0.5rem;
     }
     & h1 {
 	    text-align: center;
