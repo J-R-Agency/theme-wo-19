@@ -49,11 +49,13 @@
 									'post_type'=>'post',
 									'post_status'=>'publish',
 									'posts_per_page'=>-1,	
-								));								
+								));
+															
 							?>
 							<!-- WHILE LOOP -->
-						    <?php while ( $wpb_query->have_posts() ) : $wpb_query->the_post(); ?>
-						    	
+						    <?php while ( $wpb_query->have_posts() ) : $wpb_query->the_post();
+						    	$cat_name = $category->name; 
+						    ?>
 						    	<!-- BLOG CARD -->
 						    	<div class="col-sm-12 col-lg-4 col-md-4">
 							    	<div class="blog-card">
@@ -64,7 +66,7 @@
 									    
 								    	<!-- icon -->
 								    	<div class="blog-card__icon">
-									    	<img src="<?php echo get_template_directory_uri()?>/assets/img/blogicon-<?php echo $category->slug; ?>.svg" alt="blog icon">
+									    	<img src="<?php echo get_template_directory_uri()?>/assets/img/blogicon-<?php foreach((get_the_category()) as $category) { echo $category->slug; } ?>.svg" alt="blog icon">
 								    	</div><!-- end icon -->
 								    	
 								    	<!-- category -->
@@ -81,9 +83,11 @@
 						        </div><!-- end col -->
 			        
 						    <?php endwhile; ?>
+						    <div class="wo-btn orange loadmore">Show More</div>
 						    <?php wp_reset_postdata(); ?>
 						</div>
-					</div>
+						
+					</div>	
 				</div>
 				
 				<?php foreach($categories as $category) { 			

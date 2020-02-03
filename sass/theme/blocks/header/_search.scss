@@ -1,9 +1,13 @@
 #searchform{
+	@include respond-to('md'){
+		padding: 0 0 5rem 0;
+	}
     .form-control{
         border: none;
         border-bottom: thin solid #ccc;
         padding-left: 20px;
         color: #666;
+        
         &::placeholder{
             color: #ccc;
             text-transform: uppercase;

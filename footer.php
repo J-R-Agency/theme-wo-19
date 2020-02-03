@@ -69,4 +69,13 @@ $instagram_url = get_field('instagram_url', 'option');
 </body>
 
 </html>
+<script>
+	jQuery(document).ready(function( $ ) {
+	  $('.hideable').on('click', function() {
+	
+	    $(this).hide();
+	
+	  })
+	});
+</script>
 

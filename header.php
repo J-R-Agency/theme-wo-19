@@ -15,6 +15,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+	<!-- Google Analytics -->
+	<?php the_field('google_analytics', 'option'); ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -23,7 +25,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <body <?php body_class(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
-<div class="site" id="page">
+<div id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<!-- *** TEMPLATE *** -->

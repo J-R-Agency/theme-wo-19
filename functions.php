@@ -46,8 +46,17 @@ function wpb_custom_new_menu() {
 // Add search icon to top menu
 add_filter( 'wp_nav_menu_items', 'add_search_icon', 10, 2 );
 function add_search_icon ( $items, $args ) {
-    if (is_single() && $args->theme_location == 'top-menu') {
-        $items .= '<li><a><img id="search-icon" src="<?php echo get_template_directory_uri()?>/assets/img/search.svg" alt="search"></a></li>';
+    if( $args->theme_location == 'top-menu' ) {
+        $items .=
+        '
+        <li>'.
+        	get_template_part( 'searchform' )
+        .'</li>
+        <li>
+        	<a href="#">
+        		<img id="search-icon" src="'. get_template_directory_uri() .'/assets/img/search.svg" alt="search">
+        	</a>
+        </li>';
     }
     return $items;
 }
@@ -81,3 +90,35 @@ function my_acf_init() {
 }
 
 add_action('acf/init', 'my_acf_init');
+
+// Enqueue search script
+function myprefix_enqueue_scripts() {
+    wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/search.js', array(), true );
+}
+add_action( 'wp_enqueue_scripts', 'myprefix_enqueue_scripts' );
+
+// Trim excerpt
+function trim_excerpt($text) {
+	$string = "[...]";
+     $text = str_replace( $string, '...', $text);
+     return $text;
+    }
+add_filter('get_the_excerpt', 'trim_excerpt', 99);
+
+// Limit posts per page
+
+add_action( 'pre_get_posts',  'set_posts_per_page'  );
+function set_posts_per_page( $query ) {
+
+  global $wp_the_query;
+
+  if ( ( ! is_admin() ) && ( $query === $wp_the_query ) && ( $query->is_search() ) ) {
+    $query->set( 'posts_per_page', 5 );
+  }
+  elseif ( ( ! is_admin() ) && ( $query === $wp_the_query ) && ( $query->is_archive() ) ){
+    $query->set( 'posts_per_page', 5 );
+  }  
+
+  return $query;
+}
+
