@@ -143,36 +143,36 @@
 		}
 		/* Place the timelime to the left */
 		&:after {
-			left: 31px;
+			display: none;
 		}	  
 	} 
   
 	/* Full-width timeline-containers */
 	.timeline-container {
 		width: 100%;
-		padding-left: 70px;
-		padding-right: 25px;
+		padding: 10px 0;
 		
 		/* Make sure that all arrows are pointing leftwards */
 		&:before {
-		  left: 65px;
-		  border: medium solid white;
-		  border-width: 20px 20px 20px 0;
-		  border-color: transparent white transparent transparent;
+		  display: none;
 		}	  
 	}
   
 	.timeline-header {
-	  left: 0;
+		position: relative;
+		padding: 20px 0px;
+		width: 120px;
+		left: 28%;
+		margin: 1rem;
 	}
   
 	/* Make sure all circles are at the same spot */
-	.left::after, .right::after {
-		left: 18px;
+	.timeline-left::after, .timeline-right::after {
+		display: none;
 	}
   
 	/* Make all right timeline-containers behave like the left ones */
-	.right {
+	.timeline-right {
 		left: 0%;
 	}
 }
