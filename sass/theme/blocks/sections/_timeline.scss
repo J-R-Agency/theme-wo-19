@@ -86,7 +86,7 @@
 }
 
 /* Place the timeline-container to the left */
-.left {
+.timeline-left {
 	left: 0;
 	
 	/* Add arrows to the left timeline-container (pointing right) */
@@ -105,7 +105,7 @@
 }
 
 /* Place the timeline-container to the right */
-.right {
+.timeline-right {
 	left: 50%;
 	/* Add arrows to the right timeline-container (pointing left) */
 	&:before {

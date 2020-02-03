@@ -29,18 +29,18 @@ get_header(); ?>
 							1990
 						</div>
 						
-						  <div class="timeline-container orange left">
+						  <div class="timeline-container orange timeline-left">
 						    <div class="content">
 						      <img src="http://192.168.33.10/womens-organization/wp-content/uploads/2019/12/09_Business_Start-up_Support_D4A7727.jpg">
 						      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
 						    </div>
 						  </div>
-						  <div class="timeline-container orange right">
+						  <div class="timeline-container orange timeline-right">
 						    <div class="content">
 						      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
 						    </div>
 						  </div>
-						  <div class="timeline-container orange left">
+						  <div class="timeline-container orange timeline-left">
 						    <div class="content">
 						      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
 						    </div>
@@ -56,13 +56,13 @@ get_header(); ?>
 							1990
 						</div>
 						
-						  <div class="timeline-container aqua left">
+						  <div class="timeline-container aqua timeline-left">
 						    <div class="content">
 						      <img src="http://192.168.33.10/womens-organization/wp-content/uploads/2019/12/09_Business_Start-up_Support_D4A7727.jpg">
 						      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
 						    </div>
 						  </div>
-						  <div class="timeline-container aqua right">
+						  <div class="timeline-container aqua timeline-right">
 						    <div class="content">
 						      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
 						    </div>
