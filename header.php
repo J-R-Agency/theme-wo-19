@@ -85,7 +85,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 							)
 						); ?>
 					</div>
-					
 				</div>
 			</div><!-- .container -->
 		</nav><!-- .site-navigation -->

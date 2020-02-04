@@ -13,7 +13,7 @@
 	p {
 		padding: 1rem 1rem 0 1rem;
 	}
-	
+
 	/* The actual timeline (the vertical ruler) */  
 	&::after {
 	  content: '';
@@ -26,13 +26,14 @@
 	}	
 	&.orange::after {
 		background-color: $orange;
+		
 	}
 	&.aqua::after {
 		background-color: $aqua;
 	}	
 	&.purple::after {
 		background-color: $purple;
-	}	
+	}
 }
 
 .timeline-header {
@@ -58,10 +59,11 @@
 
 /* timeline-container around content */
 .timeline-container {
-	padding: 30px 50px 0px;
+	//padding: 30px 50px 0px;
+	display: inline-block;
 	position: relative;
 	background-color: inherit;
-	width: 50%;
+	//width: 50%;
 	
 	/* The circles on the timeline */
 	&::after {
@@ -69,8 +71,7 @@
 		position: absolute;
 		width: 25px;
 		height: 25px;
-		right: -13px;
-		top: 110px;
+		right: -86px;
 		z-index: 1;
 		border-radius: 50%;	  
 	}
@@ -87,7 +88,7 @@
 
 /* Place the timeline-container to the left */
 .timeline-left {
-	left: 0;
+	left: -10%;
 	
 	/* Add arrows to the left timeline-container (pointing right) */
 	&:before {
@@ -97,25 +98,29 @@
 		top: 100px;
 		width: 0;
 		z-index: 1;
-		right: 50px;
+		right: 0px;
 		border: medium solid white;
 		border-width: 20px 0 20px 30px;
 		border-color: transparent transparent transparent white;
+	}
+	
+	&:after {
+		top: 110px;
 	}
 }
 
 /* Place the timeline-container to the right */
 .timeline-right {
-	left: 50%;
+	left: 10%;
 	/* Add arrows to the right timeline-container (pointing left) */
 	&:before {
 		content: " ";
 		height: 0;
 		position: absolute;
-		top: 100px;
+		top: 40px;
 		width: 0;
 		z-index: 1;
-		left: 50px;
+		left: 0px;
 		border: medium solid white;
 		border-width: 20px 30px 20px 0;
 		border-color: transparent white transparent transparent;	  
@@ -123,8 +128,91 @@
 	
 	/* Fix the circle for timeline-containers on the right side */
 	&:after {
-		left: -13px;
+		left: -86px;
+		top: 40px;
 	}
+}
+
+.timeline-row {
+	padding: 30px 0px 0px 0px;
+	
+	&:last-child {
+		padding-bottom: 150px;
+	}	
+}
+
+.pullout-right {
+	position: absolute;
+	left: 15%;
+	top: 70px;
+	
+	p {
+		font-size: 21pt;
+		padding: 1rem 1rem 0rem 0rem;
+	}
+	
+	&.orange p {
+		color: $orange;
+	}
+	
+	&.aqua p {
+		color: $aqua;
+	}
+	
+	&.purple p {
+		color: $purple;
+	}
+	
+	/* Add arrows to the right timeline-container (pointing left) */
+	&:before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 30px;
+		width: 0;
+		z-index: 1;
+		left: -22px;
+		border: medium solid white;
+		border-width: 20px 30px 20px 0;
+		border-color: transparent white transparent transparent;	  
+	}	
+}
+
+.pullout-left {
+	position: absolute;
+	left: 62%;
+	top: 0px;
+	
+	p {
+		font-size: 21pt;
+		padding: 1rem 1rem 0rem 0rem;
+	}
+	
+	&.orange p {
+		color: $orange;
+	}
+	
+	&.aqua p {
+		color: $aqua;
+	}
+	
+	&.purple p {
+		color: $purple;
+	}
+	
+	/* Add arrows to the right timeline-container (pointing left) */
+	&:before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 30px;
+		width: 0;
+		z-index: 1;
+		right: -23px;
+		border: medium solid white;
+		border-width: 20px 0 20px 30px;
+		border-color: transparent transparent transparent white; 
+	}	
 }
 
 /* The actual content */
@@ -150,7 +238,12 @@
 	/* Full-width timeline-containers */
 	.timeline-container {
 		width: 100%;
-		padding: 10px 0;
+		padding: 0px;	
+		margin: 20px 0;
+		
+		.content {
+			width: 100%;
+		}
 		
 		/* Make sure that all arrows are pointing leftwards */
 		&:before {
@@ -161,18 +254,65 @@
 	.timeline-header {
 		position: relative;
 		padding: 20px 0px;
-		width: 120px;
-		left: 28%;
-		margin: 1rem;
+		width: 50%;
+		top: 0;
+		left: 0;
+		margin: 0 auto;
 	}
   
 	/* Make sure all circles are at the same spot */
 	.timeline-left::after, .timeline-right::after {
 		display: none;
 	}
-  
+	
+	.timeline-left {
+		left: 0%;
+	}
+	
 	/* Make all right timeline-containers behave like the left ones */
 	.timeline-right {
 		left: 0%;
 	}
+	
+	.timeline-row {
+		padding: 10px;
+		margin: 0;
+		
+		&:last-child {
+			padding: 0;
+		}		
+	}
+	
+	.pullout-right {
+		position: relative;
+		width: 50%;
+		margin: 0 auto;
+		padding: 10px;
+		top: 0;
+		left: 0;
+		
+		.content {
+			padding: 10px;
+		}
+		
+		&:before {
+			display: none;
+		}
+	}
+	
+	.pullout-left {
+		position: relative;
+		width: 50%;
+		margin: 0 auto;
+		top: 0;
+		left: 0;
+
+		.content {
+			padding: 10px;
+		}
+				
+		&:before {
+			display: none;
+		}
+	}	
 }

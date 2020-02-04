@@ -10,13 +10,17 @@ defined( 'ABSPATH' ) || exit;
 $bh_bkimg = get_the_post_thumbnail_url();
 ?>
 
-<section class="hero_banner" style="background-image: url('<?php echo $bh_bkimg; ?>">
+<section class="hero_banner" style="background-image: url('<?php echo $bh_bkimg; ?>'">
+
+	<?php if (! is_front_page() ) {	
+		if (function_exists('the_breadcrumb')) the_breadcrumb();
+	}?>
+	
 	<div class="container">
+
 		<div class="row align-items-center">
 			<div class="col-sm-12 col-md-10 col-lg-8">
-				<?php if (! is_front_page() ) {	
-					// echo'<p>breadcrumb</p>';
-				}?>
+			
 				<?php if ( is_category('policy') ){
 					echo "<h1>Research and policy</h1><h2>Duis consectetur neque non sem dictum, et laoreet massa mollis.</h2>";
 				} else { ?>
