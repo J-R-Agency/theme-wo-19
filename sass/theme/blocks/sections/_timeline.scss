@@ -22,7 +22,7 @@
 	  top: 0;
 	  bottom: 0;
 	  left: 50%;
-	  margin-left: -3px;  
+	  margin-left: -2px;  
 	}	
 	&.orange::after {
 		background-color: $orange;
@@ -71,7 +71,7 @@
 		position: absolute;
 		width: 25px;
 		height: 25px;
-		right: -86px;
+		right: -84px;
 		z-index: 1;
 		border-radius: 50%;	  
 	}
@@ -111,7 +111,7 @@
 
 /* Place the timeline-container to the right */
 .timeline-right {
-	left: 10%;
+	left: 115%;
 	/* Add arrows to the right timeline-container (pointing left) */
 	&:before {
 		content: " ";
@@ -128,7 +128,7 @@
 	
 	/* Fix the circle for timeline-containers on the right side */
 	&:after {
-		left: -86px;
+		left: -82px; 
 		top: 40px;
 	}
 }
@@ -180,7 +180,7 @@
 
 .pullout-left {
 	position: absolute;
-	left: 62%;
+	left: -39%;
 	top: 0px;
 	
 	p {

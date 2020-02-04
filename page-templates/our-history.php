@@ -21,149 +21,117 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
+	                <div class=" "><?php //echo the_content(); ?></div>
 	                
-	                <!-- Timeline (Orange) -->
-					<div class="container timeline orange">
-						<div class="row timeline-row">
-							<div class="col-12">
-								<!-- Timeline header -->
-								<div class="timeline-header orange">
-									1990
+
+					
+					<?php
+
+					// Check value exists.
+					if( have_rows('timelines') ):
+					
+					    // Loop through rows.
+					    while ( have_rows('timelines') ) : the_row();
+					    
+							$decade = get_sub_field('decade');
+							$style = get_sub_field ('timeline_style');
+												
+					        // Case: Repeater
+					        if( get_row_layout() == 'timeline' ): ?>
+								<?php if( have_rows('timeline_content') ):
+								?>
+						
+				                <!-- Timeline -->
+								<div class="container timeline <?php echo $style; ?>">
+									<div class="row timeline-row">
+										<div class="col-12">
+											<!-- Timeline header -->
+											<div class="timeline-header <?php echo $style; ?>">
+												<?php echo $decade; ?>
+											</div>
+										</div>
+									</div>
+							
+								<?php while( have_rows('timeline_content') ): the_row(); 
+							
+									// vars
+									$image = get_sub_field('timeline_image');
+									$copy = get_sub_field('timeline_copy');
+									$pullout = get_sub_field('timeline_pullout');
+							
+									?>
+									
+								<?php if( get_row_index() % 2 == 0 ){ ?>
+								
+								<div class="row timeline-row" data-aos="fade-up" data-aos-duration="1000">
+									
+									<!-- Content -->
+									<div class="col-12 col-md-6">						
+									  <div class="timeline-container timeline-right  <?php echo $style; ?>">
+									    <div class="content">
+									      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+									      <p><?php echo $copy; ?></p>
+									    </div>
+									  </div>
+									</div><!-- end content -->
+									
+									<!-- Pullout -->
+									<?php if (!empty($pullout)) { ?>
+									<div class="col-12 col-md-6 order-first order-md-last">	
+									  <div class="pullout-left <?php echo $style; ?>">
+									    <div class="content">
+									      <p><?php echo $pullout; ?></p>
+									    </div>
+									  </div>
+									</div><!-- end pullout -->
+									<?php } ?>	
 								</div>
-							</div>
-						</div>
-
-						<div class="row timeline-row">					
+									
+								<?php } else { ?>
+								
+								<div class="row timeline-row" data-aos="fade-up" data-aos-duration="1000">
+									
+									<!-- Pullout -->
+									<?php if (!empty($pullout)) { ?>
+									<div class="col-12 col-md-6 order-first order-md-last">	
+									  <div class="pullout-right <?php echo $style; ?>">
+									    <div class="content">
+									      <p><?php echo $pullout; ?></p>
+									    </div>
+									  </div>
+									</div><!-- end pullout -->
+									<?php } ?>								
+									
+									<!-- Content -->
+									<div class="col-12 col-md-6">						
+									  <div class="timeline-container timeline-left <?php echo $style; ?>">
+									    <div class="content">
+									      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+									      <p><?php echo $copy; ?></p>
+									    </div>
+									  </div>
+									</div><!-- end content -->
+																
+								</div>						
+								<?php } ?>		
+		
 							
-							<div class="col-12 col-md-6">						
-							  <div class="timeline-container orange timeline-left">
-							    <div class="content">
-							      <img src="http://192.168.33.10/womens-organization/wp-content/uploads/2019/12/09_Business_Start-up_Support_D4A7727.jpg">
-							      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-							    </div>
-							  </div>
-							</div>
+								<?php endwhile; ?>
 							
-							<div class="col-12 col-md-6 order-first order-md-last">	
-							  <div class="orange pullout-right">
-							    <div class="content">
-							      <p>1996</p>
-							    </div>
-							  </div>
-							</div>		
-							
-						</div>							  
-
-						<div class="row timeline-row">
-							<div class="col-12 col-md-6"></div>
-							<div class="col-12 col-md-6">						  						  
-							  <div class="timeline-container orange timeline-right">
-							    <div class="content">
-							      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-							    </div>
-							  </div>
-							</div>
-							
-							
-						</div>
-
-						<div class="row timeline-row">
-							<div class="col-12 col-md-6">							  
-							  <div class="timeline-container orange timeline-left">
-							    <div class="content">
-							      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-							    </div>
-							  </div>
-							</div>
-							<div class="col-12 col-md-6"></div>
-						</div>
-						  
-						</div>
-					</div><!-- end timeline -->
-
-	                <!-- Timeline (Aqua) -->
-					<div class="timeline aqua">
-						
-						<!-- Timeline header -->
-						<div class="row timeline-row">
-							<div class="col-12">						
-								<div class="timeline-header aqua">
-									2000
-								</div>
-							</div>
-						</div>
-						
-						<div class="row timeline-row">
-							<div class="col-12 col-md-6">					
-							  <div class="timeline-container aqua timeline-left">
-							    <div class="content">
-							      <img src="http://192.168.33.10/womens-organization/wp-content/uploads/2019/12/09_Business_Start-up_Support_D4A7727.jpg">
-							      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-							    </div>
-							  </div>
-							</div>
-							 
-							<div class="col-12 col-md-6 order-first order-md-last">	
-							  <div class="aqua pullout-right">
-							    <div class="content">
-							      <p>2002</p>
-							    </div>
-							  </div>
-							</div>
-						</div>
-
-						<div class="row timeline-row">
-							
-							<div class="col-12 col-md-6">	
-							  <div class="aqua pullout-left">
-							    <div class="content">
-							      <p>2004</p>
-							    </div>
-							  </div>
-							</div>
-							
-							<div class="col-12 col-md-6">								  
-							  <div class="timeline-container aqua timeline-right">
-							    <div class="content">
-							      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-							    </div>
-							  </div>
-							</div>				  
-						</div>
-						
-					</div><!-- end timeline -->
-
-					<!-- Timeline (Purple) -->
-					<div class="timeline purple">
-						
-						<!-- Timeline header -->
-						<div class="row timeline-row">
-							<div class="col-12">						
-								<div class="timeline-header purple">
-									2010
-								</div>
-							</div>
-						</div>
-						
-						<div class="row timeline-row">
-							<div class="col-12 col-md-6">					
-							  <div class="timeline-container purple timeline-left">
-							    <div class="content">
-							      <img src="http://192.168.33.10/womens-organization/wp-content/uploads/2019/12/09_Business_Start-up_Support_D4A7727.jpg">
-							      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-							    </div>
-							  </div>
-							</div>
-							 
-							<div class="col-12 col-md-6 order-first order-md-last">	
-							  <div class="purple pullout-right">
-							    <div class="content">
-							      <p>Today</p>
-							    </div>
-							  </div>
-							</div>
-						</div>
-					</div><!-- end timeline -->
+								</div> <!-- end repeater -->
+					
+					<?php endif; ?>
+					
+					<?php   endif;
+					
+					    // End loop.
+					    endwhile;
+					
+					// No value.
+					else :
+					    // Do something...
+					endif;
+					?>
 					              
 				</div>
             </div>
