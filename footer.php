@@ -65,8 +65,20 @@ $instagram_url = get_field('instagram_url', 'option');
 </div><!-- #page we need this extra closing tag here -->
 
 <?php wp_footer(); ?>
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
+<script>
+	jQuery(document).ready(function( $ ) {
+	  $('.hideable').on('click', function() {
+	
+	    $(this).hide();
+	
+	  })
+	});
+</script>
 

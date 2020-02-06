@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="79px" height="79px" viewBox="0 0 79 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-V6---Desktop" transform="translate(-760.000000, -3363.000000)">
+            <g id="Group-2" transform="translate(760.000000, 3363.000000)">
+                <circle id="Oval" fill="#FFFFFF" cx="39.5" cy="39.5" r="39.5"></circle>
+                <g id="Group-9" transform="translate(20.000000, 22.000000)" stroke="#FF4733" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <polyline id="Stroke-1" points="27.098992 0.33 27.098992 6.65 33.418992 6.65"></polyline>
+                    <path d="M6.559782,5.845306 L6.559782,1.603006 C6.559782,0.912546 7.114362,0.329526 7.803242,0.329526 L27.099782,0.329526 C27.426842,0.329526 27.580102,0.471726 27.812362,0.700826 L33.046902,5.865846 C33.283902,6.099686 33.419782,6.316146 33.419782,6.649526 L33.419782,35.405526 C33.419782,36.095986 32.860462,36.669526 32.168422,36.669526 L7.803242,36.669526 C7.114362,36.669526 6.559782,36.095986 6.559782,35.405526 L6.559782,31.201146" id="Stroke-3"></path>
+                    <path d="M14.422652,25.41171 C10.117152,25.41171 6.625352,21.92149 6.625352,17.61441 C6.625352,13.30891 10.117152,9.81869 14.422652,9.81869 C18.729732,9.81869 22.219952,13.30891 22.219952,17.61441 C22.219952,21.92149 18.729732,25.41171 14.422652,25.41171 Z" id="Stroke-5"></path>
+                    <path d="M8.912718,23.124976 L0.330158,31.707536" id="Stroke-7"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

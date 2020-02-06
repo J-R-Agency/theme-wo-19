@@ -14,7 +14,7 @@
 // Header
 @import "blocks/header/header";
 @import "blocks/header/navbar";
-@import "blocks/header/hamburger";
+@import "blocks/header/hamburger"; 
 @import "blocks/header/search";
 
 // Footer
@@ -36,8 +36,14 @@
 @import "blocks/sections/opportunities_accordian";
 @import "blocks/sections/standard-content";
 @import "blocks/sections/media-centre";
+@import "blocks/sections/post";
+@import "blocks/sections/map";
+@import "blocks/sections/feature";
+@import "blocks/sections/search_results";
+@import "blocks/sections/timeline";
 
 //cards
 @import "blocks/cards/blog-card"; 
 @import "blocks/cards/leader-card"; 
 @import "blocks/cards/policy-card"; 
+@import "blocks/cards/contact-card"; 

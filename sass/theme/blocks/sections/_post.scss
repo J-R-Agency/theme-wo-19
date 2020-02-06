@@ -1,0 +1,68 @@
+.post-container {
+	margin-left: 0rem;
+	@include respond-to('md') {
+        margin-left: 3rem;
+    }
+}
+
+.post-header {
+	border-bottom: solid 3px #e3e3e3;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+}
+
+.post-content {
+	blockquote {
+		background-color: #F1F1F1;
+		background-image: url('../assets/img/wo-logo-grey.svg');
+		background-size: cover;
+		background-position: center;
+  		padding: 4rem;	
+  		
+  		cite {
+	  		text-transform: uppercase;
+	  		font-style: normal;
+	  		margin: 2rem 0;
+	  		font-size: 1rem;
+  		}
+		p {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+.embed-container {
+	iframe {
+		width: 100%;
+	}
+	.video-caption {
+		background-color: #e3e3e3;
+		padding: 2rem;
+	}	
+}
+
+.post-cta-container {
+	background-color: $dark-grey;
+	color: white;
+	text-align: center;
+	margin: 4rem 0;
+	padding: 3rem 6rem;
+	
+	p {
+		margin: 1rem 0;
+	}
+	
+	.post-cta-link {
+		display: inline-block;
+		background-color: $orange;
+		color: white;
+		border-radius: 20px;
+		padding: 1rem 2rem;
+		text-transform: uppercase;
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+

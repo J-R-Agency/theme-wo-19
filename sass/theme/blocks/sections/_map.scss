@@ -1,0 +1,26 @@
+.map-container {
+	background-color: $aqua;
+	width: 100%;
+}
+
+.location-map {
+	height: 500px;
+	@include respond-to('md'){
+		height: 100%;
+	}
+}
+
+.contact-map {
+	height: 500px;
+	padding: 1rem 0;
+	
+	@include respond-to('md'){
+		padding: 2rem 0;
+	}
+}
+
+.map-banner-cta {
+	background-color: $aqua;
+	text-align: left;
+	padding: 5rem 3rem;
+}

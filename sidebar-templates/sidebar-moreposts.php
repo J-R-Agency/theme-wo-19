@@ -23,14 +23,26 @@ $related = new WP_Query( $args );
 if ( $related->have_posts()) : ?>
  
 <section class="related-container">
-   <h4>Related Posts</h4>
-    <ul class="related-list">
+	<h4>More from the blog</h4>
+		<ul class="related-list">
+	
+		<?php
+			$categories = get_categories();
+			
+			foreach($categories as $category) {
+				if($category->name !== 'Uncategorized'):
+					echo
+					'<div class="col-md-4"><a href="' . get_category_link($category->term_id) . '">' . $category->name . ' >' . '</a></div>';
+				endif;
+		}?>	 
+			
+			
  
-   <?php while ( $related->have_posts() ) : $related->the_post();   ?>
+   <!--<?php while ( $related->have_posts() ) : $related->the_post();   ?>
         <li class="related-child">
             <a href="<?php the_permalink()?>" class="theme"><?php the_title(); ?></a>
         </li><!-- /.child -->
-  <?php endwhile; ?>
+	<!--<?php endwhile; ?>-->
  </ul>
 </section><!-- /.child-grid -->
  

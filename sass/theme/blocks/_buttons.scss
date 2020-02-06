@@ -31,6 +31,10 @@
         background-color: $white;
         color: $pink;
     }
+    &.white-orange {
+	    background-color: $white;
+	    color: $orange;
+    }
 }
 
 .wo-btn:hover{
@@ -40,10 +44,17 @@
     &.white-pink{
         color: $pink;
     }
+    &.white-orange {
+	    color: $orange;
+    }
 }
 
 .wo-btn--standard-content{
     margin: 1em 0;
+}
+
+.wo-btn--cards {
+	margin: 0 auto;
 }
 
 .gradient-link{

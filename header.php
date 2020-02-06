@@ -15,15 +15,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+	<!-- Google Analytics -->
+	<?php the_field('google_analytics', 'option'); ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<?php wp_head(); ?>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+ 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
-<div class="site" id="page">
+<div id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<!-- *** TEMPLATE *** -->
@@ -48,14 +51,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<span></span>
 						</span>
 					</button>
+					
 					<div id="desktop-nav" class="d-none d-md-block">
-						<ul class="top-links">
+						<!--<ul class="top-links">
 							<li><a href="#">54 ST James Street</a></li>
 							<li><a href="#">Blog &amp; Media</a></li>
 							<li><a href="#">Contact</a></li>
 							<li><a><img id="search-icon" src="<?php echo get_template_directory_uri()?>/assets/img/search.svg" alt="search"></a></li>
-						</ul>
+						</ul>-->
+						<!-- The WordPress Menu goes here -->
+						<?php wp_nav_menu(
+							array(
+								'theme_location'  => 'top-menu',
+								'menu_class'      => 'top-links ml-auto',
+								'fallback_cb'     => '',
+								'menu_id'         => 'top-menu',
+								'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+							)
+						); ?>
+						
 					</div>
+					
 					<div id="navbarNavDropdown" class="collapse navbar-collapse">
 						<?php get_template_part( 'searchform' ); ?>
 

@@ -66,3 +66,17 @@
         text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
     }
 }
+
+#crumbs {
+	position: absolute;
+	padding: 1rem;
+	color: white;
+	z-index: 999;
+	a {
+		color: white;
+	}
+	img {
+		top: -5px;
+		position: relative;
+	}
+}

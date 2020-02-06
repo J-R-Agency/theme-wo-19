@@ -16,6 +16,11 @@
     }
 }
 
+.content {
+	width: 90%;
+	margin: 0 auto;
+}
+
 .grey-w-icon{
     background-image: url(../assets/img/wo-logo-grey.svg);
     background-size: cover;
@@ -58,4 +63,16 @@
 .bk-white{
     background-color: #ffffff;  
 }
+
+.overlay {
+/*
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background: rgba(0,0,0,0.5);
+*/
+	filter: opacity(.5);
+}
+
 

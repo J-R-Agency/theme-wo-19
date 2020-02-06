@@ -10,6 +10,9 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 $theme_colour = get_field('theme_colour');
 
@@ -17,20 +20,12 @@ get_header(); ?>
 
 <div class="site <?php echo $theme_colour; ?>">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/subsection.tpl'); ?>
-    <section class="generic bk-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h3>About Us</h3>
-                    <br>
-                    <div class="three-col text-left"><?php echo $post->post_content; ?></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <?php include_once (get_template_directory() . '/global-templates/about-cards.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/related-links.tpl'); ?>
-</div>
+    
+    <div class="container">    
+	    
+		<?php include_once (get_template_directory() . '/global-templates/category-tabs.tpl'); ?>
+    
+    </div><!-- end container -->
+</div><!-- end site -->
 
 <?php get_footer();

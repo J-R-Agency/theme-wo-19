@@ -1,3 +1,131 @@
+.story-container {
+	margin: 0 auto;
+	justify-content: center;
+	padding: 1rem;
+	
+	@include respond-to('md') {
+        padding: 1rem 20rem;
+    }
+    
+	.wp-video, video.wp-video-shortcode, .mejs-container, .mejs-overlay.load {
+	    width: 100% !important;
+	    height: 100% !important;
+	   
+	}
+	.mejs-container {
+	    padding-top: 56.25%;
+	    
+	}
+	.wp-video, video.wp-video-shortcode {
+	    max-width: 100% !important;
+	}
+	video.wp-video-shortcode {
+	    position: relative;
+	}
+	.mejs-mediaelement {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	}
+	.mejs-controls {
+	    display: none;
+	}
+	.mejs-overlay-play {
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    width: auto !important;
+	    height: auto !important;
+	}
+	
+    img {
+	    width: 100%;
+	    background-size: contain;
+	    
+    }
+    
+    p {
+	    font-size: 18px;
+	    margin: 2rem 0;
+    }
+}
+
+.story-cards{
+    padding: 90px 0px 0px;
+    background-color: white;
+    &__card{
+        position: relative;
+        padding: 2rem 0px;
+    }
+    &__img{
+        overflow: hidden;
+        position: relative;
+        height: 260px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 0 auto;
+        @include respond-to('md'){
+	    	width: 400px;
+	    }    
+        &:after {
+          background-size: 100%;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+        }
+    }
+    &__title{
+        position: absolute;
+        @include _museo;
+        font-size: 2rem;
+        line-height: 35px;
+        padding-left: 50px;
+        color: white;
+        text-align: center;
+    }
+    &__excerpt{
+        margin: 1rem;
+        padding: 0 5rem;
+        text-align: center;
+		//text-overflow: ellipsis;
+		//white-space: nowrap;
+		max-height: 4.5em;
+		overflow: hidden;	      		       
+    }
+    &__button {
+	    display: flex;
+	    margin: 0 auto;
+    }
+    & h3{
+      @include _akkurat;
+	  text-align: center;
+	  padding-top: 1rem;
+    }
+    & h1 {
+	    text-align: center;
+    }
+}
+
+.case-studies-container {
+	width: 100%;
+	
+	@include respond-to('md'){
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+.case-study-content {
+	margin: 1rem 0;
+}
+
 .stories{
     padding-top: 50px;
     padding-bottom: 50px;
