@@ -68,7 +68,7 @@ get_header(); ?>
 									<!-- Content -->
 									<div class="col-12 col-md-6">						
 									  <div class="timeline-container timeline-right  <?php echo $style; ?>">
-									    <div class="content">
+									    <div class="timeline-content">
 									      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
 									      <p><?php echo $copy; ?></p>
 									    </div>
@@ -79,7 +79,7 @@ get_header(); ?>
 									<?php if (!empty($pullout)) { ?>
 									<div class="col-12 col-md-6 order-first order-md-last">	
 									  <div class="pullout-left <?php echo $style; ?>">
-									    <div class="content">
+									    <div class="timeline-content">
 									      <p><?php echo $pullout; ?></p>
 									    </div>
 									  </div>
@@ -95,7 +95,7 @@ get_header(); ?>
 									<?php if (!empty($pullout)) { ?>
 									<div class="col-12 col-md-6 order-first order-md-last">	
 									  <div class="pullout-right <?php echo $style; ?>">
-									    <div class="content">
+									    <div class="timeline-content">
 									      <p><?php echo $pullout; ?></p>
 									    </div>
 									  </div>
@@ -105,7 +105,7 @@ get_header(); ?>
 									<!-- Content -->
 									<div class="col-12 col-md-6">						
 									  <div class="timeline-container timeline-left <?php echo $style; ?>">
-									    <div class="content">
+									    <div class="timeline-content">
 									      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
 									      <p><?php echo $copy; ?></p>
 									    </div>
