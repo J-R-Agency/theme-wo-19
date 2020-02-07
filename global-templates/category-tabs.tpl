@@ -61,7 +61,7 @@
 							    	<div class="blog-card">
 								    	<!-- image -->
 								    	<div class="blog-card__img">
-								    		<?php if ( the_post_thumbnail_url() ) {
+								    		<?php if ( has_post_thumbnail() ) {
 									    		echo "<img src=\"" . the_post_thumbnail_url(); . "\">";
 								    		}?>
 									    </div><!--end image -->
