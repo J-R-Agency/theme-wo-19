@@ -7,32 +7,6 @@
 	 
 	$categories = get_categories($args); ?>
 
-		<!--CATEGORY TABS -->
-		<section class="grey_tabs content capped-width">
-			<div class="container">
-			    <div class="row">
-					<div class="col-sm-12">
-							<ul class="nav nav-tabs" id="nav-tab" role="tablist">	
-								<li>
-									<a class="nav-item nav-link active" id="grey-tabs_all" role="tab" data-toggle="tab" aria-controls="nav-home"  href="#category_all">All</a>
-								</li>
-								<?php
-									foreach($categories as $category) {
-										$cat_name = $category->name;
-										if($cat_name !== 'Uncategorized'):	
-											echo
-											'<li><a class="nav-item nav-link" id="grey-tabs_'.$cat_name.' role="tab" data-toggle="tab" aria-controls="nav-home"  href="#category_'.$category->slug.'">'
-												.$cat_name.
-											'</a></li>';
-										endif;
-									}
-								?>
-								</ul>
-							</div>
-						</div>	    
-			    	</div>
-			</div>																		
-		</section>
 
   
   
@@ -46,7 +20,7 @@
 							<?php
 								// QUERY ALL
 								$wpb_query = new WP_Query(array(
-									'post_type'=>'post',
+									'post_type'=>'tribe_events',
 									'post_status'=>'publish',
 									'posts_per_page'=>-1,	
 								));
@@ -61,9 +35,7 @@
 							    	<div class="blog-card">
 								    	<!-- image -->
 								    	<div class="blog-card__img">
-								    		<?php if ( the_post_thumbnail_url() ) {
-									    		echo "<img src=\"" . the_post_thumbnail_url(); . "\">";
-								    		}?>
+									    	<img src="<?php the_post_thumbnail_url(); ?>">
 									    </div><!--end image -->
 									    
 								    	<!-- icon -->
