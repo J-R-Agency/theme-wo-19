@@ -4,6 +4,10 @@
     &__card{
         position: relative;
         padding: 20px 0px;
+        
+        a:hover {
+	        text-decoration: none;
+        }
     }
     &__img{
         overflow: hidden;

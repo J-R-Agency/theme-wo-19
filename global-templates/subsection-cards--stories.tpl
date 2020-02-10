@@ -50,7 +50,7 @@ if ( $parent->have_posts() ) : ?>
                 ?>
 
                 <?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
-
+					<a href="<?php the_permalink()?>">
                         <div class="col-sm-12 <?php echo $class; ?> related-links__card">
                             <div 
                                 class="related-links__img d-flex align-items-center"
@@ -64,6 +64,7 @@ if ( $parent->have_posts() ) : ?>
                                 </a>
                             </div>
                         </div>
+					</a>
                         <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
                     
                 <?php endwhile; ?>
