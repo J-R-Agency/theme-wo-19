@@ -60,9 +60,10 @@
 						    	<div class="col-sm-12 col-lg-4 col-md-4">
 							    	<div class="blog-card">
 								    	<!-- image -->
+								    	<!-- TESTING -->
 								    	<div class="blog-card__img">
 								    		<?php if ( has_post_thumbnail() ) {
-									    		echo "<img src=\"" . the_post_thumbnail_url(); . "\">";
+									    		echo "<img src=\"" . get_the_post_thumbnail_url() . "\">";
 								    		}?>
 									    </div><!--end image -->
 									    
@@ -114,7 +115,9 @@
 							    	<div class="blog-card">
 								    	<!-- image -->
 								    	<div class="blog-card__img">
-									    	<img src="<?php the_post_thumbnail_url(); ?>">
+								    		<?php if ( has_post_thumbnail() ) {
+									    		echo "<img src=\"" . get_the_post_thumbnail_url() . "\">";
+								    		}?>
 									    </div><!--end image -->
 									    
 								    	<!-- icon -->

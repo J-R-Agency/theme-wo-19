@@ -21,7 +21,7 @@ get_header(); ?>
     
     <div class="container">    
 	    
-		<?php include_once (get_template_directory() . '/global-templates/category-tabs.tpl'); ?>
+		<?php include_once (get_template_directory() . '/global-templates/events-cards.tpl'); ?>
     
     </div><!-- end container -->
 </div><!-- end site -->
