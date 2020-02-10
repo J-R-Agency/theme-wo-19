@@ -86,3 +86,60 @@
         box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.23);
     }
 }
+
+.category_grey_tabs{
+	
+	&.content {
+		width: 100%;
+	}
+	
+    .nav-tabs {
+        background-color: #DDDDDD;
+        text-align:center;
+        margin: 2rem 0 1rem 0;
+        display: table;
+        width: 100%;
+        
+        @include respond-to('md'){
+	        display: flex;
+	    }
+        
+        .nav-link {
+	        position: relative;
+            float: none;
+            display: block;
+            border-radius: 0;
+            padding: 1rem 2rem;
+            @include _akkurat;
+            font-size: 13px;
+            width: 100%;
+            
+            &:after {
+	            @include respond-to('md'){
+				  content : "";
+				  position: absolute;
+				  right: 0;
+				  z-index: 100;
+				  top: 25%;
+				  width: 1px;
+				  height: 60%;  /* or 100px */
+				  background: #c2c2c2;			            
+		        }
+            }
+            
+            @include respond-to('md'){
+                display:inline-block;
+                width: 125px;
+                font-size: 15px;
+                border: none;
+            }
+            @include respond-to('xl'){
+                font-size: 18px;
+            }
+            &.active{
+                background-color: #d4d4d4;
+                border: none;
+            }
+        }
+    }
+}

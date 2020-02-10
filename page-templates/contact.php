@@ -30,7 +30,7 @@ get_header(); ?>
 
     <!-- CONTACT CARDS -->
     <section class="generic content bk-white">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
 				<?php if( have_rows('contact_card') ): ?>
 				
@@ -64,7 +64,7 @@ get_header(); ?>
     
     <!-- Split Panel CTA -->
     <section class="fullimg-cta contact left capped-width split-panel-container">
-	    <div class="container">
+	    <div class="container-fluid">
 		    <div class="row align-items-center">
 			    <!-- image -->
 			    <?php 

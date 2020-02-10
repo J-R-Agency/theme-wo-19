@@ -11,13 +11,11 @@ $bh_bkimg = get_the_post_thumbnail_url();
 ?>
 
 <section class="hero_banner" style="background-image: url('<?php echo $bh_bkimg; ?>'">
-
+	
+	<div class="container">
 	<?php if (! is_front_page() ) {	
 		if (function_exists('the_breadcrumb')) the_breadcrumb();
 	}?>
-	
-	<div class="container">
-
 		<div class="row align-items-center">
 			<div class="col-sm-12 col-md-10 col-lg-8">
 			

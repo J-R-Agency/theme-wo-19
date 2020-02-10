@@ -8,36 +8,35 @@
 	$categories = get_categories($args); ?>
 
 		<!--CATEGORY TABS -->
-		<section class="grey_tabs content capped-width">
+		<section class="category_grey_tabs content capped-width">
 			<div class="container">
-			    <div class="row">
-					<div class="col-sm-12">
-							<ul class="nav nav-tabs" id="nav-tab" role="tablist">	
-								<li>
-									<a class="nav-item nav-link active" id="grey-tabs_all" role="tab" data-toggle="tab" aria-controls="nav-home"  href="#category_all">All</a>
-								</li>
-								<?php
-									foreach($categories as $category) {
-										$cat_name = $category->name;
-										if($cat_name !== 'Uncategorized'):	
-											echo
-											'<li><a class="nav-item nav-link" id="grey-tabs_'.$cat_name.' role="tab" data-toggle="tab" aria-controls="nav-home"  href="#category_'.$category->slug.'">'
-												.$cat_name.
-											'</a></li>';
-										endif;
-									}
-								?>
-								</ul>
-							</div>
-						</div>	    
-			    	</div>
+				<div class="row">
+					<div class="col-12">
+						<ul class="nav nav-tabs" id="nav-tab" role="tablist">	
+							<li>
+								<a class="nav-item nav-link active" id="grey-tabs_all" role="tab" data-toggle="tab" aria-controls="nav-home"  href="#category_all">All</a>
+							</li>
+							<?php
+								foreach($categories as $category) {
+									$cat_name = $category->name;
+									if($cat_name !== 'Uncategorized'):	
+										echo
+										'<li><a class="nav-item nav-link" id="grey-tabs_'.$cat_name.' role="tab" data-toggle="tab" aria-controls="nav-home"  href="#category_'.$category->slug.'">'
+											.$cat_name.
+										'</a></li>';
+									endif;
+								}
+							?>
+						</ul>
+					</div>
+				</div>
 			</div>																		
 		</section>
 
   
   
 		<!-- DISPLAY POSTS -->
-		<section class="content">
+		<section class="blog-cards-content">
 			<div class="tab-content">
 				<div class="tab-pane fade show active" id="category_all" role="tabpanel">
 					<div class="container">
@@ -57,7 +56,7 @@
 						    	$cat_name = $category->name; 
 						    ?>
 						    	<!-- BLOG CARD -->
-						    	<div class="col-sm-12 col-lg-4 col-md-4">
+						    	<div class="col-12 col-lg-4 col-md-4">
 							    	<div class="blog-card">
 								    	<!-- image -->
 								    	<!-- TESTING -->
@@ -86,10 +85,18 @@
 						        </div><!-- end col -->
 			        
 						    <?php endwhile; ?>
-						    <div class="wo-btn orange loadmore">Show More</div>
+						   
+						    
 						    <?php wp_reset_postdata(); ?>
-						</div>
+						</div> <!-- end blog cards row -->
 						
+					    <div class="row">
+						    <div class="col-12">
+							    <div class="loadmore">
+								    <a href="#" class="wo-btn orange">Show More</a>
+								</div>
+						    </div>
+					    </div>						
 					</div>	
 				</div>
 				
