@@ -16,11 +16,7 @@ $args = array(
         'posts_per_page' => 5,
         'post__not_in'   => array( $post->ID )
  );
- 
- 
-$related = new WP_Query( $args );
- 
-if ( $related->have_posts()) : ?>
+  ?>
  
 <section class="related-container">
 	<h4>More from the blog</h4>
@@ -32,7 +28,7 @@ if ( $related->have_posts()) : ?>
 			foreach($categories as $category) {
 				if($category->name !== 'Uncategorized'):
 					echo
-					'<div class="col-md-4"><a href="' . get_category_link($category->term_id) . '">' . $category->name . ' >' . '</a></div>';
+					'<div class="col-md-4"><a href="' . get_category_link($category->term_id) . '/#nav-tab">' . $category->name . ' >' . '</a></div>';
 				endif;
 		}?>	 
 			
@@ -46,4 +42,4 @@ if ( $related->have_posts()) : ?>
  </ul>
 </section><!-- /.child-grid -->
  
-<?php endif; wp_reset_query(); ?>
+<?php wp_reset_query(); ?>

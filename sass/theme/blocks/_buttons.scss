@@ -1,9 +1,10 @@
-.wo-btn{
+.wo-btn, .elm-button {
     border-radius: 30px;
     padding: 18px 30px 17px;
     text-align: center;
     color: white;
     text-transform: uppercase;
+    border: none;
     @include _bodyCopy;
     display: inline-block;
     &.green, &.theme-green{
@@ -61,6 +62,7 @@
 	display: flex;
 	justify-content: center;
 	padding: 1rem;
+	margin-bottom: 1rem; 
 }
 
 .gradient-link{

@@ -66,8 +66,6 @@ function add_search_icon ( $items, $args ) {
 
 add_post_type_support( 'page', 'excerpt' );
 
-
-
 add_filter( 'template_include', 'var_template_include', 1000 );
 function var_template_include( $t ){
     $GLOBALS['current_theme_template'] = basename($t);
@@ -94,6 +92,7 @@ add_action('acf/init', 'my_acf_init');
 // Enqueue search script
 function myprefix_enqueue_scripts() {
     wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/search.js', array(), true );
+	wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/active-link.js', array(), true );    
 }
 add_action( 'wp_enqueue_scripts', 'myprefix_enqueue_scripts' );
 
@@ -125,7 +124,6 @@ function set_posts_per_page( $query ) {
 /*=============================================
                 BREADCRUMBS
 =============================================*/
-//  to include in functions.php
 function the_breadcrumb()
 {
     $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show

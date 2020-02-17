@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-	
+    
 	$("#searchform").hide();
 	
 	$(".site, .wrapper, #close-search").click(function() {
