@@ -92,7 +92,6 @@ add_action('acf/init', 'my_acf_init');
 // Enqueue search script
 function myprefix_enqueue_scripts() {
     wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/search.js', array(), true );
-	wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/active-link.js', array(), true );    
 }
 add_action( 'wp_enqueue_scripts', 'myprefix_enqueue_scripts' );
 
@@ -115,11 +114,12 @@ function set_posts_per_page( $query ) {
     $query->set( 'posts_per_page', 5 );
   }
   elseif ( ( ! is_admin() ) && ( $query === $wp_the_query ) && ( $query->is_archive() ) ){
-    $query->set( 'posts_per_page', 5 );
+    $query->set( 'posts_per_page', 6 );
   }  
 
   return $query;
 }
+
 
 /*=============================================
                 BREADCRUMBS

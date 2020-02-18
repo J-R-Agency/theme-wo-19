@@ -25,7 +25,14 @@ get_header(); ?>
 
 					<?php if ( have_posts() ) : ?>
 
-						<?php while ( have_posts() ) : the_post(); ?>
+						<?php
+							$query = new WP_Query(array(
+							    'posts_per_page'   => 6,
+						        'category_name' => 'culture'					    
+							));
+							
+							while ($query->have_posts()): $query->the_post();
+						?>
 							<?php include (get_template_directory() . '/global-templates/category-card.tpl'); ?>					
 						<?php endwhile; ?>
 	

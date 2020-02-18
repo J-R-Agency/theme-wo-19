@@ -28,15 +28,17 @@ get_header(); ?>
 
 					<div class="row blog-posts">
 					<?php
-
-						// QUERY ALL
+						
+						$policy = get_cat_ID('policy');
+						
+						// QUERY ALL EXCEPT POLICIES
 						$wp_query = new WP_Query(array(
 							'post_type'=>'post',
 							'post_status'=>'publish',
 							'posts_per_page'=>6,
+							'category__not_in' => $policy,
 							'paged' => ( get_query_var('paged') ? get_query_var('paged') : 0)
-						));							
-													
+						));															
 					?>
 					<!-- WHILE LOOP -->
 				    <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>

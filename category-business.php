@@ -25,23 +25,19 @@ get_header(); ?>
 				<div class="row blog-posts">
 
 					<?php if ( have_posts() ) : ?>
-					
-					<?php
-						// QUERY ALL
-						$wp_query = new WP_Query(array(
-							'post_type'=>'post',
-							'post_status'=>'publish',
-							'posts_per_page'=>3,
-							'category_name'=>'business',
-							'paged' => ( get_query_var('paged') ? get_query_var('paged') : 0)
-						));							
-					?>
-						<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+						<?php
+							$query = new WP_Query(array(
+							    'posts_per_page'   => 6,
+							    'category_name' => 'business'
+							));
+							
+							while ($query->have_posts()): $query->the_post();
+						?>
 							<?php include (get_template_directory() . '/global-templates/category-card.tpl'); ?>					
 						<?php endwhile; ?>
 						
 						<?php wp_reset_postdata(); ?>
-						
+
 					<?php endif; ?>
 				</div>
 					<!-- Pagination -->
