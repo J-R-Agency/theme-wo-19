@@ -11,7 +11,7 @@ $bh_bkimg = get_the_post_thumbnail_url();
 $blog_img = "http://192.168.33.10/womens-organization/wp-content/uploads/2019/12/Letterbox_38_Blog_and_Media_D4A6423.jpg"
 ?>
 
-<section class="hero_banner" style="background-image: url('<?php if (is_category('business') || is_category('culture') || is_category('research')) { echo $blog_img; } else { echo $bh_bkimg; }?>'">
+<section class="hero_banner" style="background-image: url('<?php if (is_category('business') || is_category('culture') || is_category('research')) { echo $blog_img; } else { echo $bh_bkimg; }?>')">
 	
 	<div class="container">
 	<?php if (! is_front_page() ) {	
