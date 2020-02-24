@@ -66,3 +66,25 @@
 		border-radius: 50%;
 	}
 }
+
+.featured-event-container {
+	display: flex;
+	justify-content: center;
+}
+
+.featured-event {
+	background-color: $pink;
+	padding: 2rem;
+	position: absolute;
+	margin-top: -50px;
+	width: 80%;
+	color: white;
+	z-index: 999;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(151, 151, 151, 1);
+    -moz-box-shadow:    1px 1px 5px 0px rgba(151, 151, 151, 1);
+    box-shadow:         1px 1px 5px 0px rgba(151, 151, 151, 1);
+    
+    a {
+	    text-transform: uppercase;
+    }
+}
