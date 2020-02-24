@@ -1,0 +1,68 @@
+.event-sidebar {
+	width: 100%;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(151, 151, 151, 1);
+    -moz-box-shadow:    1px 1px 5px 0px rgba(151, 151, 151, 1);
+    box-shadow:         1px 1px 5px 0px rgba(151, 151, 151, 1);
+    text-align: center;
+    
+	@include respond-to('md') {
+		width: 70%;
+		margin: 0 2rem;
+    }      
+    
+    .event-sidebar-header {
+	    background-color: $bkgrey;
+	    color: white;
+	    padding: 1rem;
+	    text-align: center;
+	    
+	    .event-date {
+		    font-size: 1.5rem;
+	    }
+	    p {
+		    margin: 0;
+	    }
+    }
+    
+    
+    .event-sidebar-content {
+	    padding: 2rem;
+    }
+    
+    a {
+	    color: $orange;
+	    &.wo-btn {
+		   color: white; 
+	    }
+    }
+}
+
+.tribe-events-content {
+	img {
+		width: 40%;
+		margin: 1rem 0;
+	}
+}
+
+.tribe-events-cost {
+	font-size: 1.5rem;
+}
+
+.quote-content {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: center;
+	padding: 2rem 0;
+}
+
+.quote-portrait {
+	display: flex;
+	justify-content: center;
+	img {
+		height: 200px;
+		width: 200px;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+}

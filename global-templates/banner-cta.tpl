@@ -13,6 +13,7 @@ $banner_cta_button = get_field('banner_cta_button');
 $banner_cta_link = get_field('banner_cta_link'); 
 
 ?>
+
 <?php if (!empty($banner_cta_link)): ?>
 	<section class="banner_cta">
 		<div class="container">
