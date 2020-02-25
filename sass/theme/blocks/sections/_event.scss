@@ -70,21 +70,57 @@
 .featured-event-container {
 	display: flex;
 	justify-content: center;
+	a {
+		color: white;
+	}
+	.row {
+		align-items: center;
+	}
 }
 
 .featured-event {
+	display:flex;
+	align-items: center;
 	background-color: $pink;
-	padding: 2rem;
+	padding: 1rem;
 	position: absolute;
-	margin-top: -50px;
+	margin-top: -70px;
 	width: 80%;
 	color: white;
 	z-index: 999;
     -webkit-box-shadow: 1px 1px 5px 0px rgba(151, 151, 151, 1);
     -moz-box-shadow:    1px 1px 5px 0px rgba(151, 151, 151, 1);
     box-shadow:         1px 1px 5px 0px rgba(151, 151, 151, 1);
-    
-    a {
+    .featured-event-links {
 	    text-transform: uppercase;
+	    a:first-child {
+		    margin: 0 2rem 0 0;
+	    }
     }
+	.featured-event-wrapper {
+		display: flex;
+		align-items: center;
+		.featured-event-info {
+			padding: 0 1rem;
+			p {
+				margin: 0;
+			}
+			.featured-event-title {
+				font-size: 1.2rem;
+			}
+		}
+		.featured-event-date {
+			text-align: center;
+			.featured-event-month {
+				background-color: orange;
+				padding: 0.5rem 1.2rem;
+				text-transform: uppercase;
+			}
+			.featured-event-day {
+				background-color: white;
+				color: black;
+				padding: 0.2rem 1.2rem;
+			}
+		}	
+	}    
 }
