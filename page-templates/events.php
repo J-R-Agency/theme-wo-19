@@ -22,6 +22,7 @@ get_header(); ?>
     	<div class="container">    
 			
 			<!-- DISPLAY POSTS -->
+				
 
 					<div class="row events-posts">
 					<?php
@@ -37,6 +38,7 @@ get_header(); ?>
 							'paged' => ( get_query_var('paged') ? get_query_var('paged') : 0)
 						));															
 					?>
+					<div class="events-container">
 					<!-- WHILE LOOP -->
 				    <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 				    
@@ -45,7 +47,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 												    
 					<?php wp_reset_postdata(); ?>
-					
+					</div> <!-- end events container -->
 					</div> <!-- end blog cards row -->
 					
 					<!-- Pagination -->
