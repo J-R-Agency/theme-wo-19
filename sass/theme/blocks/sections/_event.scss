@@ -127,9 +127,15 @@
 
 /* TRIBE EVENTS STYLES */
 
-.tribe-events-single-event-title{
-
-	margin: 1rem 0;
+.single-tribe_events .tribe-events-single-event-title{
+	padding: 1.5rem 0;
 }
 
+.tribe-events-content p:first-child{
+	@include _akkurat_bold;
+}
+
+.tribe-events-content p{
+	margin-bottom: 1rem;
+}
 

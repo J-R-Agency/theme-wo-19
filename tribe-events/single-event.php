@@ -59,7 +59,7 @@ $themes_path = get_template_directory_uri();
 						<!-- Event content -->
 						<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
 						<div class="tribe-events-single-event-description tribe-events-content">
-							<?php the_content(); ?>
+							<?php echo make_clickable( apply_filters ('the_content', get_the_content() ) ); ?>
 						</div>
 						<!-- .tribe-events-single-event-description -->
 						<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
