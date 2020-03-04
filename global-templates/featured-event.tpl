@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
 	    <div class="container">
 	        <div class="row">
 	            <div class="col-12 col-md-3">
-		            <h2>Featured Events:</h2>
+		            <h2 class="featured-events-title">Featured Events:</h2>
 	            </div>
 	            
 	            <div class="col-12 col-md-6">
@@ -24,7 +24,8 @@ defined( 'ABSPATH' ) || exit;
 					  <div class="carousel-inner" role="listbox">
 						<?php
 							$events = tribe_get_events( [ 'posts_per_page' => 3,
-														'orderby' => 'rand', ] );
+														'orderby' => 'rand',
+														'start_date'     => 'now' ] );
 							$count = 0;							
 							
 							foreach ( $events as $event ): ?>
@@ -58,8 +59,7 @@ defined( 'ABSPATH' ) || exit;
 	            
 	            <div class="col-12 col-md-3">
 		            <div class="featured-event-links">
-			            <a>More Info</a>
-			            <a>View All Events</a>
+ 			            <a href="<?php echo site_url(); ?>/events/">View All Events</a>
 		            </div>
 	            </div>                        
 	        </div>
