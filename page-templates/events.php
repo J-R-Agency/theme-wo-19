@@ -20,34 +20,70 @@ get_header(); ?>
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
     <section class="generic">
     	<div class="container">    
-			
+			<div class="row">
+			<?php
+				include ( get_template_directory() . '/global-templates/events-tabs.tpl')  ;  
+			?>
+			</div>
+
+
 			<!-- DISPLAY POSTS -->
-				
 
 					<div class="row events-posts">
-					<?php
-						
-						$policy = get_cat_ID('policy');
-						
-						// QUERY ALL EXCEPT POLICIES
-						$wp_query = new WP_Query(array(
-							'post_type'=>'tribe_events',
-							'post_status'=>'publish',
-							'posts_per_page'=>6,
-							'category__not_in' => $policy,
-							'paged' => ( get_query_var('paged') ? get_query_var('paged') : 0)
-						));															
-					?>
-					<div class="events-container">
-					<!-- WHILE LOOP -->
-				    <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-				    
-						<?php include (get_template_directory() . '/global-templates/events-cards.tpl'); ?>
-		        
-					<?php endwhile; ?>
-												    
-					<?php wp_reset_postdata(); ?>
-					</div> <!-- end events container -->
+
+
+
+
+
+<?php
+
+
+// Ensure the global $post variable is in scope
+global $post;
+
+if (isset($_GET['category'])) {
+	$event_category = $_GET['category'];
+	$events = tribe_get_events( [
+		'start_date'     => 'now',
+		'eventDisplay'   => 'list',
+		'posts_per_page' => 6,
+		'tax_query'=> array(
+			array(
+				'taxonomy' => 'tribe_events_cat',
+				'field' => 'slug',
+				'terms' => $event_category
+			)
+		)
+	] );
+} else {
+  //Handle the case where there is no parameter
+	$events = tribe_get_events( [
+		'start_date'     => 'now',
+		'eventDisplay'   => 'list',
+		'posts_per_page' => 6
+	] );
+}
+
+ 
+// Retrieve the next 5 upcoming events
+// Grab the 5 next "party" events (by tag)
+
+// Loop through the events: set up each one as
+// the current post then use template tags to
+// display the title and content
+foreach ( $events as $post ) {
+	setup_postdata( $post );
+
+	// This time, let's throw in an event-specific
+	// template tag to show the date after the title!
+	include ( get_template_directory() . '/global-templates/events-cards.tpl')  ;
+
+}
+
+?>
+
+
+
 					</div> <!-- end blog cards row -->
 					
 					<!-- Pagination -->
@@ -58,7 +94,6 @@ get_header(); ?>
 					</div>
 						
 				</div>
-			</section>
     
     	</div><!-- end container -->
     </section><!-- end generic section -->

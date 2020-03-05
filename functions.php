@@ -233,3 +233,37 @@ function the_breadcrumb()
         echo '</div>';
     }
 } // end the_breadcrumb()
+
+
+
+/*
+    TRIBE EVENTS
+*/
+/**
+ * Add a list of clickable category links below the event
+ * search bar.
+ *
+ * Can be easily styled using the following selector:
+ *
+ * .the-events-calendar-category-list
+ */
+add_action( 'tribe_events_bar_after_template', function() {
+  $terms = get_terms( [
+    'taxonomy' => Tribe__Events__Main::TAXONOMY
+  ] );
+ 
+  if ( empty( $terms ) || is_wp_error( $terms ) ) {
+    return;
+  }
+ 
+  echo '<div class="the-events-calendar-category-list"><ol>';
+ 
+  foreach ( $terms as $single_term ) {
+    $url = esc_url( get_term_link( $single_term ) );
+    $name = esc_html( get_term_field( 'name', $single_term ) );
+ 
+    echo "<li><a href='$url'>$name</a> </li>";
+  }
+ 
+  echo '</ol></div>';
+} );

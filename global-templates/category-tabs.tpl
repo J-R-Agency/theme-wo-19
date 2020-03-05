@@ -21,9 +21,9 @@
 									$cat_name = $category->name;
 									if($cat_name != 'Policy'):	
 										echo
-										'<a class="nav-item nav-link" href="'.get_category_link($category->term_id).'#nav-tab">'
+										'<li><a class="nav-item nav-link" href="'.get_category_link($category->term_id).'#nav-tab">'
 											.$cat_name.
-										'</a>';
+										'</a></li>';
 									endif;
 								}
 							?>
