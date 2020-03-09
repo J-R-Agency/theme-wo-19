@@ -43,6 +43,7 @@ function wpb_custom_new_menu() {
   }
   add_action( 'init', 'wpb_custom_new_menu' );
 
+
 // Add search icon to top menu
 add_filter( 'wp_nav_menu_items', 'add_search_icon', 10, 2 );
 function add_search_icon ( $items, $args ) {
@@ -102,6 +103,15 @@ function trim_excerpt($text) {
      return $text;
     }
 add_filter('get_the_excerpt', 'trim_excerpt', 99);
+
+// Remove excerpt "read more" button
+function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+
+	return $post_excerpt;
+}
+
+add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
+
 
 // Limit posts per page
 
@@ -267,3 +277,4 @@ add_action( 'tribe_events_bar_after_template', function() {
  
   echo '</ol></div>';
 } );
+

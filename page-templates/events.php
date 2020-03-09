@@ -26,17 +26,11 @@ get_header(); ?>
 			?>
 			</div>
 
-
 			<!-- DISPLAY POSTS -->
 
 					<div class="row events-posts">
 
-
-
-
-
 <?php
-
 
 // Ensure the global $post variable is in scope
 global $post;
@@ -81,9 +75,6 @@ foreach ( $events as $post ) {
 }
 
 ?>
-
-
-
 					</div> <!-- end blog cards row -->
 					
 					<!-- Pagination -->

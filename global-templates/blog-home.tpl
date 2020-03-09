@@ -17,34 +17,32 @@ defined( 'ABSPATH' ) || exit;
                 <p class="strapline">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
             </div>
         </div>
-        <div class="row row-eq-height">
-            <div class="col-sm-12 col-md-4">
-                <div class="blog-card first">
-                    <div class="blog-card__img"><img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/09/blog-image1.png" alt="blog image"></div>
-                    <div class="blog-card__icon"><img src="<?php echo get_template_directory_uri()?>/assets/img/blogicon-business.svg" alt="blog icon"></div>
-                    <div class="blog-card__category">business</div>
-                    <p>#balanceforbetter international women's day 2019.</p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="blog-card">
-                    <div class="blog-card__img"><img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/09/blog-image1.png" alt="blog image"></div>
-                    <div class="blog-card__icon"><img src="<?php echo get_template_directory_uri()?>/assets/img/blogicon-research.svg" alt="blog icon"></div>
-                    <div class="blog-card__category">Research</div>
-                    <p>#balanceforbetter international women's day 2019.</p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="blog-card">
-                    <div class="blog-card__img"><img src="http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/09/blog-image1.png" alt="blog image"></div>
-                    <div class="blog-card__icon"><img src="<?php echo get_template_directory_uri()?>/assets/img/blogicon-culture.svg" alt="blog icon"></div>
-                    <div class="blog-card__category">culture</div>
-                    <p>#balanceforbetter international women's day 2019.</p>
-                </div>
-            </div>
-
+        
+        <div class="row align-items-center">
+	        <?php
+				
+				$policy = get_cat_ID('policy');
+				
+				// QUERY ALL EXCEPT POLICIES 
+				$wp_query = new WP_Query(array(
+					'post_type'=>'post',
+					'post_status'=>'publish',
+					'posts_per_page'=>3,
+					'category__not_in' => $policy,
+					'paged' => ( get_query_var('paged') ? get_query_var('paged') : 0)
+				));															
+			?>
+			<!-- WHILE LOOP -->
+		    <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+		    
+				<?php include (get_template_directory() . '/global-templates/category-card.tpl'); ?>
+	    
+			<?php endwhile; ?>
+										    
+			<?php wp_reset_postdata(); ?>
+        </div>
             <div class="col-sm-12">
-                <a href="#" class="wo-btn orange">Visit the blog</a>
+                <a href="<?php echo site_url();?>/blog-media/" class="wo-btn orange">Visit the blog</a>
             </div>
         </div>
     </div>

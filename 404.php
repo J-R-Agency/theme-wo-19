@@ -37,40 +37,83 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 							<?php get_search_form(); ?>
 
-							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
-							<?php if ( understrap_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-
-								<div class="widget widget_categories">
-
-									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'understrap' ); ?></h2>
-
-									<ul>
-										<?php
-										wp_list_categories(
-											array(
-												'orderby'    => 'count',
-												'order'      => 'DESC',
-												'show_count' => 1,
-												'title_li'   => '',
-												'number'     => 10,
-											)
-										);
+							<h2>From Our Blog</h2>
+								<div class="container-fluid">
+									<div class="row align-items-center">
+								        <?php
+											
+											$policy = get_cat_ID('policy');
+											
+											// QUERY ALL EXCEPT POLICIES 
+											$wp_query = new WP_Query(array(
+												'post_type'=>'post',
+												'post_status'=>'publish',
+												'posts_per_page'=>3,
+												'category__not_in' => $policy,
+												'paged' => ( get_query_var('paged') ? get_query_var('paged') : 0)
+											));															
 										?>
-									</ul>
-
-								</div><!-- .widget -->
-
-							<?php endif; ?>
-
-							<?php
-
-							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'understrap' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-							the_widget( 'WP_Widget_Tag_Cloud' );
-							?>
+										<!-- WHILE LOOP -->
+									    <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+									    
+											<?php include (get_template_directory() . '/global-templates/category-card.tpl'); ?>
+								    
+										<?php endwhile; ?>
+																	    
+										<?php wp_reset_postdata(); ?>
+							        </div>
+								</div>
+							
+							<h2>Our Events</h2>
+							<div class="container-fluid">
+								<div class="row events-posts">
+									<?php
+									
+									// Ensure the global $post variable is in scope
+									global $post;
+									
+									if (isset($_GET['category'])) {
+										$event_category = $_GET['category'];
+										$events = tribe_get_events( [
+											'start_date'     => 'now',
+											'eventDisplay'   => 'list',
+											'posts_per_page' => 3,
+											'tax_query'=> array(
+												array(
+													'taxonomy' => 'tribe_events_cat',
+													'field' => 'slug',
+													'terms' => $event_category
+												)
+											)
+										] );
+									} else {
+									  //Handle the case where there is no parameter
+										$events = tribe_get_events( [
+											'start_date'     => 'now',
+											'eventDisplay'   => 'list',
+											'posts_per_page' => 3
+										] );
+									}
+									
+									 
+									// Retrieve the next 5 upcoming events
+									// Grab the 5 next "party" events (by tag)
+									
+									// Loop through the events: set up each one as
+									// the current post then use template tags to
+									// display the title and content
+									foreach ( $events as $post ) {
+										setup_postdata( $post );
+									
+										// This time, let's throw in an event-specific
+										// template tag to show the date after the title!
+										include ( get_template_directory() . '/global-templates/events-cards.tpl')  ;
+									
+									}
+									
+									?>
+								</div>							
+							</div>
 
 						</div><!-- .page-content -->
 
