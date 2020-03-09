@@ -31,33 +31,32 @@ get_header(); ?>
     <!-- CONTACT CARDS -->
     <section class="generic content bk-white">
         <div class="container-fluid">
-            <div class="row">
-				<?php if( have_rows('contact_card') ): ?>
-				
-					<?php while( have_rows('contact_card') ): the_row(); 
-				
-						// vars
-						$contact_card_title = get_sub_field('contact_card_title');
-						$contact_card_body = get_sub_field('contact_card_body');
-						$contact_card_cta = get_sub_field('contact_card_cta');
-						$contact_card_cta_link = get_sub_field('contact_card_cta_link');
-						$contact_card_colour = get_sub_field('contact_card_colour');
-						?>
-				
-						<div class="col-12 col-md-4 col-lg-4">
-							<div class="contact-card <?php echo $contact_card_colour; ?>">
-								<h2><?php echo $contact_card_title; ?></h2>
-								<p><?php echo $contact_card_body; ?></p>
-								<a href=" <?php echo $contact_card_cta_link['url']; ?> ">
-						        	<div class="contact_card_cta_link"> <?php echo $contact_card_cta; ?></div>
-						        </a>								
+            <div class="row contact-cards-wrapper">
+					<?php if( have_rows('contact_card') ): ?>
+					
+						<?php while( have_rows('contact_card') ): the_row(); 
+					
+							// vars
+							$contact_card_title = get_sub_field('contact_card_title');
+							$contact_card_body = get_sub_field('contact_card_body');
+							$contact_card_cta = get_sub_field('contact_card_cta');
+							$contact_card_cta_link = get_sub_field('contact_card_cta_link');
+							$contact_card_colour = get_sub_field('contact_card_colour');
+							?>
+					
+							<div class="col-12 col-md-4 col-lg-4">
+								<div class="contact-card <?php echo $contact_card_colour; ?>">
+									<h2><?php echo $contact_card_title; ?></h2>
+									<p><?php echo $contact_card_body; ?></p>
+									<a href=" <?php echo $contact_card_cta_link['url']; ?> ">
+							        	<div class="contact_card_cta_link"> <?php echo $contact_card_cta; ?></div>
+							        </a>								
+								</div>
 							</div>
-						</div>
-				
-					<?php endwhile; ?>
-				
-				<?php endif; ?>	            
-	            
+					
+						<?php endwhile; ?>
+					
+					<?php endif; ?>	            
             </div> <!-- end contact card row -->
         </div>
     </section>

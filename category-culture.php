@@ -17,7 +17,33 @@ get_header(); ?>
 
 <div class="site <?php echo $theme_colour; ?>">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
-    <section class="generic">
+
+    <section class="instagram-cta">
+	    <div class="container-fluid">
+		    <div class="row">
+			    <div class="col-12">
+				    The latest from Instagram
+			    </div>
+		    </div>
+	    </div>
+    </section>
+    
+    <div class="container-fluid">
+		<div class="row">
+		    <div class="col-12">
+			    <?php
+					if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'android')) {
+					   echo do_shortcode("[instagram-feed num=3]");
+					}	
+					else {
+					   echo do_shortcode("[instagram-feed num=9]");
+					}
+			    ?>
+			    
+		    </div>
+	    </div>
+    </div>    
+    
         <div class="container">
 			<?php include (get_template_directory() . '/global-templates/category-tabs.tpl'); ?>	        
 			<section class="blog-cards-content">
@@ -44,7 +70,6 @@ get_header(); ?>
 				</div>
             </section>
         </div>
-    </section>
 </div>
 
 <?php get_footer();

@@ -56,8 +56,14 @@
         line-height: 30px;
         @include respond-to('md'){
 	    	padding: 0 45px;
-	    }
-        
+	    }     
     }
+}
 
+.contact-cards-wrapper {
+	display: flex;
+	justify-content: center;
+    @include respond-to('md'){
+    	width: 100%;
+    }	
 } 

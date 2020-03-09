@@ -34,7 +34,15 @@ get_header(); ?>
     <div class="container-fluid">
 		<div class="row">
 		    <div class="col-12">
-			    <?php echo do_shortcode("[instagram-feed]"); ?>
+			    <?php
+					if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'android')) {
+					   echo do_shortcode("[instagram-feed num=3]");
+					}	
+					else {
+					   echo do_shortcode("[instagram-feed num=9]");
+					}
+			    ?>
+			    
 		    </div>
 	    </div>
     </div>
