@@ -18,39 +18,15 @@ $term = get_queried_object();
 $theme_colour = get_field('theme_colour', $term);
 $category_feature_image = get_field('feature_image', $term);
 
+// $theme_colour = get_field('theme_colour');
+
 get_header(); ?>
 
-<div class="site <?php echo $theme_colour; ?>">
+<div class="site <?php echo $theme_colour; ?> ">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
-    
-    <section class="instagram-cta">
-	    <div class="container-fluid">
-		    <div class="row">
-			    <div class="col-12">
-				    The latest from Instagram
-			    </div>
-		    </div>
-	    </div>
-    </section>
-    
-    <div class="container-fluid">
-		<div class="row">
-		    <div class="col-12">
-			    <?php
-					if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'android')) {
-					   echo do_shortcode("[instagram-feed num=3]");
-					}	
-					else {
-					   echo do_shortcode("[instagram-feed num=9]");
-					}
-			    ?>
-			    
-		    </div>
-	    </div>
-    </div>    
-    
+ 	<section class="generic">
+        <h1>Current policies</h1>
         <div class="container">
-			<?php include (get_template_directory() . '/global-templates/category-tabs.tpl'); ?>	        
 			<section class="blog-cards-content">
 				<div class="row blog-posts">
 
@@ -63,7 +39,7 @@ get_header(); ?>
 							
 							while ($query->have_posts()): $query->the_post();
 						?>
-							<?php include (get_template_directory() . '/global-templates/category-card.tpl'); ?>					
+							<?php include (get_template_directory() . '/global-templates/category-card--plain.tpl'); ?>					
 						<?php endwhile; ?>
 						
 						<?php wp_reset_postdata(); ?>
@@ -79,7 +55,7 @@ get_header(); ?>
 					
             </section>
         </div>
-    
+	</section>
 </div>
 
 <?php get_footer();

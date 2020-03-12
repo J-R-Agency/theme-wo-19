@@ -8,10 +8,17 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 $bh_bkimg = get_the_post_thumbnail_url();
-$blog_img = "http://192.168.33.10/womens-organization/wp-content/uploads/2019/12/Letterbox_38_Blog_and_Media_D4A6423.jpg"
+$blog_img = "http://192.168.33.10/womens-organization/wp-content/uploads/2019/12/Letterbox_38_Blog_and_Media_D4A6423.jpg";
+
+
+if( isset( $category_feature_image ) ) {
+	$background_image = $category_feature_image['url'] ;
+} else {
+	$background_image = get_the_post_thumbnail_url();
+}
 ?>
 
-<section class="hero_banner" style="background-image: url('<?php if (is_category('business') || is_category('culture') || is_category('research')) { echo $blog_img; } else { echo $bh_bkimg; }?>')">
+<section class="hero_banner" style="background-image: url('<?php echo $background_image ; ?>')">
 	
 	<div class="container">
 	<?php if (! is_front_page() ) {	

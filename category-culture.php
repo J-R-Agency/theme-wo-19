@@ -11,7 +11,12 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$theme_colour = get_field('theme_colour');
+// get the current taxonomy term
+$term = get_queried_object();
+
+// vars
+$theme_colour = get_field('theme_colour', $term);
+$category_feature_image = get_field('feature_image', $term);
 
 get_header(); ?>
 
