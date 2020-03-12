@@ -216,9 +216,9 @@
 }
 
 /* The actual content */
-.content {
+.timeline-content {
 	padding: 20px 30px;
-	background-color: white;
+	background-color: white ;
 	position: relative;
 	box-shadow: 3px 2px 17px 0px rgba(0,0,0,0.3);
 }
@@ -241,7 +241,7 @@
 		padding: 0px;	
 		margin: 20px 0;
 		
-		.content {
+		.timeline-content {
 			width: 100%;
 		}
 		
@@ -291,7 +291,7 @@
 		top: 0;
 		left: 0;
 		
-		.content {
+		.timeline-content {
 			padding: 10px;
 		}
 		
@@ -307,7 +307,7 @@
 		top: 0;
 		left: 0;
 
-		.content {
+		.timeline-content {
 			padding: 10px;
 		}
 				

@@ -46,19 +46,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 				<div class="col-md-7 col-lg-8">
 					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-						<!-- memnu-icon hidden on mobile -->
+						<!-- menu-icon hidden on mobile -->
 						<span class="c-hamburger">
 							<span></span>
 						</span>
 					</button>
 					
 					<div id="desktop-nav" class="d-none d-md-block">
-						<!--<ul class="top-links">
-							<li><a href="#">54 ST James Street</a></li>
-							<li><a href="#">Blog &amp; Media</a></li>
-							<li><a href="#">Contact</a></li>
-							<li><a><img id="search-icon" src="<?php echo get_template_directory_uri()?>/assets/img/search.svg" alt="search"></a></li>
-						</ul>-->
 						<!-- The WordPress Menu goes here -->
 						<?php wp_nav_menu(
 							array(

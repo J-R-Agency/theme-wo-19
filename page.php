@@ -19,8 +19,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<?php if ( is_archive ('events') ){
+<?php if (tribe_is_event_query()){
 	// do nothing
+	$container = 'container-fluid';
+	
 } else {
 	?>
 <div class="site <?php echo $theme_colour; ?>">

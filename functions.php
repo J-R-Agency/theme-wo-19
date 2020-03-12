@@ -43,6 +43,7 @@ function wpb_custom_new_menu() {
   }
   add_action( 'init', 'wpb_custom_new_menu' );
 
+
 // Add search icon to top menu
 add_filter( 'wp_nav_menu_items', 'add_search_icon', 10, 2 );
 function add_search_icon ( $items, $args ) {
@@ -65,8 +66,6 @@ function add_search_icon ( $items, $args ) {
 // Add Excerpt support for Page post type
 
 add_post_type_support( 'page', 'excerpt' );
-
-
 
 add_filter( 'template_include', 'var_template_include', 1000 );
 function var_template_include( $t ){
@@ -105,6 +104,15 @@ function trim_excerpt($text) {
     }
 add_filter('get_the_excerpt', 'trim_excerpt', 99);
 
+// Remove excerpt "read more" button
+function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+
+	return $post_excerpt;
+}
+
+add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
+
+
 // Limit posts per page
 
 add_action( 'pre_get_posts',  'set_posts_per_page'  );
@@ -116,16 +124,16 @@ function set_posts_per_page( $query ) {
     $query->set( 'posts_per_page', 5 );
   }
   elseif ( ( ! is_admin() ) && ( $query === $wp_the_query ) && ( $query->is_archive() ) ){
-    $query->set( 'posts_per_page', 5 );
+    $query->set( 'posts_per_page', 6 );
   }  
 
   return $query;
 }
 
+
 /*=============================================
                 BREADCRUMBS
 =============================================*/
-//  to include in functions.php
 function the_breadcrumb()
 {
     $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
@@ -235,3 +243,38 @@ function the_breadcrumb()
         echo '</div>';
     }
 } // end the_breadcrumb()
+
+
+
+/*
+    TRIBE EVENTS
+*/
+/**
+ * Add a list of clickable category links below the event
+ * search bar.
+ *
+ * Can be easily styled using the following selector:
+ *
+ * .the-events-calendar-category-list
+ */
+add_action( 'tribe_events_bar_after_template', function() {
+  $terms = get_terms( [
+    'taxonomy' => Tribe__Events__Main::TAXONOMY
+  ] );
+ 
+  if ( empty( $terms ) || is_wp_error( $terms ) ) {
+    return;
+  }
+ 
+  echo '<div class="the-events-calendar-category-list"><ol>';
+ 
+  foreach ( $terms as $single_term ) {
+    $url = esc_url( get_term_link( $single_term ) );
+    $name = esc_html( get_term_field( 'name', $single_term ) );
+ 
+    echo "<li><a href='$url'>$name</a> </li>";
+  }
+ 
+  echo '</ol></div>';
+} );
+

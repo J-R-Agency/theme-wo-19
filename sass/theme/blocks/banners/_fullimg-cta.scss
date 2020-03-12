@@ -42,7 +42,7 @@
     &.right{
         .fullimg-cta__content{
             @include respond-to('lg'){
-               padding-left: 15px;
+               // padding-left: 15px;
            }
        }
     }

@@ -8,21 +8,30 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 $bh_bkimg = get_the_post_thumbnail_url();
+$blog_img = "http://192.168.33.10/womens-organization/wp-content/uploads/2019/12/Letterbox_38_Blog_and_Media_D4A6423.jpg";
+
+
+if( isset( $category_feature_image ) ) {
+	$background_image = $category_feature_image['url'] ;
+} else {
+	$background_image = get_the_post_thumbnail_url();
+}
 ?>
 
-<section class="hero_banner" style="background-image: url('<?php echo $bh_bkimg; ?>'">
-
+<section class="hero_banner" style="background-image: url('<?php echo $background_image ; ?>')">
+	
+	<div class="container">
 	<?php if (! is_front_page() ) {	
 		if (function_exists('the_breadcrumb')) the_breadcrumb();
 	}?>
-	
-	<div class="container">
-
 		<div class="row align-items-center">
 			<div class="col-sm-12 col-md-10 col-lg-8">
 			
 				<?php if ( is_category('policy') ){
 					echo "<h1>Research and policy</h1><h2>Duis consectetur neque non sem dictum, et laoreet massa mollis.</h2>";
+				}
+				elseif (is_category('business') || is_category('culture') || is_category('research')){
+					echo"<h1>Blog & Media</h1><h2>Observations, press and opinion from The Women's Organisation.</h2>";
 				} else { ?>
 				<h1><?php the_title(); ?></h1>
 				<h2><?php the_field('bh_subtitle'); ?></h2>

@@ -111,6 +111,9 @@
     & h1 {
 	    text-align: center;
     }
+    a:hover {
+	    text-decoration: none;
+    }
 }
 
 .case-studies-container {
@@ -178,7 +181,7 @@
             padding-bottom: 30px;
             max-width: none;
             @include respond-to('lg'){
-                max-width: 320px;
+                max-width: 500px;
             }
         }
         h4{

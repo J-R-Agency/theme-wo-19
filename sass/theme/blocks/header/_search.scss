@@ -33,4 +33,19 @@
         background-color: transparent;
         margin-left: 20px;
     }
+    
+    #close-search {
+	    display: none;
+	    
+	    &:hover {
+		   cursor: pointer; 
+	    }
+	   @include respond-to('md'){
+		   display: block;
+		   position: relative;
+		   top: 8px;
+		   left: -15px;
+		   color: #00A9D8;
+	   }
+    }
 }

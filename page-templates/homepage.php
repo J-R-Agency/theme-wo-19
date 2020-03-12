@@ -15,8 +15,10 @@ $theme_colour = get_field('theme_colour');
 
 get_header(); ?>
 
-<div class="site <?php echo $theme_colour; ?>">
+<div class="site <?php echo $theme_colour; ?>">	
+    <?php include_once (get_template_directory() . '/global-templates/homepage_video.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
+    <?php include_once (get_template_directory() . '/global-templates/featured-event.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/carousel_home.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/grey_tabs.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/home-stories.tpl'); ?>

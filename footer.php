@@ -32,7 +32,7 @@ $instagram_url = get_field('instagram_url', 'option');
 						<p><?php echo $address; ?></p>
 					</div>
 					<div class="col-md-6 col-sm-12">
-						<p><div><strong>Current template:</strong> <?php get_current_template( true ); ?></div>
+						<!--p><div><strong>Current template:</strong> <?php get_current_template( true ); ?></div-->
 
 							Call Us: <a href="tel:+<?php echo $phone_number;?>"><?php echo $phone_display_number;?></a> <br>
 							CONTACT US ONLINE

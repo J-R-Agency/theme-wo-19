@@ -9,7 +9,6 @@
     margin: 1rem 0rem 1rem 0rem;
     width: 100%;
     height: 90%;
-    display: none;
     
     &.first{
         display: block;
@@ -18,10 +17,19 @@
         margin-bottom: 100px;
         display: inline-block;
     }
-    &__img img{
+    &__img {
         width: 100%;
         height: 250px;
         object-fit: cover;
+        background: rgb(0,0,0);
+        background: linear-gradient(18deg, rgba(0,0,0,1) 0%, rgba(60,60,60,1) 35%, rgba(54,54,54,1) 100%);    
+    }
+    &__img img{
+        width: 100%; 
+        height: 250px;
+        object-fit: cover;
+        background: rgb(0,0,0);
+        background: linear-gradient(18deg, rgba(0,0,0,1) 0%, rgba(60,60,60,1) 35%, rgba(54,54,54,1) 100%);    
     }
     &__icon{
         margin-top: -39px;
@@ -39,7 +47,7 @@
 	    font-size: 18pt;
     }
     a{
-	    color: white;
+	    color: white;	    
     }
     p{
         font-size: 22px;
@@ -47,9 +55,68 @@
         padding: 0 45px;
     }
     &:last-child{
-        margin-bottom: 60px;
+        margin-bottom: 0px;
         @include respond-to('md'){
             margin-bottom: 20px;
         }
     }
+
+    &__img--plain {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        background: rgb(0,0,0);
+        background: linear-gradient(18deg, rgba(0,0,0,1) 0%, rgba(60,60,60,1) 35%, rgba(54,54,54,1) 100%);    
+    }
+    &__img--plain img{
+        width: 100%; 
+        height: 250px;
+        object-fit: cover;
+        background: rgb(0,0,0);
+        background: linear-gradient(18deg, rgba(0,0,0,1) 0%, rgba(60,60,60,1) 35%, rgba(54,54,54,1) 100%);    
+    }
+    &__icon--plain{
+        margin-top: 0px;
+        padding-bottom: 10px;
+    }
+    &__category--plain{
+        @include _bodyCopy;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 1rem 0;
+    }
+    &__title--plain{
+        margin: 0 auto;
+        width: 80%;
+        font-size: 18pt;
+    }
+
+} 
+
+.blog-card--plain{
+    background-color: $white;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(151, 151, 151, 1);
+    -moz-box-shadow:    1px 1px 5px 0px rgba(151, 151, 151, 1);
+    box-shadow:         1px 1px 5px 0px rgba(151, 151, 151, 1);
+    padding: 20px 20px 50px;
+    color: $dark-grey;
+    text-align: center;
+    margin: 1rem 0rem 1rem 0rem;
+    width: 100%;
+    height: 90%;
+    @include respond-to('md'){
+        width: 90%;
+    }   
+    &.first{
+        display: block;
+    }
+    @include respond-to('md'){
+        margin-bottom: 100px;
+        display: inline-block;
+    }
+
+    a{
+        color: $dark-grey;       
+    }
+
 } 

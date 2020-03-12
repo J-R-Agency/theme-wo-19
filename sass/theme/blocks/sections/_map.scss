@@ -1,5 +1,5 @@
 .map-container {
-	background-color: $aqua;
+	background-color: #b8e6e7;
 	width: 100%;
 }
 
@@ -8,6 +8,24 @@
 	@include respond-to('md'){
 		height: 100%;
 	}
+}
+
+.event-map {
+	margin: 1rem 0;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(151, 151, 151, 1);
+    -moz-box-shadow:    1px 1px 5px 0px rgba(151, 151, 151, 1);
+    box-shadow:         1px 1px 5px 0px rgba(151, 151, 151, 1);
+    border: none;
+    width: 100%;	
+    
+	@include respond-to('md') {
+       margin: 2rem;
+       width: 70%;
+    }    
+      
+    iframe {
+	    display: block;
+    }
 }
 
 .contact-map {
@@ -20,7 +38,6 @@
 }
 
 .map-banner-cta {
-	background-color: $aqua;
 	text-align: left;
 	padding: 5rem 3rem;
 }
