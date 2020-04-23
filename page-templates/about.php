@@ -24,7 +24,7 @@ get_header(); ?>
                 <div class="col-sm-12">
                     <h3>About Us</h3>
                     <br>
-                    <div class="three-col text-left"><?php echo $post->post_content; ?></div>
+                    <div class="col-lg-8 col-md-10 col-sm-12 text-left block-centre"><?php echo $post->post_content; ?></div>
                 </div>
             </div>
         </div>
