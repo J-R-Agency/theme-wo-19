@@ -16,7 +16,10 @@ $theme_colour = get_field('theme_colour');
 get_header(); ?>
 
 <div class="site <?php echo $theme_colour; ?>">
-	
+
+    <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
+
+<!-- 	
 	<section class="subsection content">		
 		<div class="container">
 	        <div class="row">
@@ -27,7 +30,7 @@ get_header(); ?>
 	        </div>
 		</div>
 	</section>
-
+ -->
     <!-- CONTACT CARDS -->
     <section class="generic content bk-white">
         <div class="container-fluid">
