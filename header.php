@@ -36,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<nav class="container navbar-expand-md">
 			<div class="row align-items-start">
-				<div class="col-md-5 col-lg-4">
+				<div class="col-md-4 col-lg-4">
 					<div id="site-logo">
 						<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="The Womens Organisation" itemprop="url">
 							<img class="d-none d-md-block" src="<?php echo get_template_directory_uri()?>/assets/img/wo-logo.svg" alt="The Womens Organisation">
@@ -44,7 +44,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</a>
 					</div>
 				</div>
-				<div class="col-md-7 col-lg-8">
+				<div class="col-md-8 col-lg-8">
 					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 						<!-- menu-icon hidden on mobile -->
 						<span class="c-hamburger">

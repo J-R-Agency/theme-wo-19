@@ -151,6 +151,11 @@ ul#main-menu{
 #menu-item-544 .dropdown-menu{
     @include respond-to('md'){
         border-bottom: $pink 8px solid;
+        margin-left: -75px;
+    }
+    @include respond-to('lg'){
+        border-bottom: $pink 8px solid;
+        margin-left: -25px;
     }
 }
 
@@ -181,9 +186,29 @@ ul#main-menu{
 
 .navbar-expand-md {
     margin-bottom: 32px;
-    margin-top: 32px;
+    margin-top: 36px;
+
+    @include respond-to('xs'){
+        // background-color: pink;
+    }
+    @include respond-to('sm'){
+        // background-color: red;
+    }
     @include respond-to('md'){
+        // background-color: yellow;
         margin-bottom: 0;
+        height:calc(19vh - 36px);
+        // overflow: hidden;
+    }
+    @include respond-to('lg'){
+        // background-color: green;
+        margin-bottom: 0;
+        height:calc(17vh - 36px);
+        // overflow: hidden;
+    }
+    @include respond-to('xl'){
+        // background-color: blue;
+        height:calc(14vh - 31px); // CHECK ALL SCREENS
     }
 }
 
