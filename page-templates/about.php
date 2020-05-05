@@ -30,7 +30,7 @@ get_header(); ?>
         </div>
     </section>
     <?php include_once (get_template_directory() . '/global-templates/about-cards.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/related-links.tpl'); ?>
+    <?php include_once (get_template_directory() . '/global-templates/related-cards.tpl'); ?>
 </div>
 
 <?php get_footer();
