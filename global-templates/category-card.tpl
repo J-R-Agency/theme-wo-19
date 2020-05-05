@@ -13,7 +13,7 @@
 	    	<div class="blog-card__icon">
 			<?php $category = get_the_category();
 				if(!empty($category)) {
-					$firstCategory = $category[0]->cat_name;
+					$firstCategory = $category[0]->cat_slug;
 				}
 			?>
 		    	<img src="<?php echo get_template_directory_uri()?>/assets/img/blogicon-<?php echo $firstCategory; ?>.svg" alt="blog icon">
