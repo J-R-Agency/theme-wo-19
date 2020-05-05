@@ -21,6 +21,7 @@ $theme_colour = get_field('theme_colour');
 
 		<?php the_content(); ?>
 		<?php get_template_part( 'loop-templates/content', 'standard-cta' ); ?>
+		<?php get_template_part( 'loop-templates/download', 'file-cta' ); ?>
 		<?php
 		wp_link_pages(
 			array(
