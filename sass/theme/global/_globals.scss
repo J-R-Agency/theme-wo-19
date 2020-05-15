@@ -1,6 +1,7 @@
 .stretch-left{
   margin-left: calc((100vw - 769px) / -2);
-  max-width: 50vw;
+/*  max-width: 50vw;*/  
+  max-width: 46vw;
   flex: auto;
   @include respond-to('md'){
     margin-left: calc((100vw - 1025px) / -2);
@@ -15,7 +16,8 @@
 
 .stretch-right{
   margin-right: calc((100vw - 769px) / -2);
-  max-width: 50vw;
+/*  max-width: 50vw;*/  
+  max-width: 46vw;
   flex: auto;
   @include respond-to('md'){
     margin-right: calc((100vw - 1025px) / -2);

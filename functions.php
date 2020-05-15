@@ -156,7 +156,8 @@ function the_breadcrumb()
             if ($thisCat->parent != 0) {
                 echo get_category_parents($thisCat->parent, true, ' ' . $delimiter . ' ');
             }
-            echo $before . 'Archive by category "' . single_cat_title('', false) . '"' . $after;
+            // echo $before . 'Archive by category "' . single_cat_title('', false) . '"' . $after;
+            echo $before . single_cat_title('', false) . $after;
         } elseif (is_search()) {
             echo $before . 'Search results for "' . get_search_query() . '"' . $after;
         } elseif (is_day()) {

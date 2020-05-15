@@ -54,7 +54,7 @@ if (isset($_GET['category'])) {
 	$events = tribe_get_events( [
 		'start_date'     => 'now',
 		'eventDisplay'   => 'list',
-		'posts_per_page' => 6
+		'posts_per_page' => 12
 	] );
 }
 

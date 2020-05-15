@@ -62,7 +62,7 @@ get_header(); ?>
 			$wp_query = new WP_Query(array(
 				'post_type'=>'post',
 				'post_status'=>'publish',
-				'posts_per_page'=>6,
+				'posts_per_page'=>12,
 				'category__not_in' => $policy,
 				'paged' => ( get_query_var('paged') ? get_query_var('paged') : 0)
 			));															

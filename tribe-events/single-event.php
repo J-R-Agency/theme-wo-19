@@ -85,9 +85,11 @@ $themes_path = get_template_directory_uri();
 							<p>If you have questions about this event call us on <a href="tel:0151-706-8111">0151 706 8111</a> or <a href="<?php echo site_url(); ?>/contact/">contact us online</a></p>
 						</div>
 					</div>
+					<?php if (tribe_get_venue()!=""){ ?>
 					<div class="event-map">
 						<iframe width="100%" height="300" frameborder="0" src="https://maps.google.com/maps?q=<?php echo tribe_get_venue(); ?>&output=embed"></iframe>
 					</div>
+					<?php } ?>
 				</div>
 				
 			</div> <!-- end row -->

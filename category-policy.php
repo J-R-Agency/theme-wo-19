@@ -34,7 +34,7 @@ get_header(); ?>
 						<?php
 							$query = new WP_Query(array(
 							    'posts_per_page'   => 6,
-							    'category_name' => 'business'
+							    'category_name' => 'policy'
 							));
 							
 							while ($query->have_posts()): $query->the_post();
