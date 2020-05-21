@@ -115,8 +115,10 @@ get_header(); ?>
 				<?php
 					else:
 				?>
-					<p>There are currently no vacancies to join our team. Please check back for updates. </p>
-					<p>You can also stay up-to-date via our social media channels where new vacancies will be shared as they become available.</p>
+					<div class="msg-no-vacancies">
+						<p>There are currently no vacancies to join our team. Please check back for updates. </p>
+						<p>You can also stay up-to-date via our social media channels where new vacancies will be shared as they become available.</p>
+					</div>
 				<?php endif; wp_reset_query(); ?> 
 				
                 </div> <!-- end col -->
