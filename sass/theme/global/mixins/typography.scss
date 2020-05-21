@@ -10,6 +10,14 @@
 	font-family: 'akkurat-bold';
 }
 
+@mixin _akkurat_italic {
+	font-family: 'akkurat-italic';
+}
+
+@mixin _akkurat_bold_italic {
+	font-family: 'akkurat-bold-italic';
+}
+
 @mixin _title {
 	@include _museo;
 	font-size: 30px;
