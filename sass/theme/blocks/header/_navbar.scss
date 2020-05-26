@@ -76,6 +76,7 @@ ul#main-menu{
         }
         > a{
             @include respond-to('md'){
+                /* Affects height / position if dropdown menu */                
                 height: 52px;
             }
         }
@@ -183,6 +184,8 @@ ul#main-menu{
         } 
     }
 }
+
+/* Hover menu position for different breakpoints */
 
 .navbar-expand-md {
     margin-bottom: 32px;
