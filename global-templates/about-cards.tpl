@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
         <div class="row">
             <div class="col-sm-12">
                 <div class="h1">Our Leadership</div>
-                <p class="strapline">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <p class="strapline">&nbsp;</p>
             </div>
         </div>
         <div class="row row-eq-height">
