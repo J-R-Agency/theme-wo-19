@@ -5,6 +5,19 @@
     h2{
         margin-bottom: 1em;
     }
+    p + h2{
+        margin-top: 2rem;
+    }
+    h3{
+        @include _akkurat;
+        font-size: 24px;
+    }
+    h4{
+        @include _akkurat_bold;
+        font-size: 18px;
+        text-transform: none;
+        margin-top: 1.5rem;
+    }
     .accordion{
         padding-top: 50px;
         .card{
@@ -73,3 +86,33 @@
         }
     }
 }
+
+
+.theme-orange .standard-content .entry-content p a{
+    color: $orange;
+}
+
+.theme-green .standard-content .entry-content p a{
+    color: $green;
+}
+
+.theme-purple .standard-content .entry-content p a{
+    color: $purple;
+}
+
+.theme-lime .standard-content .entry-content p a{
+    color: $lime;
+}
+
+.theme-pink .standard-content .entry-content p a{
+    color: $pink;
+}
+
+.theme-red .standard-content .entry-content p a{
+    color: $red;
+}
+
+.theme-aqua .standard-content .entry-content p a{
+    color: $aqua;
+}
+
