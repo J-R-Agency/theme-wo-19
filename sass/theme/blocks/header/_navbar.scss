@@ -153,6 +153,13 @@ ul#main-menu{
         border-bottom: $lime 8px solid;
     }
 }
+
+#menu-item-1921 .dropdown-menu{
+    @include respond-to('md'){
+        border-bottom: $lime 8px solid;
+    }
+}
+
 #menu-item-544 .dropdown-menu{
     @include respond-to('md'){
         border-bottom: $pink 8px solid;
