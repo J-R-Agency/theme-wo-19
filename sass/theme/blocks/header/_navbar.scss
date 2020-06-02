@@ -231,6 +231,15 @@ ul#main-menu{
 
 .menu-main-menu-container{
     width: 100%;
+
+    @include respond-to('sm'){
+        margin-top: 3rem;
+    }
+
+    @include respond-to('lg'){
+        margin-top: 0 ;
+    }
+
 }
 
 .dropdown-toggle::after {

@@ -58,7 +58,7 @@ if( have_rows('social_media_accounts') ):
 
 
         if( $social_media_link ):
-            echo "<span class=\"media-centre__title\"><a href=\"" . $social_media_link['url'] . "\" title=\"$press_article_title\">$social_title</a></span><p>$social_media_handle</p>";
+            echo "<a href=\"" . $social_media_link['url'] . "\" title=\"$press_article_title\" target=\"_blank\"><span class=\"media-centre__title\">$social_title</span><p>$social_media_handle</p></a>";
         endif;
 
 

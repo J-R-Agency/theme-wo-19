@@ -13,19 +13,26 @@ defined( 'ABSPATH' ) || exit;
 
 $theme_colour = get_field('theme_colour');
 
-get_header(); ?>
+get_header(); 
+
+$landing_page__content = $post->post_content;
+
+
+?>
 
 <div class="site <?php echo $theme_colour; ?>">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
+    <?php if ( $landing_page__content != "" ) { ?>
     <section class="generic bk-white">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class=" "><?php echo $post->post_content; ?></div>
+                    <div class="landing_page__content"><?php echo $landing_page__content ; ?></div>
                 </div>
             </div>
         </div>
     </section>
+    <?php } ?>
     <?php include_once (get_template_directory() . '/global-templates/subpage-cards.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/banner-cta.tpl'); ?>
 </div>

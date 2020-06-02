@@ -25,16 +25,22 @@ $args = array(
  
 $parent = new WP_Query( $args );
  
-if ( $parent->have_posts() ) : ?>
+if ( $parent->have_posts() ) : 
+
+    $subcontent_title = get_field('subcontent_title')
+
+    ?>
  
 
 <section class="related-links content capped-width">
     <div class="container">
+        <?php if ( $subcontent_title != "" ) { ?>
 	    <div class="row">
 		    <div class="col-12">
-			    <h1><?php the_field('subcontent_title')?></h1>
+			    <h1><?php echo $subcontent_title ; ?></h1>
 		    </div>
 	    </div>
+        <?}?>
         <div class="row">
             <?php  if( $parent->have_posts() ): ?>
                 <?php 
