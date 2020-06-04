@@ -34,6 +34,7 @@ $landing_page__content = $post->post_content;
     </section>
     <?php } ?>
     <?php include_once (get_template_directory() . '/global-templates/subpage-cards.tpl'); ?>
+    <?php include_once (get_template_directory() . '/global-templates/direct-downloads-cards.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/banner-cta.tpl'); ?>
 </div>
 

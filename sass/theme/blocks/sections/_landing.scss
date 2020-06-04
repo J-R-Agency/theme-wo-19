@@ -17,3 +17,84 @@
     }
 
 }
+
+
+.direct-downloads .container{ 
+
+	background-color: #f1f1f1; 
+/*
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+*/
+	padding: 2rem 0;
+
+}
+
+
+.downloads__title {
+
+	@include _museo;
+	font-size: 3rem;
+	margin: 2rem;
+	text-align: center;
+
+}
+
+
+.direct-downloads{
+
+	&__container{
+
+		display: flex;
+		flex-wrap: wrap;
+
+		justify-content: space-around;
+		align-items: stretch;
+
+		width: 100%;
+
+	}
+
+	&__card{
+
+		border: 1px solid #eee;
+		background-color: #fff;
+		flex-basis: 100%;
+
+		padding: 1rem;
+		margin: 0 0 2rem 1rem;
+
+		text-align: center;
+
+		@include respond-to('md') {
+
+			flex-basis: 30%;
+			width: 400px;
+			min-height: 450px;
+
+	    }	
+
+	}
+
+	&__img{
+
+		background-color: #333;
+		background-position: center;
+		background-size: cover;
+
+		height: 240px;
+		width: 360px;
+
+	}
+
+	&__title{
+                    
+        @include _akkurat;
+
+        font-size: 1.75rem;
+        margin: 1rem 0;
+		width: 360px;
+
+	}
+	
+}
