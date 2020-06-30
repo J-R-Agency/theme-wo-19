@@ -11,6 +11,7 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <section class="generic capped-width">
     <div class="container">
+    	
         <div class="row">
             <div class="col-sm-12">
                 <div class="h1">From The Blog</div>

@@ -19,6 +19,7 @@ defined( 'ABSPATH' ) || exit;
         </div>
         <div class="row row-eq-height">
             <?php  if( have_rows('leadership_repeater') ): ?>
+                <div class="leader-card-container">
                 <?php $count = 0; ?>
                 <?php while ( have_rows('leadership_repeater') ) : the_row(); ?>
                     <?php $class = ($count != 0) ?: 'first'; ?>
@@ -33,6 +34,7 @@ defined( 'ABSPATH' ) || exit;
                     </div>
                     <?php $count = $count + 1; ?>
                 <?php endwhile; ?>
+                </div>
             <?php endif ?>
         </div>
     </div>
