@@ -21,7 +21,7 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class=" "><?php echo $post->post_content; ?></div>
+                    <?php echo apply_filters ( 'the_content', $post->post_content ) ; ?>
                 </div>
             </div>
         </div>

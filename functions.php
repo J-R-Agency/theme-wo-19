@@ -279,3 +279,13 @@ add_action( 'tribe_events_bar_after_template', function() {
   echo '</ol></div>';
 } );
 
+
+/*
+    ADD SUPPORT FOR EDITOR STYLE
+*/
+
+function theme_wo_19__setup() {
+    add_editor_style();
+}
+add_action( 'after_setup_theme', 'theme_wo_19__setup' );
+

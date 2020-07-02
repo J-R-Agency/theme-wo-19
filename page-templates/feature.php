@@ -23,7 +23,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-sm-12">
 
-                    <div class="three-col text-left"><?php echo $post->post_content; ?></div>
+                    <div class="three-col text-left"><?php echo apply_filters ( 'the_content', $post->post_content ) ; ?></div>
                 </div>
             </div>
         </div>

@@ -11,14 +11,14 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <section class="generic capped-width">
     <div class="container">
-    	
+<!--     	
         <div class="row">
             <div class="col-sm-12">
                 <div class="h1">From The Blog</div>
                 <p class="strapline">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
             </div>
         </div>
-        
+         -->
         <div class="row align-items-center">
 	        <?php
 				
