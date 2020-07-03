@@ -73,4 +73,3 @@ if( !empty( $funder_logo ) ) {
 
 	<?php } ?>
 </section>
-

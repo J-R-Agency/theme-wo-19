@@ -86,13 +86,20 @@
 }
 
 .funder_logo{
-    text-align: right; 
-    padding: 2rem;
-    background-color: #fff;
-    box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+    text-align: right;
+    padding: 1rem 0;
+
     img{
         
-        // width: 200px;
+        background-color: #fff;
+        padding: 1rem;
+        width: 456px;
+        box-sizing: content-box;
+        box-shadow: 2px 2px 8px rgba(0,0,0,.3);  
 
     }
 }
