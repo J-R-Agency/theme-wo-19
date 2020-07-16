@@ -1,4 +1,4 @@
-.spotlight-intro, .spotlight-white, .spotlight-grey, .spotlight-grey-full {
+.spotlight-intro, .spotlight-white, .spotlight-grey, .spotlight-grey-full, .spotlight-full {
 
 	padding: 2rem;
 
@@ -42,6 +42,58 @@
 
 		text-align: center;
 		
+	}
+
+	& + .orange {
+
+		background-color: rgba($orange, .3) !important ;
+
+	}
+
+	& + .green {
+
+		background-color: rgba($green, .3) !important ;
+		
+	}
+	& + .purple {
+
+		background-color: rgba($purple, .3) !important ;
+		
+	}
+	& + .pink {
+
+		background-color: rgba($pink, .3) !important ;
+		
+	}
+	& + .red {
+
+		background-color: rgba($red, .3) !important ;
+		
+	}
+	& + .red {
+
+		background-color: rgba($red, .3) !important ;
+		
+	}
+	& + .grey {
+
+		background-color: rgba($grey, .3) !important ;
+		
+	}
+	& + .white {
+
+		background-color: rgba($white, .3) !important ;
+		
+	}
+
+	& + .wo_background {
+
+	    background-image: url(../assets/img/wo-logo-grey.svg);
+	    background-size: cover;
+	    position: relative;
+	    background-position: center;
+	    background-blend-mode: lighten;
+
 	}
 
 }

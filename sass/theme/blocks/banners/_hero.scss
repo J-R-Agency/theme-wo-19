@@ -85,19 +85,67 @@
     }
 }
 
+.hero-contents{
+
+    display: flex;
+
+    &__info{
+        
+        flex-basis: 100%;
+
+        @include respond-to('md'){
+
+            flex-basis: 67%;
+
+        }
+    }
+
+    &__logo{
+
+        flex-basis: 100%;
+
+        @include respond-to('md'){
+
+            flex-basis: 33%;
+
+        }
+
+    }
+
+}
+
+
+
 .funder_logo{
+
 
     align-items: flex-end;
     display: flex;
-    height: 100%;
-    text-align: right;
-    padding: 1rem 0;
+    
+
+    padding: 1rem;
+    
+        @include respond-to('md'){
+
+            height: 100%;
+            text-align: right;
+            padding: 1rem 0;
+
+        }
+
 
     img{
         
         background-color: #fff;
         padding: 1rem;
-        width: 456px;
+        width: 83vw;
+
+        @include respond-to('sm'){
+
+            width: 456px;
+
+        }        
+        
         box-sizing: content-box;
         box-shadow: 2px 2px 8px rgba(0,0,0,.3);  
 

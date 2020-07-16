@@ -30,7 +30,7 @@ if ( isset( $featured_image_position ) ) {
 $funder_logo = get_field('funder_logo');
 if( !empty( $funder_logo ) ) {
     $show_funder_logo = "
-    <div class=\"funder_logo\">
+    <div class=\"funder_logo hero-contents__logo\">
 	    <img src=\"" .  esc_url($funder_logo['url']) . "\" alt=\"" . esc_attr($funder_logo['alt']) . "\" />
 	</div>
     " ;
@@ -46,8 +46,8 @@ if( !empty( $funder_logo ) ) {
 	<?php if (! is_front_page() ) {	
 		if (function_exists('the_breadcrumb')) the_breadcrumb();
 	}?>
-		<div class="row align-items-center">
-			<div class="col-sm-12 col-md-10 col-lg-8">
+		<div class="row align-items-center hero-contents">
+			<div class="col-sm-12 col-md-10 col-lg-8 hero-contents__info">
 			
 				<?php if ( is_category('policy') ){
 					echo "<h1>Research and policy</h1><h2></h2>";

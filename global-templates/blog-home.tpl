@@ -11,14 +11,27 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <section class="generic capped-width">
     <div class="container">
-<!--     	
+
+<?php
+if ( get_field('blog_section_title') ) {
+?>
+
         <div class="row">
             <div class="col-sm-12">
-                <div class="h1">From The Blog</div>
-                <p class="strapline">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <div class="h1"><?php the_field('blog_section_title'); ?></div>
+                <?php
+				if ( get_field('blog_section_intro') ) {
+				?>
+                <p class="strapline"><?php the_field('blog_section_intro'); ?></p>
+                <?php
+				}
+				?> 
             </div>
         </div>
-         -->
+
+<?php
+}
+?>         
         <div class="row align-items-center">
 	        <?php
 				

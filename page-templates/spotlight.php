@@ -41,31 +41,48 @@ if( have_rows('spotlight_content') ):
 
         // Load sub field value.
 
+        $spotlight_wo_background_class = "";
+        $spotlight_colour = "";
+
         $spotlight_panel = get_sub_field('spotlight_panel');
         $spotlight_style = get_sub_field('spotlight_style');
         $spotlight_alignment = get_sub_field('spotlight_alignment');
+        $spotlight_colour = get_sub_field('spotlight_colour');
+        $spotlight_wo_background = get_sub_field('spotlight_wo_background');
+
+        if ( $spotlight_wo_background == "true" ){
+            $spotlight_wo_background_class = "wo_background";
+        } else {
+            $spotlight_wo_background_class = "";            
+        }
 
         // Do something...
 
+        $spotlight_global = $spotlight_style . " " . $spotlight_alignment . " " . $spotlight_wo_background_class . " " . $spotlight_colour ;
+
         if ( $spotlight_style == "spotlight-intro") {
 
-            $spotlight_class = $spotlight_style . " " . $spotlight_alignment . " subsection bk-grey grey-w-icon capped-width";
+            $spotlight_class = $spotlight_global . " subsection bk-grey grey-w-icon capped-width";
 
         } elseif ( $spotlight_style == "spotlight-grey") {
 
-            $spotlight_class = $spotlight_style . " " . $spotlight_alignment . " subsection bk-grey capped-width";
+            $spotlight_class = $spotlight_global . " subsection bk-grey capped-width";
 
         } elseif ( $spotlight_style == "spotlight-grey-full") {
 
-            $spotlight_class = $spotlight_style . " " . $spotlight_alignment . " subsection bk-grey";
+            $spotlight_class = $spotlight_global . " subsection bk-grey";
+
+        } elseif ( $spotlight_style == "spotlight-full") {
+
+            $spotlight_class = $spotlight_global . " subsection";
 
         } elseif ( $spotlight_style == "spotlight-white" ) {
 
-            $spotlight_class = $spotlight_style . " " . $spotlight_alignment . " subsection capped-width";
+            $spotlight_class = $spotlight_global . " subsection capped-width";
 
         } else {
 
-            $spotlight_class = $spotlight_style . " " . $spotlight_alignment . " subsection capped-width";
+            $spotlight_class = $spotlight_global . " subsection capped-width";
 
         }
 ?>
