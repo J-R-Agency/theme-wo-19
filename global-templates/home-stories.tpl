@@ -5,6 +5,17 @@ if( $post_object ):
     $post = $post_object;
     setup_postdata( $post ); 
     $post_bg_image = get_the_post_thumbnail_url( $post->ID, 'medium_large' );
+
+
+    // Check for alternative card image
+
+    if ( null !== get_field ( 'card_image', $post->ID ) ) {
+
+    	$card_image = get_field( 'card_image', $post->ID );
+    	$post_bg_image = $card_image['url'];
+
+    }
+
     ?>
 
 	<section class="stories capped-width">
@@ -28,3 +39,5 @@ if( $post_object ):
 
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif; ?>
+
+
