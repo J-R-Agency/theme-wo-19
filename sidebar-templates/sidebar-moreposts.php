@@ -28,7 +28,7 @@ $args = array(
 			foreach($categories as $category) {
 				if($category->name !== 'Uncategorized'):
 					echo
-					'<div class="col-md-4"><a href="' . get_category_link($category->term_id) . '/#nav-tab">' . $category->name . ' >' . '</a></div>';
+					'<div class="col-md-8"><a href="' . get_category_link($category->term_id) . '/#nav-tab">' . $category->name . ' >' . '</a></div>';
 				endif;
 		}?>	 
 			

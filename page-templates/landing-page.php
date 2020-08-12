@@ -27,7 +27,8 @@ $landing_page__content = $post->post_content;
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="landing_page__content"><?php echo $landing_page__content ; ?></div>
+                    <!--div class="landing_page__content"><?php echo $landing_page__content ; ?></div-->
+                    <?php echo apply_filters ( 'the_content', $landing_page__content ) ; ?>
                 </div>
             </div>
         </div>

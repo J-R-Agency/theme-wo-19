@@ -12,6 +12,9 @@
 	    	<!-- icon -->
 	    	<div class="blog-card__icon">
 			<?php $category = get_the_category();
+
+			print_r($category);
+
 				if(!empty($category)) {
 					$firstCategory = $category[0]->slug;
 				}
