@@ -1,4 +1,4 @@
-.hero_banner{
+.hero_banner, .hero_banner__mobile{
     overflow: hidden;
     color: white;
     background-size: cover;
@@ -65,6 +65,23 @@
     h1, h2 {
         text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
     }
+}
+
+.hero_banner{
+    display: none;
+    @include respond-to('sm'){
+        display: block;
+    }    
+}
+
+.hero_banner__mobile{
+    @include respond-to('sm'){
+        display: none;
+    }    
+}
+
+.hero_banner__override{
+    display: block;
 }
 
 #crumbs {

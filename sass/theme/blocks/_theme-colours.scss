@@ -15,7 +15,7 @@
     a.theme{
         color: $orange;
     }
-    .hero_banner{
+    .hero_banner, .hero_banner__mobile{
         &:before{
             content: url('../assets/img/wo-logo_orange.svg');
             opacity: 0.5;
@@ -38,7 +38,7 @@
     a.theme{
         color: $green;
     }
-    .hero_banner{
+    .hero_banner, .hero_banner__mobile{
         &:before{ 
             content: url('../assets/img/wo-logo_green.svg');
             opacity: 0.5;
@@ -61,7 +61,7 @@
     a.theme{
         color: $purple;
     }
-    .hero_banner{
+    .hero_banner, .hero_banner__mobile{
         &:before{
             content: url('../assets/img/wo-logo_purple.svg');
             opacity: 0.5;
@@ -85,7 +85,7 @@
     a.theme{
         color: $lime;
     }
-    .hero_banner{
+    .hero_banner, .hero_banner__mobile{
         &:before{
             content: url('../assets/img/wo-logo_lime.svg');
             opacity: 0.5;
@@ -108,7 +108,7 @@
     a.theme{
         color: $pink;
     }
-    .hero_banner{
+    .hero_banner, .hero_banner__mobile{
         &:before{
             content: url('../assets/img/wo-logo_pink.svg');
             opacity: 0.5;
@@ -131,7 +131,7 @@
     a.theme{
         color: $red;
     }
-    .hero_banner{
+    .hero_banner, .hero_banner__mobile{
         &:before{
             content: url('../assets/img/wo-logo_red.svg');
             opacity: 0.5;
@@ -154,7 +154,7 @@
     a.theme{
         color: $aqua;
     }
-    .hero_banner{
+    .hero_banner, .hero_banner__mobile{
         &:before{
             content: url('../assets/img/wo-logo_aqua.svg');
             opacity: 0.5;
