@@ -42,7 +42,11 @@
     }
     .row{
         // height: 500px;
-        height: calc(100vh - 90px);
+        // height: calc(100vh - 90px);
+        // height: calc(67vh - 90px);
+
+        height: calc(50vh - 90px);
+
         @include respond-to('md'){
             height: 550px;
         }
@@ -50,7 +54,7 @@
             height: 600px;
         }
         div{
-            z-index: 1;;
+            z-index: 1;
         }
     }
     &__video {
@@ -137,12 +141,14 @@
 
 
     align-items: flex-end;
-    display: flex;
+    display: none;
     
 
     padding: 1rem;
     
         @include respond-to('md'){
+            
+            display: flex;
 
             height: 100%;
             text-align: right;
@@ -150,6 +156,35 @@
 
         }
 
+
+    img{
+        
+        background-color: #fff;
+        padding: 1rem;
+        width: 83vw;
+
+        @include respond-to('sm'){
+
+            width: 456px;
+
+        }        
+        
+        box-sizing: content-box;
+        box-shadow: 2px 2px 8px rgba(0,0,0,.3);  
+
+    }
+}
+
+
+.funder_logo_mobile{
+
+
+    align-items: flex-end;
+    display: flex;
+    
+
+    padding: 2rem 1rem 1rem 1rem;
+    
 
     img{
         

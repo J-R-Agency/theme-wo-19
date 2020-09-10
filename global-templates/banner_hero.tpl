@@ -34,8 +34,14 @@ if( !empty( $funder_logo ) ) {
 	    <img src=\"" .  esc_url($funder_logo['url']) . "\" alt=\"" . esc_attr($funder_logo['alt']) . "\" />
 	</div>
     " ;
+	$show_funder_logo_mobile = "
+    <div class=\"funder_logo_mobile hero-contents__logo\">
+	    <img src=\"" .  esc_url($funder_logo['url']) . "\" alt=\"" . esc_attr($funder_logo['alt']) . "\" />
+	</div>
+    " ;
 } else {
 	$show_funder_logo = "";
+	$show_funder_logo_mobile = "";
 }
 
 
@@ -90,7 +96,6 @@ if ( isset( $mobile_alternative['url'] ) ){
 
 	<?php } ?>
 </section>
-
 <?php
 } else {
 	$hero_banner__override = "hero_banner__override" ;
@@ -130,4 +135,5 @@ if ( isset( $mobile_alternative['url'] ) ){
 
 	<?php } ?>
 </section>
+<?php echo $show_funder_logo_mobile ;?>
 </div>
