@@ -44,8 +44,9 @@
         // height: 500px;
         // height: calc(100vh - 90px);
         // height: calc(67vh - 90px);
+        // height: calc(50vh - 90px);
 
-        height: calc(50vh - 90px);
+        height: calc(55vh - 90px);
 
         @include respond-to('md'){
             height: 550px;
@@ -175,6 +176,18 @@
     }
 }
 
+
+.hero_banner .align-items-center{
+    
+    align-items: flex-end !important;
+
+    @include respond-to('sm'){
+
+            align-items: center !important;
+
+    }
+
+}
 
 .funder_logo_mobile{
 
