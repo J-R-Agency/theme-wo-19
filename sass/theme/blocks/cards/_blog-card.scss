@@ -34,6 +34,10 @@
     &__icon{
         margin-top: -39px;
         padding-bottom: 10px;
+        img {
+	        width: 75px;
+	        height: 75px;
+        }
     }
     &__category{
         @include _bodyCopy;
@@ -120,4 +124,4 @@
         color: $dark-grey;       
     }
 
-} 
+}
