@@ -58,3 +58,14 @@
   margin-right: auto;
   overflow: hidden;
 }
+
+.container {
+	max-width: 1125px;
+}
+
+@include respond-to('lg') {
+	.container {
+		max-width: 1600px;
+	}	
+}
+

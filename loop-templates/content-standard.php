@@ -16,7 +16,8 @@ $theme_colour = get_field('theme_colour');
 
 	<div class="entry-content">
 
-		<?php the_content(); ?>
+		<?php $post_content = get_the_content(); ?>
+		<?php echo apply_filters ( 'the_content', $post_content ) ; ?>
 		<?php get_template_part( 'loop-templates/content', 'standard-cta' ); ?>
 		<?php get_template_part( 'loop-templates/downloads', 'panel' ); ?>
 		<?php

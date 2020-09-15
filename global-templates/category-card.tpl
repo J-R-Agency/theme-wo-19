@@ -4,9 +4,16 @@
 		<div class="blog-card">
 	    	<!-- image -->
 	    	<div class="blog-card__img">
-	    		<?php if ( has_post_thumbnail() ) {
+	    		<?php
+	    		$blog_card_placeholder_image = get_field('blog_card_placeholder_image', 'option');
+	    		
+	    		if ( has_post_thumbnail() ) {
 		    		echo "<img src=\"" . get_the_post_thumbnail_url() . "\">";
-	    		}?>
+	    		} else {
+		    		echo "<img src=\"" . $blog_card_placeholder_image['url'] . "\">";
+		    	}
+	    		
+	    		?>
 		    </div><!--end image -->
 		    
 	    	<!-- icon -->
