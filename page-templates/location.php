@@ -28,7 +28,11 @@ get_header(); ?>
 	        </div>
 	        <div class="row">
 	            <div class="col-sm-12">
-					<a href=" <?php the_field('content_cta_url'); ?> ">
+	                <?php 
+	                $content_cta_link = get_field('content_cta_url'); 
+	                $content_cta_url = $content_cta_link['url'];
+	                ?>
+					<a href=" <?php echo $content_cta_url; ?> " target="_blank" title="<?php the_field('content_cta_text'); ?>">
 			        	<div class="wo-btn <?php echo $theme_colour; ?> wo-btn--standard-content">
 				        	<?php the_field('content_cta_text'); ?>
 				        </div>
