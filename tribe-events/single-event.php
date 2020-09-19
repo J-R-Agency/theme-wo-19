@@ -23,7 +23,7 @@ $themes_path = get_template_directory_uri();
 ?>
 
 <div class="site theme-pink">
-	<section class="hero_banner" style="background-image: url('http://preview.thewomensorganisation.org.uk/wp-content/uploads/2019/12/36_Events_D4A7910.jpg')">
+	<section class="hero_banner" style="background-image: url('https://www.thewomensorganisation.org.uk/wp-content/uploads/2019/12/36_Events_D4A7910.jpg')">
 		
 		<div class="container">
 		<?php if (! is_front_page() ) {	
