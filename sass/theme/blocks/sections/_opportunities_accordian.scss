@@ -76,3 +76,9 @@
         }
     }
 }
+
+.msg-no-vacancies{
+    @include _akkurat_italic;
+    font-style: italic;
+    color: $bkgrey;
+}

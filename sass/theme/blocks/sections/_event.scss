@@ -156,6 +156,11 @@
 		}
 	}
 
+	h3 {
+		a{
+			font-family: 'akkurat';
+		}
+	}
 
 	label {
 		font-size: 1rem ;
@@ -181,7 +186,10 @@
 	.tribe-events-calendar thead th{
 		background-color: $pink;
 		border: $white solid 0;
-		font-size: 1.5rem;
+		font-size: auto;
+		@include respond-to('lg') {
+			font-size: 1.5rem;
+		}
 	}
 
 
@@ -205,8 +213,13 @@
 
 	#tribe-events-header .tribe-events-sub-nav a, #tribe-events-footer .tribe-events-sub-nav a{
 		color: $pink;
-		font-size: 2rem;
+		font-size: auto;
 		margin: 2rem 0;
+		background-color: transparent;
+		
+		@include respond-to('md') {
+			font-size: 2rem;
+		}
 
 		&:hover{
 			opacity: 0.7;

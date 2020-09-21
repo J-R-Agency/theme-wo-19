@@ -1,0 +1,113 @@
+.spotlight-intro, .spotlight-white, .spotlight-grey, .spotlight-grey-full, .spotlight-full {
+
+	padding: 2rem;
+
+	h2 {
+        @include _museo;
+        font-size: 3rem;
+        margin: 2rem 0;
+	}
+
+	h3 {
+        @include _museo;
+        font-size: 2rem;
+        margin: 1rem 0;
+	}
+
+	h4 {
+        @include _museo;
+        font-size: 1.2rem;
+        margin: 2rem 0 1rem;
+	}
+
+	& .left p, & .left h2, & .left h3, & .left h4{
+
+		text-align: left;
+
+	}
+
+	& .centred p, & .centred h2, & .centred h3, & .centred h4{
+
+		text-align: center;
+		
+	}
+
+	& .hybrid p{
+
+		text-align: left;
+
+	}
+
+	& .hybrid h2, & .hybrid h3, & .hybrid h4{
+
+		text-align: center;
+		
+	}
+
+	& + .orange {
+
+		background-color: rgba($orange, .3) !important ;
+
+	}
+
+	& + .green {
+
+		background-color: rgba($green, .3) !important ;
+		
+	}
+	& + .purple {
+
+		background-color: rgba($purple, .3) !important ;
+		
+	}
+	& + .pink {
+
+		background-color: rgba($pink, .3) !important ;
+		
+	}
+	& + .red {
+
+		background-color: rgba($red, .3) !important ;
+		
+	}
+	& + .red {
+
+		background-color: rgba($red, .3) !important ;
+		
+	}
+	& + .grey {
+
+		background-color: rgba($grey, .3) !important ;
+		
+	}
+	& + .white {
+
+		background-color: rgba($white, .3) !important ;
+		
+	}
+
+	& + .wo_background {
+
+	    background-image: url(../assets/img/wo-logo-grey.svg);
+	    background-size: cover;
+	    position: relative;
+	    background-position: center;
+	    background-blend-mode: lighten;
+
+	}
+
+}
+
+.spotlight-intro{
+
+	h2 {
+        margin: 2rem 0;
+		line-height: 1;
+	}
+
+	p{
+		font-size: 1.2rem;
+		line-height: 1.5;
+	}
+
+}

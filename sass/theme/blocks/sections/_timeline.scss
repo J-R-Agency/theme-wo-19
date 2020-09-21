@@ -1,5 +1,4 @@
 
-	
 /* The actual timeline (the vertical ruler) */
 .timeline {
 	position: relative;
@@ -26,13 +25,24 @@
 	}	
 	&.orange::after {
 		background-color: $orange;
-		
 	}
-	&.aqua::after {
-		background-color: $aqua;
+	&.green::after {
+		background-color: $green;
 	}	
 	&.purple::after {
 		background-color: $purple;
+	}
+	&.lime::after {
+		background-color: $lime;
+	}
+	&.pink::after {
+		background-color: $pink;
+	}	
+	&.red::after {
+		background-color: $red;
+	}	
+	&.aqua::after {
+		background-color: $aqua;
 	}
 }
 
@@ -45,16 +55,29 @@
 	font-size: 20pt;
 	left: 45%;
 	top:-50px;
-	
+	background-color: $grey;
+
 	&.orange {
-	  background-color: $orange;
+		background-color: $orange;
 	}
-	&.aqua {
-	  background-color: $aqua;
-	}
-	&.purple {
-	  background-color: $purple;
+	&.green {
+		background-color: $green;
 	}	
+	&.purple {
+		background-color: $purple;
+	}
+	&.lime {
+		background-color: $lime;
+	}
+	&.pink {
+		background-color: $pink;
+	}	
+	&.red {
+		background-color: $red;
+	}	
+	&.aqua {
+		background-color: $aqua;
+	}
 }
 
 /* timeline-container around content */
@@ -78,12 +101,24 @@
 	&.orange::after {
 		background-color: $orange;
 	}
-	&.aqua::after {
-		background-color: $aqua;
+	&.green::after {
+		background-color: $green;
 	}	
 	&.purple::after {
 		background-color: $purple;
-	}		
+	}
+	&.lime::after {
+		background-color: $lime;
+	}
+	&.pink::after {
+		background-color: $pink;
+	}	
+	&.red::after {
+		background-color: $red;
+	}	
+	&.aqua::after {
+		background-color: $aqua;
+	}	
 }
 
 /* Place the timeline-container to the left */
@@ -150,19 +185,35 @@
 		font-size: 21pt;
 		padding: 1rem 1rem 0rem 0rem;
 	}
-	
+
 	&.orange p {
 		color: $orange;
 	}
 	
-	&.aqua p {
-		color: $aqua;
+	&.green p {
+		color: $green;
 	}
 	
 	&.purple p {
 		color: $purple;
 	}
 	
+	&.lime p {
+		color: $lime;
+	}
+	
+	&.pink p {
+		color: $pink;
+	}
+	
+	&.red p {
+		color: $red;
+	}
+	
+	&.aqua p {
+		color: $aqua;
+	}
+
 	/* Add arrows to the right timeline-container (pointing left) */
 	&:before {
 		content: " ";
@@ -187,17 +238,33 @@
 		font-size: 21pt;
 		padding: 1rem 1rem 0rem 0rem;
 	}
-	
+
 	&.orange p {
 		color: $orange;
 	}
 	
-	&.aqua p {
-		color: $aqua;
+	&.green p {
+		color: $green;
 	}
 	
 	&.purple p {
 		color: $purple;
+	}
+	
+	&.lime p {
+		color: $lime;
+	}
+	
+	&.pink p {
+		color: $pink;
+	}
+	
+	&.red p {
+		color: $red;
+	}
+	
+	&.aqua p {
+		color: $aqua;
 	}
 	
 	/* Add arrows to the right timeline-container (pointing left) */

@@ -1,5 +1,6 @@
 .related-links{
-    padding: 90px 0 70px;
+    // padding: 90px 0 70px;
+    padding: 3rem 0 2rem 0;
     background-color: $grey;
     &__card{
         position: relative;
@@ -16,6 +17,8 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+        background-color: #ddd;
+        background-blend-mode: multiply;
         margin: 0 auto;
         @include respond-to('md'){
 	    	width: 400px;
@@ -37,9 +40,10 @@
         font-size: 2rem;
         line-height: 35px;
         padding-left: 2rem;
+        padding-right: 2rem;
         color: white;
         text-align: left;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     }
     &__excerpt{
         margin: 1rem;

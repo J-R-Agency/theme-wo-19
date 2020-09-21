@@ -90,3 +90,35 @@
         -webkit-filter: drop-shadow(2px 2px 1px #555);
     }
 }
+
+
+
+.homepage-video_banner{
+
+    @include respond-to('xs'){
+        // background-color: pink;
+    }
+    @include respond-to('sm'){
+        // background-color: red;
+        // margin-bottom: 0;
+        // height:calc(86vh);
+        // overflow: hidden;
+    }
+    @include respond-to('md'){
+        // background-color: yellow;
+        height:calc(81vh + 4px);
+    }
+    @include respond-to('lg'){
+        // background-color: green;
+        height:calc(87vh + 4px);
+    }
+    @include respond-to('xl'){
+        // background-color: blue;
+        height:calc(86vh + 4px);
+    }
+
+}
+
+
+
+

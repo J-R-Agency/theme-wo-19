@@ -24,9 +24,12 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-7 col-lg-8 text-left">
-                    <h5>Lorem ipsum dolor sit amet consectetur adipiscing</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                	<?php 
 
+                	$content = apply_filters('the_content', $post->post_content);
+                	echo $content;
+
+                	?>
 			<!-- Query -->
 			<?php
 			global $post;
@@ -39,7 +42,6 @@ get_header(); ?>
 			    'orderby'        => 'menu_order',
 			    'post__not_in' => array( $post->ID ),
 			 );
-			 
 			 
 			$parent = new WP_Query( $args );
 			 
@@ -115,7 +117,10 @@ get_header(); ?>
 				<?php
 					else:
 				?>
-					<p>Sorry, there are currently no opportunities.</p>
+					<div class="msg-no-vacancies">
+						<p>There are currently no vacancies to join our team. Please check back for updates. </p>
+						<p>You can also stay up-to-date via our social media channels where new vacancies will be shared as they become available.</p>
+					</div>
 				<?php endif; wp_reset_query(); ?> 
 				
                 </div> <!-- end col -->

@@ -3,11 +3,28 @@
 }
 
 @mixin _akkurat {
-	font-family: 'akkurat';
+/*	font-family: 'akkurat';*/
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 
 @mixin _akkurat_bold {
-	font-family: 'akkurat-bold';
+/*	font-family: 'akkurat-bold';*/
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+@mixin _akkurat_italic {
+/*	font-family: 'akkurat-italic';*/
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-style: italic;
+
+}
+
+@mixin _akkurat_bold_italic {
+/*	font-family: 'akkurat-bold-italic';*/
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-style: italic;
 }
 
 @mixin _title {

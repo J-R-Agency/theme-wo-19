@@ -34,6 +34,10 @@
     &__icon{
         margin-top: -39px;
         padding-bottom: 10px;
+        img {
+	        width: 75px;
+	        height: 75px;
+        }
     }
     &__category{
         @include _bodyCopy;
@@ -45,6 +49,7 @@
 	    margin: 0 auto;
 	    width: 80%;
 	    font-size: 18pt;
+        line-height: 1.2;
     }
     a{
 	    color: white;	    
@@ -119,4 +124,4 @@
         color: $dark-grey;       
     }
 
-} 
+}

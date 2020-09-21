@@ -22,10 +22,16 @@
 
  
   foreach ( $terms as $single_term ) {
+  	
     $url = esc_url( get_term_link( $single_term ) );
     $name = esc_html( get_term_field( 'name', $single_term ) );
+
+    if ( $name != "Course" ) {
+	
+	    echo "<li><a class=\"nav-item nav-link\" href=\"?category=$name\">$name</a> </li>";
+
+    }
  
-    echo "<li><a class=\"nav-item nav-link\" href=\"?category=$name\">$name</a> </li>";
   }
  
    ?>

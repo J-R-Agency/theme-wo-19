@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				            	<h2><?php echo get_the_date( 'd M Y' );?></h2>
 				            </div>
 				            <div class="col-sm-12 col-md-5 col-lg-5 text-left">
-				            	<p>Share this article</p>
+				            	<!--p>Share this article</p-->
 				            </div>	            
 			            </div>
 					</section>

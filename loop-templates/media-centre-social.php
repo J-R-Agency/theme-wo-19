@@ -17,7 +17,7 @@ $theme_colour = get_field('theme_colour');
 // check if the repeater field has rows of data
 if( have_rows('social_media_accounts') ):
 
-    echo "<h2>Official social accounts</h2>";
+    echo "<h2>Official social media</h2>";
 
  	// loop through the rows of data
     while ( have_rows('social_media_accounts') ) : the_row();
@@ -58,7 +58,7 @@ if( have_rows('social_media_accounts') ):
 
 
         if( $social_media_link ):
-            echo "<span class=\"media-centre__title\"><a href=\"" . $social_media_link['url'] . "\" title=\"$press_article_title\">$social_title</a></span><p>$social_media_handle</p>";
+            echo "<a href=\"" . $social_media_link['url'] . "\" title=\"$press_article_title\" target=\"_blank\"><span class=\"media-centre__title\">$social_title</span><p>$social_media_handle</p></a>";
         endif;
 
 

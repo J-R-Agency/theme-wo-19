@@ -52,6 +52,16 @@ ul#main-menu{
                 opacity: 0;
                 transition: opacity 0.3s linear;
                 border-radius: 0;
+                margin-top: 2rem;
+                
+                top: 0rem !important;
+                @include respond-to('md') {
+	                transform: none !important;
+	                top: 2.27rem !important;
+                }
+                @include respond-to('lg') {
+	                top: 1.15rem !important;
+                }
             }
             &:hover{
                 > .dropdown-menu{
@@ -60,6 +70,7 @@ ul#main-menu{
                 }
             }
         }
+        
         a{
             &:link, &:visited{
                 color: $primary;
@@ -67,16 +78,20 @@ ul#main-menu{
                 line-height: 19px;
                 color: $primary;
                 text-transform: uppercase;
-                padding: 0;
+                padding: 0;                
             }
             &:hover, &:visited{
-                text-decoration: underline;
+                // text-decoration: underline;
                 background-color: transparent;
+                // pointer-events: none;
+                // cursor: default;
             }
         }
         > a{
+            height: calc(100% + 2rem);
             @include respond-to('md'){
-                height: 52px;
+                /* Affects height / position if dropdown menu */                
+                // height: 52px;
             }
         }
         > ul{
@@ -124,6 +139,11 @@ ul#main-menu{
             }
         }
     }
+
+    .child-item{
+        margin: -1rem 0 0 1rem;
+        line-height: 1rem;
+    }
 }
 
 
@@ -148,9 +168,21 @@ ul#main-menu{
         border-bottom: $lime 8px solid;
     }
 }
+
+#menu-item-1921 .dropdown-menu{
+    @include respond-to('md'){
+        border-bottom: $lime 8px solid;
+    }
+}
+
 #menu-item-544 .dropdown-menu{
     @include respond-to('md'){
         border-bottom: $pink 8px solid;
+        margin-left: -75px;
+    }
+    @include respond-to('lg'){
+        border-bottom: $pink 8px solid;
+        margin-left: -25px;
     }
 }
 
@@ -179,19 +211,61 @@ ul#main-menu{
     }
 }
 
+/* Hover menu position for different breakpoints */
+
 .navbar-expand-md {
     margin-bottom: 32px;
-    margin-top: 32px;
-    @include respond-to('md'){
-        margin-bottom: 0;
+    margin-top: 36px;
+
+/*
+    @include respond-to('xs'){
+        // background-color: pink;
     }
+    @include respond-to('sm'){
+        // background-color: red;
+    }
+    @include respond-to('md'){
+        // background-color: yellow;
+        margin-bottom: 0;
+        height:calc(19vh - 36px);
+        // overflow: hidden;
+    }
+    @include respond-to('lg'){
+        // background-color: green;
+        margin-bottom: 0;
+        height:calc(17vh - 36px);
+        // overflow: hidden;
+    }
+    @include respond-to('xl'){
+        // background-color: blue;
+        height:calc(14vh - 31px); // CHECK ALL SCREENS
+    }
+*/
+
 }
 
 .menu-main-menu-container{
     width: 100%;
+
+    @include respond-to('sm'){
+        margin-top: 3rem;
+    }
+
+    @include respond-to('lg'){
+        margin-top: 0 ;
+    }
+
 }
 
 .dropdown-toggle::after {
     color: #ccc;
     margin-left: 8px;
+}
+
+.dropdown-menu{
+    // cursor: pointer;
+}
+a.dropdown-toggle::active{
+    cursor: default;
+    pointer-events: none;
 }

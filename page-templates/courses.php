@@ -63,21 +63,25 @@ get_header(); ?>
 ?>
 
     		</div>
-			
+<!-- 			
 			<div class="row courses-title">
 				<h1><?php the_title(); ?></h1>
 			</div>
-
+ -->
 			<!-- DISPLAY POSTS -->
 
 					<div class="row courses-posts">
 
 
 
+    <?php include_once (get_template_directory() . '/global-templates/subsection-cards.tpl'); ?>
+
+
+
 
 
 <?php
-
+/*
 
 // Ensure the global $post variable is in scope
 global $post;
@@ -110,7 +114,7 @@ foreach ( $events as $post ) {
 	// template tag to show the date after the title!
 	include ( get_template_directory() . '/global-templates/courses-cards.tpl')  ;
 
-}
+}*/
 
 ?>
 

@@ -60,7 +60,7 @@ if ( $parent->have_posts() ) : ?>
                             <div class="story-cards__excerpt"><?php echo $post->post_excerpt ;?></div>
                             <div class="story-cards__button">
                             	<a class="wo-btn orange wo-btn--cards" href="<?php the_permalink()?>">
-                                	Hear her story
+                                	Read their story
                                 </a>
                             </div>
                         </div>

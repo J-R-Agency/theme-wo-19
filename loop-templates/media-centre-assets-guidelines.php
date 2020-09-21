@@ -27,7 +27,7 @@ if( have_rows('assets_guidelines') ):
         $press_article_link = get_sub_field('press_article_link');
 
         if( $press_article_link ):
-            echo "<span class=\"media-centre__title\"><a href=\"" . $press_article_link['url'] . "\" title=\"$press_article_title\">$press_article_title</a></span>";
+            echo "<span class=\"media-centre__title\"><a href=\"" . $press_article_link['url'] . "\" title=\"$press_article_title\" target=\"_blank\">$press_article_title</a></span>";
         endif;
 
         echo "</div><p>&nbsp;</p>";
