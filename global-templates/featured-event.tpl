@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
 							  		<div class="featured-event-wrapper">	
 										<div class="featured-event-date">
 											<div class="featured-event-month"><?php echo tribe_get_start_date( $event, true, 'M'); ?> </div>
-											<div class="featured-event-day"><?php echo tribe_get_start_date ($event, true, 'n'); ?> </div>
+											<div class="featured-event-day"><?php echo tribe_get_start_date ($event, true, 'd'); ?> </div>
 										</div>
 										<div class="featured-event-info">
 											<a href="<?php echo tribe_get_event_link($event) ?>"><p class="featured-event-title"><?php echo $event->post_title; ?></p></a>

@@ -177,7 +177,7 @@
 }
 
 
-.hero_banner .align-items-center{
+.hero_banner .align-items-center, .hero_banner__mobile .align-items-center{
     
     align-items: flex-end !important;
 
@@ -191,11 +191,11 @@
 
 .funder_logo_mobile{
 
+    display: none;
 
     align-items: flex-end;
     display: flex;
     
-
     padding: 2rem 1rem 1rem 1rem;
  
     @include respond-to('sm'){

@@ -53,6 +53,15 @@ ul#main-menu{
                 transition: opacity 0.3s linear;
                 border-radius: 0;
                 margin-top: 2rem;
+                
+                top: 0rem !important;
+                @include respond-to('md') {
+	                transform: none !important;
+	                top: 2.27rem !important;
+                }
+                @include respond-to('lg') {
+	                top: 1.15rem !important;
+                }
             }
             &:hover{
                 > .dropdown-menu{
@@ -61,6 +70,7 @@ ul#main-menu{
                 }
             }
         }
+        
         a{
             &:link, &:visited{
                 color: $primary;
