@@ -8,9 +8,15 @@
 	    		$blog_card_placeholder_image = get_field('blog_card_placeholder_image', 'option');
 	    		
 	    		if ( has_post_thumbnail() ) {
-		    		echo "<img src=\"" . get_the_post_thumbnail_url() . "\">";
+	    			$get_the_post_thumbnail_url = get_the_post_thumbnail_url();
+	    			// Attempt to use Jetpack Photon CDN URL if available
+					if ( function_exists('jetpack_photon_url') ) $get_the_post_thumbnail_url = jetpack_photon_url( $get_the_post_thumbnail_url );
+		    		echo "<img src=\"" . $get_the_post_thumbnail_url . "\">";
 	    		} else {
-		    		echo "<img src=\"" . $blog_card_placeholder_image['url'] . "\">";
+	    			$blog_card_placeholder_image_url = $blog_card_placeholder_image['url'];
+	    			// Attempt to use Jetpack Photon CDN URL if available
+					if ( function_exists('jetpack_photon_url') ) $blog_card_placeholder_image_url = jetpack_photon_url( $blog_card_placeholder_image_url );
+		    		echo "<img src=\"" . $blog_card_placeholder_image_url . "\">";
 		    	}
 	    		
 	    		?>
