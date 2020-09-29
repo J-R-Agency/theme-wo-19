@@ -53,11 +53,13 @@ ul#main-menu{
                 transition: opacity 0.3s linear;
                 border-radius: 0;
                 margin-top: 2rem;
+                left: auto;
+				right: 0;
                 
                 top: 0rem !important;
                 @include respond-to('md') {
 	                transform: none !important;
-	                top: 2.27rem !important;
+	                top: 2.29rem !important;
                 }
                 @include respond-to('lg') {
 	                top: 1.15rem !important;

@@ -37,6 +37,7 @@ global $post;
 
 if (isset($_GET['category'])) {
 	$event_category = $_GET['category'];
+	
 	$events = tribe_get_events( [
 		'start_date'     => 'now',
 		'eventDisplay'   => 'list',

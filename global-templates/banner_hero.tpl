@@ -15,6 +15,9 @@ if( isset( $category_feature_image ) ) {
 	$background_image = $category_feature_image['url'] ;
 } else {
 	$background_image = get_the_post_thumbnail_url();
+
+	// Attempt to use Jetpack Photon CDN URL if available
+	if ( function_exists('jetpack_photon_url') ) $background_image = jetpack_photon_url( get_the_post_thumbnail_url() );
 }
 
 
@@ -48,9 +51,13 @@ if( !empty( $funder_logo ) ) {
 
 $mobile_alternative = get_field('mobile_alternative');
 if( !empty( $mobile_alternative ) ) {
+
+	// Attempt to use Jetpack Photon CDN URL if available
+	if ( function_exists('jetpack_photon_url') ) $mobile_alternative_url = jetpack_photon_url( $mobile_alternative['url'] );
+
     $show_mobile_alternative = "
     <div class=\"mobile_alternative hero-contents__mobile_alternative\">
-	    <img src=\"" .  esc_url($mobile_alternative['url']) . "\" alt=\"" . esc_attr($mobile_alternative['alt']) . "\" />
+	    <img src=\"" .  esc_url($mobile_alternative_url) . "\" alt=\"" . esc_attr($mobile_alternative['alt']) . "\" />
 	</div>
     " ;
 } else {
@@ -62,9 +69,15 @@ if( !empty( $mobile_alternative ) ) {
 
 if ( isset( $mobile_alternative['url'] ) ){
 	$hero_banner__override = "" ;
+	$mobile_alternative_background_image = $mobile_alternative['url'] ;
+	
+	// Attempt to use Jetpack Photon CDN URL if available
+	if ( function_exists('jetpack_photon_url') ) $mobile_alternative_background_image = jetpack_photon_url( $mobile_alternative['url'] );
+
+
 ?>
 
-<section class="hero_banner__mobile" style="background-image: url('<?php echo $mobile_alternative['url'] ; ?>');background-size: cover;">	
+<section class="hero_banner__mobile" style="background-image: url('<?php echo $mobile_alternative_background_image ; ?>');background-size: cover;">	
 	<div class="container">
 	<?php if (! is_front_page() ) {	
 		if (function_exists('the_breadcrumb')) the_breadcrumb();
