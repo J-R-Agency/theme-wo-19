@@ -67,9 +67,11 @@ get_header(); ?>
 			            	<p><?php echo $map_banner_copy; ?></p>
 			            <?php endif; ?>
 			            
-			            <a href=" <?php echo $map_banner_cta_link['url']; ?> " class="wo-btn orange float-md-right" target="<?php echo $map_banner_cta_link['target']; ?> ">
-							<?php echo $map_banner_cta_link['title']; ?>
-			        	</a>
+			            <?php if ($map_banner_cta_link): ?>
+			            	<a href=" <?php echo $map_banner_cta_link['url']; ?> " class="wo-btn orange float-md-right" target="<?php echo $map_banner_cta_link['target']; ?> ">
+								<?php echo $map_banner_cta_link['title']; ?>
+			        		</a>
+			        	<?php endif; ?>
 		            </div>
 		        </div>	            
 		    </div> <!-- end map row -->
