@@ -5,7 +5,10 @@
 	    	<!-- image -->
 	    	<div class="blog-card__img blog-card__img--plain">
 	    		<?php if ( has_post_thumbnail() ) {
-		    		echo "<img src=\"" . get_the_post_thumbnail_url() . "\">";
+	    			$get_the_post_thumbnail_url = get_the_post_thumbnail_url();
+	    			// Attempt to use Jetpack Photon CDN URL if available
+					if ( function_exists('jetpack_photon_url') ) $get_the_post_thumbnail_url = jetpack_photon_url( $get_the_post_thumbnail_url );
+		    		echo "<img src=\"" . $get_the_post_thumbnail_url . "\">";
 	    		}?>
 		    </div><!--end image -->
 	    	
