@@ -43,6 +43,9 @@
 	.video-caption {
 		background-color: #e3e3e3;
 		padding: 2rem;
+		p {
+			margin: 0;
+		}
 	}	
 }
 
@@ -50,11 +53,10 @@
 	background-color: $dark-grey;
 	color: white;
 	text-align: center;
-	margin: 4rem 0;
 	padding: 3rem 6rem;
 	
 	p {
-		margin: 1rem 0;
+		margin: 0 0 2rem 0;
 	}
 	
 	.post-cta-link {

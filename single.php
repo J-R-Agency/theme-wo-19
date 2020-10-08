@@ -62,13 +62,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<?php echo $video_embed ?>
 								</div>
 							</div>
+							
+							<?php if ($video_caption): ?>
 							<div class="video-caption">
-								<div class="row">
-									<div class="col-12">
-										<p><?php echo $video_caption ?></p>
-									</div>
-								</div>
+								<p><?php echo $video_caption ?></p>
 							</div>
+							<?php endif; ?>
+							
 						</div>	
 					<?php endif; ?>				
 

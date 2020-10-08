@@ -50,6 +50,7 @@ if (isset($_GET['category'])) {
 			)
 		)
 	] );
+	
 } else {
   //Handle the case where there is no parameter
 	$events = tribe_get_events( [
@@ -59,20 +60,24 @@ if (isset($_GET['category'])) {
 	] );
 }
 
- 
-// Retrieve the next 5 upcoming events
-// Grab the 5 next "party" events (by tag)
-
-// Loop through the events: set up each one as
-// the current post then use template tags to
-// display the title and content
-foreach ( $events as $post ) {
-	setup_postdata( $post );
-
-	// This time, let's throw in an event-specific
-	// template tag to show the date after the title!
-	include ( get_template_directory() . '/global-templates/events-cards.tpl')  ;
-
+if (empty($events)) {
+	echo "<span class='notice'>No events found</span>";
+} else {
+	// Retrieve the next 5 upcoming events
+	// Grab the 5 next "party" events (by tag)
+	
+	// Loop through the events: set up each one as
+	// the current post then use template tags to
+	// display the title and content
+	foreach ( $events as $post ) {
+		setup_postdata( $post );
+	
+		// This time, let's throw in an event-specific
+		// template tag to show the date after the title!
+		
+		include ( get_template_directory() . '/global-templates/events-cards.tpl')  ;
+	
+	}
 }
 
 ?>
