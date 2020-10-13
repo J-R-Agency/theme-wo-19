@@ -53,7 +53,7 @@ if ( get_field('blog_section_title') ) {
 	    
 			<?php endwhile; ?>
 										    
-			<?php wp_reset_postdata(); ?>
+			<?php wp_reset_query(); ?>
         </div>
             <div class="col-sm-12">
                 <a href="<?php echo site_url();?>/blog-media/" class="wo-btn orange">Visit the blog</a>

@@ -101,23 +101,45 @@ get_header(); ?>
     <section class="generic content bk-white">
 	    <div class="container">
 		    <?php
-				$map_banner_cta_link = get_field('map_banner_cta_link');    
+			    $map_banner_google_details = get_field('map_banner_google_details');
+				$map_banner_cta_link = get_field('map_banner_cta_link');
+				$map_banner_title = get_field('map_banner_title');
+				$map_banner_copy = get_field('map_banner_copy');				 
 			?>
+			
 		    <div class="row">
+			    
 			    <div class='col-12 col-md-6 col-lg-6'>
-			    	<h1 class="float-left"><?php echo the_field('map_banner_title'); ?></h1>
+				    
+				    <?php if($map_banner_title): ?>
+			    		<h1 class="float-left"><?php echo the_field('map_banner_title'); ?></h1>
+			    	<?php endif; ?>
+			    	
 			    </div>
+			    
 			    <div class='col-12 col-md-6 col-lg-6'>
-					<a href=" <?php echo $map_banner_cta_link['url']; ?> " class="wo-btn orange float-md-right" target="<?php echo $map_banner_cta_link['target']; ?> ">
-						<?php echo $map_banner_cta_link['title']; ?>
-			        </a>
+				    
+				    <?php if($map_banner_cta_link): ?>
+						<a href=" <?php echo $map_banner_cta_link['url']; ?> " class="wo-btn orange float-md-right" target="<?php echo $map_banner_cta_link['target']; ?> ">
+							<?php echo $map_banner_cta_link['title']; ?>
+			        	</a>
+			        <?php endif; ?>
+			        
 			    </div>				    
 		    </div>
+		    
+		    <?php if ($map_banner_copy): ?>
+		    <div class='row'>
+			    <div class='col-12'>
+				    <?php echo $map_banner_copy; ?>
+			    </div>
+		    </div>
+			<?php endif; ?>
 		    
 		    <div class="row">
 			    <div class="col-12">
 				    <div class="contact-map">
-						<?php the_field('map_banner_google_details') ?>
+						<?php echo $map_banner_google_details;  ?>
 				    </div>	    
 			    </div>
 		    </div>
