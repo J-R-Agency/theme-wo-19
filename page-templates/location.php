@@ -77,7 +77,7 @@ get_header(); ?>
 		    </div> <!-- end map row -->
 	    </div>
     </section>
-    
+    <?php include_once (get_template_directory() . '/global-templates/related-links.tpl'); ?>
     <!-- CTA Banner -->
 	<?php include_once (get_template_directory() . '/global-templates/banner-cta.tpl'); ?>            
 </div> <!-- end site -->

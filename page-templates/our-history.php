@@ -137,6 +137,7 @@ get_header(); ?>
             </div>
         </div>
     </section>
+    <?php include_once (get_template_directory() . '/global-templates/related-links.tpl'); ?>
 </div>
 
 <?php get_footer();

@@ -94,6 +94,8 @@ if (empty($events)) {
     
     	</div><!-- end container -->
     </section><!-- end generic section -->
+    <?php include_once (get_template_directory() . '/global-templates/related-links.tpl'); ?>
+    <?php include_once (get_template_directory() . '/global-templates/banner-cta.tpl'); ?>
 </div><!-- end site -->
 
 <?php get_footer();

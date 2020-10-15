@@ -18,6 +18,7 @@ get_header(); ?>
 <div class="site <?php echo $theme_colour; ?>">
     <?php include_once (get_template_directory() . '/global-templates/banner_hero.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/related-links.tpl'); ?>
+    <?php include_once (get_template_directory() . '/global-templates/banner-cta.tpl'); ?>
 </div>
 
 <?php get_footer();

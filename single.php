@@ -78,25 +78,34 @@ $container = get_theme_mod( 'understrap_container_type' );
 						$post_cta_content = get_field('post_cta_content');
 						$post_cta_link = get_field('post_cta_link');
 						
-						if (!empty($post_cta_content)): ?>
+						if ($post_cta_title or $post_cta_content or $post_cta_link): ?>
 						<div class="post-cta-container">
+							
+							<?php if($post_cta_title): ?>
 							<div class="row">
 								<div class="col-12">
-									<h2><?php echo $post_cta_title ?></h2>
+									<h2><?php echo $post_cta_title; ?></h2>
 								</div>
 							</div>
+							<?php endif; ?>
+							
+							<?php if($post_cta_content): ?>
 							<div class="row">
 								<div class="col-12">
-									<p><?php echo $post_cta_content ?></p>
+									<p><?php echo $post_cta_content; ?></p>
 								</div>
 							</div>
+							<?php endif; ?>
+							
+							<?php if($post_cta_link): ?>
 							<div class="row">
 								<div class="col-12">
 									<a href=" <?php echo $post_cta_link['url'] ?> ">
 							        	<div class="post-cta-link"> <?php echo $post_cta_link['title'] ?></div>
 							        </a>
 	        					</div>
-							</div>								
+							</div>
+							<?php endif; ?>						
 						</div>	
 					<?php endif; ?>	
 

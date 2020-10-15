@@ -40,6 +40,7 @@ get_header(); ?>
     </section>
     
     <?php include_once (get_template_directory() . '/global-templates/subsection-cards--stories.tpl'); ?>
+    <?php include_once (get_template_directory() . '/global-templates/related-links.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/banner-cta.tpl'); ?>
 </div>
 

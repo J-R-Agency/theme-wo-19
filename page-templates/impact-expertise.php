@@ -27,6 +27,7 @@ get_header(); ?>
         </div>
     </section>
     <?php include_once (get_template_directory() . '/global-templates/subsection-cards.tpl'); ?>
+    <?php include_once (get_template_directory() . '/global-templates/related-links.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/banner-cta.tpl'); ?>
 </div>
 

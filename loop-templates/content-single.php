@@ -28,7 +28,6 @@ defined( 'ABSPATH' ) || exit;
 	<div class="entry-content">
 
 		<?php the_content(); ?>
-		
 
 		<?php
 		wp_link_pages(

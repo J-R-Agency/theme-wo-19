@@ -10,9 +10,11 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
  
+ <?php  if( have_rows('related_links_repeater') ): ?>
  <section class="related-links capped-width">
     <div class="container">
         <div class="row">
+	    <?php endif; ?>
             <?php if(get_field('related_links_title')){
                 echo '<div class="col-sm-12 text-center"><div class="h1">'. get_field('related_links_title') .'</div><br><br></div>';
             }
@@ -40,6 +42,8 @@ defined( 'ABSPATH' ) || exit;
                     </div>
                 <?php endwhile; ?>
             <?php endif ?>
+            <?php  if( have_rows('related_links_repeater') ): ?>
         </div>
     </div>
 </section>
+<?php endif; ?>
