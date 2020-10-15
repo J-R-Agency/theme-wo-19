@@ -12,14 +12,13 @@ $blog_img = "http://192.168.33.10/womens-organization/wp-content/uploads/2019/12
 
 
 if( isset( $category_feature_image ) ) {
-	$background_image = $category_feature_image['url'] ;
+	$background_image = $category_feature_image['url'] ;	
 } else {
 	$background_image = get_the_post_thumbnail_url();
 
 	// Attempt to use Jetpack Photon CDN URL if available
 	if ( function_exists('jetpack_photon_url') ) $background_image = jetpack_photon_url( get_the_post_thumbnail_url() );
 }
-
 
 $featured_image_position = get_field('featured_image_position');
 
@@ -85,11 +84,8 @@ if ( isset( $mobile_alternative['url'] ) ){
 		<div class="row align-items-center hero-contents">
 			<div class="col-sm-12 col-md-10 col-lg-8 hero-contents__info">
 			
-				<?php if ( is_category('policy') ){
-					echo "<h1>Research and policy</h1><h2></h2>";
-				}
-				elseif (is_category('business') || is_category('culture') || is_category('research')){
-					echo"<h1>Blog & Media</h1><h2>Observations, press and opinion from The Women's Organisation.</h2>";
+				<?php if ( is_category() ){
+					echo"<h1>Blog & Media</h1>";
 				} else { ?>
 				<h1><?php the_title(); ?></h1>
 				<h2><?php the_field('bh_subtitle'); ?></h2>
@@ -124,11 +120,8 @@ if ( isset( $mobile_alternative['url'] ) ){
 		<div class="row align-items-center hero-contents">
 			<div class="col-sm-12 col-md-10 col-lg-8 hero-contents__info">
 			
-				<?php if ( is_category('policy') ){
-					echo "<h1>Research and policy</h1><h2></h2>";
-				}
-				elseif (is_category('business') || is_category('culture') || is_category('research')){
-					echo"<h1>Blog & Media</h1><h2>Observations, press and opinion from The Women's Organisation.</h2>";
+				<?php if ( is_category() ){
+					echo"<h1>Blog & Media</h1>";
 				} else { ?>
 				<h1><?php the_title(); ?></h1>
 				<h2><?php the_field('bh_subtitle'); ?></h2>

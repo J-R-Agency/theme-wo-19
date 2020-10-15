@@ -308,4 +308,3 @@ function theme_wo_19__setup() {
     add_editor_style();
 }
 add_action( 'after_setup_theme', 'theme_wo_19__setup' );
-
