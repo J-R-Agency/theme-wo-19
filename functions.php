@@ -63,44 +63,13 @@ function add_search_icon ( $items, $args ) {
 }
  
 // Add Excerpt support for Page post type
- function oz_add_excerpt_meta_box( $post_type ) {
- if ( in_array( $post_type, array( 'post', 'page' ) ) ) {
- add_meta_box(
- 'oz_postexcerpt',
- __( 'Excerpt', 'thetab-theme' ),
- 'post_excerpt_meta_box',
- $post_type,
- 'after_title',
- 'high'
- );
- }
- }
- add_action( 'add_meta_boxes', 'oz_add_excerpt_meta_box' );
+add_action(
+  'admin_menu', function () {
+    remove_meta_box('postexcerpt', 'post', 'normal');
+  }, 999
+);
 
-
- function oz_run_after_title_meta_boxes() {
- global $post, $wp_meta_boxes;
- do_meta_boxes( get_current_screen(), 'after_title', $post );
- }
- add_action( 'edit_form_after_title', 'oz_run_after_title_meta_boxes' );
-
-
-add_filter( 'template_include', 'var_template_include', 10000 );
-function var_template_include( $t ){
-    $GLOBALS['current_theme_template'] = basename($t);
-    return $t;
-}
-
-function get_current_template( $echo = false ) {
-    if( !isset( $GLOBALS['current_theme_template'] ) )
-        return false;
-    if( $echo )
-        echo $GLOBALS['current_theme_template'];
-    else
-        return $GLOBALS['current_theme_template'];
-}
-
-
+add_action('edit_form_after_title', 'post_excerpt_meta_box');
 
 // Google Maps API
 function my_acf_init() {
