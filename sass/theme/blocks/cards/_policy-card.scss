@@ -1,0 +1,84 @@
+.policy-card{
+    background-color: $white;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(151, 151, 151, 1);
+    -moz-box-shadow:    1px 1px 5px 0px rgba(151, 151, 151, 1);
+    box-shadow:         1px 1px 5px 0px rgba(151, 151, 151, 1);
+    padding: 20px 20px 50px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+    &.first{
+        display: block;
+    }
+    @include respond-to('md'){
+        margin-bottom: 100px;
+        display: inline-block;
+    }
+    &__img img{
+        width:100%;
+    }
+    &__icon{
+        margin-top: -39px;
+        padding-bottom: 10px;
+    }
+    &__category{
+        @include _bodyCopy;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+    }
+    p{
+        font-size: 22px;
+        line-height: 30px;
+        padding: 0 45px;
+    }
+    &:last-child{
+        margin-bottom: 60px;
+        @include respond-to('md'){
+            margin-bottom: 20px;
+        }
+    }
+} 
+
+.policy-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+      flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.policy-item {
+	display: flex;
+	flex-direction: column;
+	-ms-flex-preferred-size: 32%;
+	  flex-basis: 32%;
+	background: $white;
+	box-shadow: 1px 1px 5px 0px rgba(151, 151, 151, 1);
+	/*height: 40vh;*/
+	padding: 1em;
+	margin: 1em;
+	max-width: calc(360px + 2em);
+}
+
+.policy-item__img{
+    height: 240px;
+    width: 300px;
+    background-position: center;
+    background-size: cover;
+    @include respond-to('md'){
+        width: 360px;
+    }    
+}
+
+.policy-item__category{
+    font-size: 1rem;
+    margin: 1em 0;
+}
+
+.policy-item__title{
+    font-size: 1.25rem;
+    margin: 0 2em;
+}

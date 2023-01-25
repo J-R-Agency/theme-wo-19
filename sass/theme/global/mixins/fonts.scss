@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'museo';
+    src: url('../fonts/Museo_Slab_500_2-webfont.eot');
+    src: url('../fonts/Museo_Slab_500_2-webfont.ttf') format('truetype'),
+    		 url('../fonts/Museo_Slab_500_2-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Museo_Slab_500_2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'akkurat';
+    // src: url('../fonts/396C18_1_0.eot');
+    src: url('../fonts/Akkurat.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'akkurat-bold';
+    src: url('../fonts/Akkurat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'akkurat-italic';
+    src: url('../fonts/Akkurat-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'akkurat-bold-italic';
+    src: url('../fonts/Akkurat-BoldItalic.ttf');
+}

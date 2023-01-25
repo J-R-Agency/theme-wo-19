@@ -1,0 +1,38 @@
+.carousel_home{
+    h4{
+        text-transform: uppercase;
+        @include _bodyCopy;
+        margin-bottom: 30px;
+    }
+    .carousel-item{
+        min-height: 200px;
+        @include respond-to('md'){
+            min-height: 150px;
+        }
+    }
+    .carousel-indicators {
+        position: relative;
+        margin-bottom: 0;
+        li{
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            background-color: #ccc;
+            opacity: 1;
+            margin-left: 13px;
+            margin-right: 13px;
+            border-top: none;
+            border-bottom: none;
+            &.active{
+                background-color: $pink;
+            }
+        }
+    }
+}
+
+#carousel_events {
+	.carousel-indicators {
+		position: relative;
+		margin: 0.5rem 0 0 0;
+	}
+}

@@ -1,0 +1,84 @@
+.opportunities{
+	padding: 2rem;
+	
+	p {
+		text-align: left;
+	}
+	
+    h5{
+        margin-bottom: 15px;
+    }
+    .accordion{
+        padding-top: 50px;
+        .card{
+            border:none;
+            border-top:thin solid #D8D8D8;
+            &:last-child{
+                border-bottom: thin solid #D8D8D8;
+            }
+        }
+        .card-header{
+            background-color: unset;
+            border: none;
+            padding: 0;
+            .btn-link{
+                padding: 0.75rem 0;
+                background-color: #EEEEEE;
+                width: 100%;
+                text-align: left;
+                &.collapsed{
+                    background-color: #fff;
+                }
+                .card-title{
+                    @include _akkurat;
+                    font-size: 20px;
+                    line-height: 30px;
+                    padding-left: 15px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .collapse{
+            background-color: #EEEEEE;
+        }
+        .card-body{
+            @include _bodyCopy;
+            background-color: #EEEEEE;
+        }
+    }
+    h5.job{
+        text-align: center;
+        margin-bottom: 0px;
+        font-size: 20px;
+        margin-top: 40px;
+    }
+    .job-links{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        a{
+            display: block;
+            margin-bottom: 15px;
+            @include respond-to('lg'){
+                margin-right: 10px;
+                display: inline-block;
+                margin-bottom: 0;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+            
+        }
+    }
+    .job-img{
+        padding: 30px;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.msg-no-vacancies{
+    @include _akkurat_italic;
+    font-style: italic;
+    color: $bkgrey;
+}

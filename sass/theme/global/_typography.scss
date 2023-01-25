@@ -1,0 +1,47 @@
+h1, .h1{
+    @include _title;
+    display: block;
+}
+
+h2, .h2{
+    @include _heroSubTitle;
+    display: block;
+}
+
+h3, .h3{
+    @include _subTitle;
+    display: block;
+}
+
+h4, .h4 {
+	text-transform: uppercase;
+}
+
+p, body, html{
+    @include _bodyCopy;
+    display: block;
+}
+
+a:active, a:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+a.white-link{
+    color: white;
+    &:hover, &:focus{
+        color: white;
+    }
+}
+
+.standard-content a {
+	color: $orange;
+	
+	&:hover, &:focus {
+	}
+}

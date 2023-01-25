@@ -1,0 +1,17 @@
+#site-logo{
+    @include _museo;
+	font-size: 19px;
+	line-height: 26px;
+    font-weight: 400;
+
+    img {
+        height: 80px;
+        padding-bottom: 8px;
+    }
+
+    @media all and (max-width: 768px) {
+        img {
+            height: 60px;
+        }
+    }
+}

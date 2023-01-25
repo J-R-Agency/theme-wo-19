@@ -1,0 +1,69 @@
+.related-links{
+    // padding: 90px 0 70px;
+    padding: 3rem 0 2rem 0;
+    background-color: $grey;
+    &__card{
+        position: relative;
+        padding: 20px 0px;
+        
+        a:hover {
+	        text-decoration: none;
+        }
+    }
+    &__img{
+        overflow: hidden;
+        position: relative;
+        height: 260px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #ddd;
+        background-blend-mode: multiply;
+        margin: 0 auto;
+        @include respond-to('md'){
+	    	width: 400px;
+	    }         
+        &:after {
+          background-size: 100%;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+        }
+        
+    }
+    &__title{
+        position: absolute;
+        @include _museo;
+        font-size: 2rem;
+        line-height: 35px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        color: white;
+        text-align: left;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+    &__excerpt{
+        margin: 1rem;
+        padding: 0 5rem;
+        text-align: center;
+		//text-overflow: ellipsis;
+		//white-space: nowrap;
+		max-height: 4.5em;
+		overflow: hidden;		      
+    }
+    &__button {
+	    display: flex;
+	    margin: 0 auto;
+    }
+    & h3{
+      @include _akkurat;
+	  text-align: center;
+	  padding-top: 0.5rem;
+    }
+    & h1 {
+	    text-align: center;
+    }
+}

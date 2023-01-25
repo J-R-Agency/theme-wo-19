@@ -1,0 +1,60 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+// Global styles
+@import "global/mixins/fonts";
+@import "global/mixins/breakpoints";
+@import "global/mixins/typography";
+@import "global/typography"; 
+@import "global/globals"; 
+
+// BLOCKS
+@import "blocks/buttons";
+@import "blocks/theme-colours";
+
+// Header
+@import "blocks/header/header";
+@import "blocks/header/navbar";
+@import "blocks/header/hamburger"; 
+@import "blocks/header/search";
+
+// Footer
+@import "blocks/footer/footer";
+@import "blocks/footer/social-icons";
+
+// Banners
+@import "blocks/banners/hero";
+@import "blocks/banners/homepage-video";
+@import "blocks/banners/fullimg-cta";
+@import "blocks/banners/cta";
+
+// Sections
+@import "blocks/sections/carousel_home";
+@import "blocks/sections/grey_tabs";
+@import "blocks/sections/generic";
+@import "blocks/sections/stories";
+@import "blocks/sections/policy";
+@import "blocks/sections/related-links";
+@import "blocks/sections/related-cards";
+@import "blocks/sections/sidebar"; 
+@import "blocks/sections/opportunities_accordian";
+@import "blocks/sections/standard-content";
+@import "blocks/sections/media-centre";
+@import "blocks/sections/post";
+@import "blocks/sections/map";
+@import "blocks/sections/feature";
+@import "blocks/sections/spotlight";
+@import "blocks/sections/landing";
+@import "blocks/sections/search_results";
+@import "blocks/sections/timeline";
+@import "blocks/sections/event";
+@import "blocks/sections/course";
+@import "blocks/sections/404";
+@import "blocks/sections/instagram-feed";
+
+//cards
+@import "blocks/cards/blog-card"; 
+@import "blocks/cards/leader-card"; 
+@import "blocks/cards/policy-card"; 
+@import "blocks/cards/contact-card"; 
+@import "blocks/cards/events-card"; 
+@import "blocks/cards/courses-card"; 

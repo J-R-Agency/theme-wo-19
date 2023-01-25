@@ -1,0 +1,144 @@
+.grey_tabs{
+	
+    .nav-tabs {
+        background-color: #DDDDDD;
+        text-align:center;
+        -webkit-box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.23);
+        box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.23);
+        border: none;
+        .nav-link{
+            float:none;
+            display:block;
+            border: none;
+            border-radius: 0;
+            padding: 13px 20px;
+            // margin: 10px 0;
+            @include _akkurat;
+            font-size: 13px;
+            width: 100%;
+            &:last-child{
+                border-right: none;
+            }
+            @include respond-to('md'){
+                display:inline-block;
+                border-right: thin solid #B9B9B9;
+                width: auto;
+                font-size: 13px;
+            }
+            @include respond-to('xl'){
+                font-size: 16px;
+            }
+            &.active{
+                background-color: #d4d4d4;
+                border: none;
+                // margin-bottom: 0;
+                // margin-top: 0;
+                // padding: 22px 40px;
+                
+                // @include _museo;
+            }
+        }
+    }
+    &__bkimg{
+        height: 530px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        &:after{
+            background: -moz-linear-gradient(top,  rgba(255,255,255,0) 40%, rgba(238,231,141,0.4) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 40%,rgba(238,231,141,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(255,255,255,0) 40%,rgba(238,231,141,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#66ff4733',GradientType=0 ); /* IE6-9 */
+            content: '';
+            background-size: 100%;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+        }
+    }
+    &__content{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        @include respond-to('md'){
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        @include respond-to('lg'){
+            padding: 50px;
+            padding-right: 0;
+        }
+        .h1{
+            padding-bottom: 20px;
+        }
+        p{
+            padding-bottom: 30px;
+        }
+    }
+    
+    .tab-content{
+        background-color: #78CDD1;
+        -webkit-box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.23);
+        box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.23);
+    }
+}
+
+.category_grey_tabs{
+	
+	&.content {
+		width: 100%;
+	}
+	
+    .nav-tabs {
+        background-color: #DDDDDD;
+        text-align:center;
+        margin: 2rem 0 1rem 0;
+        display: table;
+        width: 100%;
+        
+        @include respond-to('md'){
+	        display: flex;
+	    }
+        
+        .nav-link {
+	        position: relative;
+            float: none;
+            display: block;
+            border-radius: 0;
+            padding: 1rem 2rem;
+            @include _akkurat;
+            font-size: 13px;
+            width: 100%;
+            
+            &:after {
+	            @include respond-to('md'){
+				  content : "";
+				  position: absolute;
+				  right: 0;
+				  z-index: 100;
+				  top: 25%;
+				  width: 1px;
+				  height: 60%;  /* or 100px */
+				  background: #c2c2c2;			            
+		        }
+            }
+            
+            @include respond-to('md'){
+                display:inline-block;
+                font-size: 15px;
+                border: none;
+            }
+            @include respond-to('xl'){
+                font-size: 18px;
+            }
+            &.active{
+                background-color: #d4d4d4;
+                border: none;
+            }
+        }
+    }
+}
