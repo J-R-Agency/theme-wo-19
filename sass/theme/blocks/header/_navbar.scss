@@ -123,15 +123,28 @@ ul#main-menu{
     }
 
     .dropdown-menu {
-
         max-width: 330px;
         min-width: 200px;
         padding-right: 0;
+
+		&.show {
+			transform: translate3d(0px, 19px, 0px);
+		}
 
         .dropdown-menu {
             margin-top: 0;
             left: 100%;
             top: -2rem;
+
+			@media all and (max-width: 1024px) {
+				position: static!important;
+				margin-top: 0;
+
+				li {
+					margin-bottom: 10px;
+					padding-bottom: 10px;
+				}
+			}
         }
 
         .menu-item-has-children {
@@ -139,7 +152,7 @@ ul#main-menu{
                 content: "";
                 position: absolute;
                 right: 2rem;
-                top: 25%;
+                top: 10px;
                 display: inline-block;
                 border-top: 0.3em solid;
                 border-right: 0.3em solid transparent;
@@ -147,7 +160,8 @@ ul#main-menu{
                 border-left: 0.3em solid transparent;
             }
 
-            &:hover::after {
+            &:hover::after,
+			&:focus::after {
                 transform: rotate(-90deg);
             }
         }
