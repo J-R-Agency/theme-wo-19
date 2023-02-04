@@ -38,14 +38,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<nav class="container navbar-expand-md">
 			<div class="row align-items-start">
-				<div class="col-md-4 col-lg-4">
+				<div class="col-md-3 col-lg-3">
 					<div id="site-logo">
 						<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="The Womens Organisation" itemprop="url">
 							<img class="d-md-block" src="<?php echo wp_get_attachment_image_src(get_theme_mod( 'custom_logo' ), 'full')[0];?>" alt="The Womens Organisation">
 						</a>
 					</div>
 				</div>
-				<div class="col-md-8 col-lg-8">
+				<div class="col-md-9 col-lg-9">
 					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 						<!-- menu-icon hidden on mobile -->
 						<span class="c-hamburger">
