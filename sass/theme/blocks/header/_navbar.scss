@@ -109,6 +109,7 @@ ul#main-menu{
                 }
                 a.dropdown-item{
                     font-size: 15px;
+                    white-space: normal;
                 }
             }
         }
@@ -121,7 +122,7 @@ ul#main-menu{
 
     .dropdown-menu {
         max-width: 330px;
-        min-width: 200px;
+        min-width: 260px;
         padding-right: 0;
 
 		&.show {
@@ -131,7 +132,7 @@ ul#main-menu{
         .dropdown-menu {
             margin-top: 0;
             left: 100%;
-            top: -2rem;
+            top: -2rem!important;
 
 			@media all and (max-width: 1024px) {
 				position: static!important;
