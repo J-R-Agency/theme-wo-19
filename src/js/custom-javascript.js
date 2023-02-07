@@ -28,9 +28,13 @@ window.addEventListener("load", (event) => {
             if(e.target.tagName == 'A') {
                 parent = parent.parentElement;
                 parentDropdown = target.parentElement.parentElement;
+                console.log(target.parentElement, target);
                 childDropdown = target.parentElement.querySelector('.dropdown-menu');
+                if(childDropdown === null) {
+                    window.location = target.getAttribute('href');
+                }
             }
-            console.log(childDropdown, parent, parentDropdown);
+            // console.log(childDropdown, parent, parentDropdown);
             if(childDropdown.classList.contains('show')) {
                 setTimeout(() => {
                     childDropdown.classList.remove('show');
