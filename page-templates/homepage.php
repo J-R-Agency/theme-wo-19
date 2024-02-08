@@ -21,7 +21,6 @@ get_header(); ?>
     <?php include_once (get_template_directory() . '/global-templates/featured-event.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/carousel_home.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/grey_tabs.tpl'); ?>
-    <?php include_once (get_template_directory() . '/global-templates/home-stories.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/fullimg-cta_partners.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/blog-home.tpl'); ?>
     <?php include_once (get_template_directory() . '/global-templates/fullimg-cta_conversation.tpl'); ?>
